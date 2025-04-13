@@ -10,12 +10,12 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
+theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "ko-KR"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "시나브로 AI 노트"
 title_separator          : "-"
@@ -113,11 +113,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "시나브로 AI 노트"
+  name             : "AI 테크 블로그그"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "테크 컬럼니스트, AI 에반젤리스트트"
+  bio              : "AI 컬럼니스트"
   location         : "Somewhere"
-  email            :
+  email            : "synabreu@outlook.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
