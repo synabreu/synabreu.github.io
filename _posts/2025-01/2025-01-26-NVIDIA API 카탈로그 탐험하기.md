@@ -1,5 +1,5 @@
 ---
-title: "NVIDIA API 카탈로그 탐험하기"
+title: "NVIDIA NIM(3): NVIDIA API 카탈로그 탐험하기"
 date: 2025-01-26
 tags: [NVIDIA, NIM,GPU, CUDA, microservice, NVIDIA API, meta, llama, 쿠버네티스, 마이크로서비스, 추론, 메타, 라마]
 typora-root-url: ../

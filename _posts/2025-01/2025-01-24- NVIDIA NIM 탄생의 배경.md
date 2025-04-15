@@ -1,7 +1,8 @@
 ---
-title: "NVIDIA NIM 탄생의 배경"
+title: "NVIDIA NIM(1): NVIDIA NIM 탄생의 배경"
 date: 2025-01-24
 tags: [NVIDIA, NIM,GPU, CUDA, microservice, OpenAI, 오픈AI, 퍼플렉시티, Perfexibilty, 트리톤 추론 서버, Triton Inference Server, TensorRT-LLM, LLM,H100, 애플, Apple, Speculative decoding, xAI]
+typora-root-url: ../
 ---
 
 2022년 11월, 오픈AI의 챗GPT가 공개되고 난 이후로 부터, 오픈AI, 구글, 마이크로소프트, 페이스북과 같은 대기업부터 미스트랄, xAI 과 같은 스타트업까지 기업 자체 연구소에서 초거대 언어 모델을 파운데이션 모델로 만들어 공개하는 것이 지난 2년 동안 전세계적 유행이 되었다. 따라서, 2023년과 2024년이 AI 훈련의 해였다면, 2025년 부터는 AI 추론의 해가 될 것이다. 텍스트나 이미지, 음성, 동영상과 같은 모든 데이터 훈련을 기반으로 새로운 가치를 제공하는 AI 추론은 성숙해가는 인공지능 시장과 일반 사람들의 실용적인 일상에서 AI 애플리케이션의 성공의 열쇠가 될 것이기 때문이다.
