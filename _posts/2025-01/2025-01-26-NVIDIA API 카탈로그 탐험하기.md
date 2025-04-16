@@ -114,9 +114,11 @@ NVIDIA NIM은 NVIDIA API 카탈로그에서 마우스 몇 번만 클릭하면 GP
 
 
 
+
+
 또한, Stream 여부는 LLM의 **`stream`** 파라미터는 위에서 설명한 생성 제어 파라미터(generation parameter) 중 하나라기보다는, "응답 전달 방식"을 제어하는 출력 방식 설정값(output behavior parameter)이다.  LLM이 생성한 텍스트를 **한 번에 모두 반환할지**, 또는 **조금씩 나누어(스트리밍)** 반환할지를 제어하는 용도이다. 
 
-기본값은 보통 `false` 이며, 한 번에 전체 출력을 한다. 만일 `stream=True`로 설정하면, 토큰이 생성될 때마다 **실시간으로** 출력한다. 예) ChatGPT, OpenAI API, LangChain 등에서 토큰 단위로 빠르게 출력되는 효과.
+기본값은 보통 `false` 이며, 한 번에 전체 출력을 한다. 만일 `stream=True`로 설정하면, 토큰이 생성될 때마다 **실시간으로** 출력한다. 예를 들어, ChatGPT, OpenAI API, LangChain 등에서 토큰 단위로 빠르게 출력되는 효과가 있다.
 
 
 
