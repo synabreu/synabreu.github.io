@@ -323,6 +323,6 @@ defaults:
       read_time: true
       comments: true
       share: true
-      
+      css: "assets/css/custom.css"
     
 future: true
