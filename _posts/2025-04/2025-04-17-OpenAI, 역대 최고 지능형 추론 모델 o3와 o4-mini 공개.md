@@ -1,7 +1,7 @@
 ---
 title: "OpenAI, 역대 최고 지능형 추론 모델 o3와 o4-mini 공개"
 date: 2025-04-17
-tags: [오픈AI, OpenAI, 챗GPT, ChatGPT, 멀티모달, SWE-Bench, Claude 3 Sonnet, o3, o3-mini]
+tags: [오픈AI, OpenAI, 챗GPT, ChatGPT, 멀티모달, SWE-Bench, Claude 3 Sonnet, o3, o4-mini]
 typora-root-url: ../
 ---
 
