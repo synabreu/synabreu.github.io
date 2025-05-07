@@ -1,3 +1,12 @@
+---
+title: "NVIDIA DGX"
+date: 2023-12-19
+tags: [NVIDIA, GPU, RDMA, DGX, InfiniBand, Spine-Leaf, NDR, NCCL]
+typora-root-url: ../
+---
+
+
+
 **NVIDIA DGX는 단일 서버**으로써 고성능 AI 모델 훈련과 추론을 위한 **All-in-One GPU 컴퓨팅 시스템**이다. 기업이나 연구기관이 **멀티-GPU 학습 환경**을 손쉽게 구축할 수 있도록 NVIDIA가 직접 설계한 서버 제품군이며, 대표적으로는 **DGX A100**과 **DGX H100** 모델이 있다.
 
 그러므로, **DGX 서버는 1대만으로도 완전한 멀티-GPU 딥러닝 훈련/추론 환경**을 제공하는 데,  내부에 고속 GPU 간 연결 (NVLink), 대용량 메모리, 스토리지, 고속 네트워크 NIC가 통합되어 있어, **"AI 데스크탑 슈퍼컴퓨터"**라고도 부른다. 

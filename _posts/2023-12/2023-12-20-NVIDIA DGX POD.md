@@ -1,5 +1,5 @@
 ---
-title: "2023-12-20-NVIDIA DGX POD.md"
+title: "NVIDIA DGX POD"
 date: 2023-12-20
 tags: [NVIDIA, GPU, RDMA, DGX, InfiniBand, Spine-Leaf, NDR, NCCL]
 typora-root-url: ../
