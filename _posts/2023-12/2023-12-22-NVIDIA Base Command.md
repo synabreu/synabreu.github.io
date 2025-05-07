@@ -1,7 +1,7 @@
 ---
-title: "NVIDIA DGX SuperPOD"
+title: "NVIDIA Base Command"
 date: 2023-12-22
-tags: [NVIDIA, GPU, RDMA, DGX, SuperPod, InfiniBand, Spine-Leaf, NDR, NCCL]
+tags: [NVIDIA, GPU, RDMA, DGX, SuperPod, InfiniBand, NCCL, BaseCommand]
 typora-root-url: ../
 ---
 
