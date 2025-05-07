@@ -1,5 +1,5 @@
 ---
-title: "2023-11-24-Infiniband vs. RoCE 비교"
+title: "Infiniband vs. RoCE 비교"
 date: 2023-11-24
 tags: [NVIDIA, GPU, RDMA, Infiniband, RoCE, 인피니밴드]
 typora-root-url: ../
