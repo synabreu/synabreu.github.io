@@ -1,6 +1,6 @@
 ---
-title: "DeepSpeed"
-date: 2023-12-09
+title: "NCCL이란 무엇인가?"
+date: 2023-12-05
 tags: [NVIDIA, GPU, CUDA, NCCL]
 typora-root-url: ../
 ---
