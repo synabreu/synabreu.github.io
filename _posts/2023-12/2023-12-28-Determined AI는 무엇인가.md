@@ -1,5 +1,5 @@
 ---
-title: "Determined AI는 무엇인가.md"
+title: "Determined AI는 무엇인가"
 date: 2023-12-28
 tags: [NVIDIA, GPU, CUDA, NVLink, NVSwitch, GraceHopper, NVLink Switch, NVIDIA Blackwell]
 typora-root-url: ../
