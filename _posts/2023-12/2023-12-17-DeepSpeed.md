@@ -1,7 +1,7 @@
 ---
 title: "DeepSpeed"
 date: 2023-12-17
-tags: [NVIDIA, GPU, CUDA, NCCL]
+tags: [DeepSpeed, 딥스피드, Microsoft, 마이크로소프트, PyTorch, ZeRO optimizer, Mixed Precision, Model Parallelism, Pipeline Parallelism, DeepSpeed-Inference]
 typora-root-url: ../
 ---
 
@@ -22,7 +22,7 @@ DeepSpeed는 **Microsoft에서 개발한 딥러닝 최적화 라이브러리**�
 
 ##  2. DeepSpeed 핵심 아키텍처
 
-
+![그림 - DeepSpeed 아키텍처](/../images/2023-12/DeepSpeed-01.png)
 
 * **DeepSpeed Engine**: 모델, 옵티마이저, 스케줄러를 관리하며, 모든 학습 루프에 대한 효율적인 추상화 제공
 * **ZeRO Optimizer**: GPU 메모리를 모델 상태, 그라디언트, 옵티마이저 상태로 나눠 분산 저장
