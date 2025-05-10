@@ -99,3 +99,8 @@ typora-root-url: ../
 * GitHub: [https://github.com/NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)
 
 * 블로그: [https://developer.nvidia.com/blog/tensorrt-llm-supercharging-large-language-models-inference/](https://developer.nvidia.com/blog/tensorrt-llm-supercharging-large-language-models-inference/)
+
+* 유투브: https://youtu.be/hhhvZdkxsCE
+
+  
+
