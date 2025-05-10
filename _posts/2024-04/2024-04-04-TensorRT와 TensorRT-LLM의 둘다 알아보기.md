@@ -7,9 +7,9 @@ typora-root-url: ../
 
 
 
-어제 알아본 TensorRT**와 **TensorRT-LLM**은 **어떠한 차이점이 있을까? TensorRT는 모든 모델에 적용 가능한 범용 스포츠카 엔진이라면, TensorRT-LLM은 GPT·LLaMA만을 위한 F1 머신 엔진이라고 할 수 있다.  **Transformer 기반 LLM에 최적화된 기능과 성능**을 원한다면 **TensorRT-LLM이 압도적**이다. 
+어제 알아본 TensorRT와 TensorRT-LLM**은 **어떠한 차이점이 있을까? TensorRT는 모든 모델에 적용 가능한 범용 스포츠카 엔진이라면, TensorRT-LLM은 GPT·LLaMA만을 위한 F1 머신 엔진이라고 할 수 있다.  Transformer 기반 LLM에 최적화된 기능과 성능을 원한다면 TensorRT-LLM이 압도적이다. 
 
-**둘 다 NVIDIA에서 만든 **딥러닝 추론 최적화 엔진이지만, 용도와 최적화 대상이 다르다. 이번에는 TensorRT 와 TensorRT-LLM의 차이에 대해 알아보고, TensorRT-LLM에 대해 좀 더 상세히 알아보자!
+둘 다 NVIDIA에서 만든 딥러닝 추론 최적화 엔진이지만, 용도와 최적화 대상이 다르다. 이번에는 TensorRT 와 TensorRT-LLM의 차이에 대해 알아보고, TensorRT-LLM에 대해 좀 더 상세히 알아보자!
 
 
 
@@ -96,6 +96,6 @@ typora-root-url: ../
 
 ## 8. 공식 자료
 
-* GitHub: https://github.com/NVIDIA/TensorRT-LLM
+* GitHub: [https://github.com/NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)
 
-* 블로그: https://developer.nvidia.com/blog/tensorrt-llm-supercharging-large-language-models-inference/
+* 블로그: [https://developer.nvidia.com/blog/tensorrt-llm-supercharging-large-language-models-inference/](https://developer.nvidia.com/blog/tensorrt-llm-supercharging-large-language-models-inference/)
