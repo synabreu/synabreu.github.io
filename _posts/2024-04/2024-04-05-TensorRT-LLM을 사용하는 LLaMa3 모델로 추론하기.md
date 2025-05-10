@@ -5,11 +5,7 @@ tags: [엔비디아, NVIDIA, TensorRT, TensorRT-LLM, Transformer, 트랜스포�
 typora-root-url: ../
 ---
 
-
-
 NVIDIA의 [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)을 사용하여 **LLaMA 3 모델**을 추론하는 **Python 예제 코드**를 작성해 보자! 이 코드는 TensorRT-LLM Python API 기반이며, LLM 구조에 최적화된 방식으로 작성했다. 
-
-​	
 
 ## 1. 전제 조건  
 
@@ -18,8 +14,6 @@ NVIDIA의 [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)을 사용하여
 * HuggingFace에서 변환된 LLaMA 3 모델 (ex: `meta-llama/Llama-3-8B-Instruct`)
 * `convert_checkpoint.py`로 TensorRT-LLM 변환된 모델
 * 추론 전 TensorRT 엔진 생성 완료 (`trtllm.build_engine()`)
-
-
 
 ## 2. 디렉토리 구성  
 
@@ -33,8 +27,6 @@ llama3-tensorrtllm/
 │   └── tokenizer.model
 ├── infer.py
 ```
-
-
 
 ## 3. 추론 소스 코드 (llama3-inference.py)  
 
@@ -67,8 +59,6 @@ print("Generated:", output_text)
 
 ```
 
-
-
 ## 4. TensorRT-LLM 엔진 빌드 명령
 
 ```bash
@@ -83,8 +73,6 @@ trtllm-build \
   --enable_fp16
 
 ```
-
-
 
 ## 5. 요약
 
