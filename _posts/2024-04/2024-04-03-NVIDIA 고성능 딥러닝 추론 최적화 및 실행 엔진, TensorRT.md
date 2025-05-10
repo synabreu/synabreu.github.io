@@ -120,6 +120,7 @@ print("Generated Text:", generated_text)
 
 * 이 코드는 **GPT2 기준의 ONNX → TensorRT 변환** 기반이며, 구조에 따라 shape, output handling은 조정 필요
 * LLaMA 계열 모델을 TensorRT로 추론하려면 `NVIDIA TensorRT-LLM` 패키지나 `TensorRT-LLM` Python wrapper를 사용하는 것이 더 일반적
+* NVIDIA TensorRT 공식 홈페이지: https://developer.nvidia.com/tensorrt
 
 
 
