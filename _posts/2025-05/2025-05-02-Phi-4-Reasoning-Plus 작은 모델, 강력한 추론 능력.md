@@ -24,7 +24,25 @@ typora-root-url: ../
 
 
 
-## 2. 참고
+## 2. 애저 AI 파운더리에서 Phi-4
+
+* 소형 언어 모델(SLM)의 가능성을 입증한 **Phi 시리즈** 공개 1주년을 맞아, **추론에 최적화되고 멀티스텝 사고에 특화**된 **새로운 모델군을 발표**함
+* **Phi-4-reasoning**: 14B 파라미터, 고품질 reasoning 데이터로 SFT(Supervised Fine-Tuning) 진행
+* **Phi-4-reasoning-plus**: 위 모델에 RL(Reinforcement Learning) 추가, **1.5배 더 많은 토큰 사용으로 정확도 향상**
+* **Phi-4-mini-reasoning**: 3.8B 크기에도 불구하고 다양한 수학 벤치마크에서 **2배 이상 큰 모델들을 능가** , 모바일/에지에 적합
+  * **OpenThinker-7B, Llama-3.2-3B, DeepSeek-R1 계열 등 다양한 모델을 성능 측면에서 능가함**
+  * **OpenAI o1-mini와 유사하거나 우위의 성과**, 특히 Math-500, GPQA Diamond 등 수학 중심 테스트에서 강세
+* Phi-4 모델들은 **Copilot+ PC에서 NPU 최적화 버전**인 **Phi Silica**로 제공되어 Windows 환경에서 빠르고 효율적인 실행 가능
+* Azure AI Foundry 및 HuggingFace에서 공개:
+  * [Phi-4-reasoning](https://huggingface.co/microsoft/Phi-4-reasoning)
+  * [Phi-4-reasoning-plus](https://huggingface.co/microsoft/Phi-4-reasoning-plus)
+  * [Phi-4-mini-reasoning](https://aka.ms/phi4-mini-reasoning/hf)
+
+* **개발자 API 및 로컬 통합 도구**도 함께 제공되어 다양한 환경에 쉽게 접목 가능
+
+
+
+## 3. 참고
 
 * **논문**: [Phi-4 Reasoning 논문 링크](https://www.microsoft.com/.../2025/04/phi_4_reasoning.pdf)
 * **마이크로소프트 공식 발표**: [1년간의 Phi 개발 성과](https://azure.microsoft.com/.../one-year-of-phi-small...)
