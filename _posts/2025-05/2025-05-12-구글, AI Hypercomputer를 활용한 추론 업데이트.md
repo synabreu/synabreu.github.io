@@ -80,11 +80,11 @@ typora-root-url: ../
 
 * 구글 클라우드 Compute 블로그: [Accelerate AI Inference with Google Cloud TPUs and GPUs](https://cloud.google.com/blog/products/compute/accelerating-ai-inference-with-google-cloud-tpus-and-gpus?hl=en)
 
-* JetStream 오픈소스: https://github.com/AI-Hypercomputer/JetStream
+* JetStream 오픈소스: [https://github.com/AI-Hypercomputer/JetStream](https://github.com/AI-Hypercomputer/JetStream)
 
-* MaxDiffusion 오픈소스: https://github.com/AI-Hypercomputer/maxdiffusion
+* MaxDiffusion 오픈소스: [https://github.com/AI-Hypercomputer/maxdiffusion](https://github.com/AI-Hypercomputer/JetStream)
 
-* MaxText 오픈소스: https://github.com/AI-Hypercomputer/maxtext
+* MaxText 오픈소스: [https://github.com/AI-Hypercomputer/maxtext](https://github.com/AI-Hypercomputer/JetStream)
 
   
 
