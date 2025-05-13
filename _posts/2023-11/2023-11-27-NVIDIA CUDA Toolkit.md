@@ -3,6 +3,7 @@ title: "NVIDIA CUDA Toolkit"
 date: 2023-11-27
 tags: [NVIDIA, GPU, CUDA, ]
 typora-root-url: ../
+toc: true
 ---
 
 CUDA(Compute Unified Device Architecture)는 여러분들도 잘 아시다시피, NVIDIA의 GPU를 활용해 병렬 계산을 수행할 수 있도록 해주는 프로그래밍 플랫폼을 말한다. 이에 우리는 최신 NVIDIA CUDA Toolkit 12.8에 대해 좀 더 알아보자.

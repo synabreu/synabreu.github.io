@@ -3,6 +3,7 @@ title: "TensorRT-LLM을 사용하는 LLaMa3 모델로 추론하기"
 date: 2024-04-05
 tags: [엔비디아, NVIDIA, TensorRT, TensorRT-LLM, Transformer, 트랜스포머, Multi-GPU, 추론, Inference, 텐서 병렬, Tensor Parallelism, 스트리밍 디코딩]
 typora-root-url: ../
+toc: true
 ---
 
 NVIDIA의 [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)을 사용하여 **LLaMA 3 모델**을 추론하는 **Python 예제 코드**를 작성해 보자! 이 코드는 TensorRT-LLM Python API 기반이며, LLM 구조에 최적화된 방식으로 작성했다. 

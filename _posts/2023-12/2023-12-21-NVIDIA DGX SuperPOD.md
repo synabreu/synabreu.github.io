@@ -3,6 +3,7 @@ title: "NVIDIA DGX SuperPOD"
 date: 2023-12-20
 tags: [NVIDIA, GPU, RDMA, DGX, SuperPod, InfiniBand, Spine-Leaf, NDR, NCCL]
 typora-root-url: ../
+toc: true
 ---
 
 NVIDIA DGX SuperPOD는 DGX POD의 확장형 버전으로, 대규모 LLM 훈련, 시뮬레이션, HPC, GenAI 등에 사용되는 엔터프라이즈급 AI 슈퍼컴퓨터 아키텍처이다. 따라서,  수십~수백 대의 **DGX 시스템**을 **초고속 스토리지**, **InfiniBand 기반 스파인-리프 네트워크**, **NVIDIA AI 소프트웨어 스택**과 함께 구성한 **대규모 AI 슈퍼컴퓨팅 플랫폼**으로 구성한다.

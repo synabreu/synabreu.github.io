@@ -3,6 +3,7 @@ title: "Determined AI는 무엇인가"
 date: 2023-12-28
 tags: [NVIDIA, GPU, CUDA, NVLink, NVSwitch, GraceHopper, NVLink Switch, NVIDIA Blackwell]
 typora-root-url: ../
+toc: true
 ---
 
 지난번 HPE MLDE에 대해 간략하게 알아보았다. 사실 HPE MLDE의 핵심 엔진은 바로 Determined AI이다. HPE는 2021년 AI 스타트업 Determined AI를 인수하면서, 이 플랫폼을 MLDE의 기반 기술로 삼았다. 따라서 MLDE의 내부 아키텍처는 사실상 Determined AI의 아키텍처와 거의 동일하다.

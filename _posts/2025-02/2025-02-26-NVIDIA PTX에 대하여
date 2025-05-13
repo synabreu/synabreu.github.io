@@ -3,6 +3,7 @@ title: "NVIDIA PTX에 대하여"
 date: 2025-02-25
 tags: [DeepSeek, MultiGPU, Collective Communication, NVIDIA NCCL, GPU, PTX]
 typora-root-url: ../
+toc: true
 ---
 
 DeepSeek를 분석하다가 DeepSeek 이 훈련 파이프라인을 하는 단계, 즉, 사전훈련에서 추론(reasoning)까지, SFT로 콜드 스타팅히는 것과 RL 단계로 나누어져 실행할 때 PTX로 학습시켰다고 하는 글을 보고 도대체 NVIDIA PTX(Parallel Thread Execution)가 무엇인지 궁금해서 조사해서 정리해본다.

@@ -3,6 +3,7 @@ title: "NVIDIA DGX POD"
 date: 2023-12-20
 tags: [NVIDIA, GPU, RDMA, DGX, InfiniBand, Spine-Leaf, NDR, NCCL]
 typora-root-url: ../
+toc: true
 ---
 
 NVIDIA DGX POD는 여러 대의 DGX 시스템 (A100 또는 H100) 을 고속 스토리지, 스파인-리프 네트워크, 그리고 AI 소프트웨어 스택과 함께 구성한 AI 슈퍼컴퓨팅 인프라 유닛을 말한다.  실제 구성 컴포넌트는 DGX 서버인 Computer Layer, 고속 네트워크인 Fabric Layer, 고속 스토리지인 Storage Layer, 소프트웨어 스택 등으로 나뉜다. 

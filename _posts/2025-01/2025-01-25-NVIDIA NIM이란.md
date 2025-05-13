@@ -3,6 +3,7 @@ title: "NVIDIA NIM(2): NVIDIA NIM 이란?"
 date: 2025-01-25
 tags: [NVIDIA, NIM,GPU, CUDA, microservice, inference, AWS, Azure, GCP, Kubernetes, k8s, NVIDIA Cloud, NVIDIA AI Enterprise, 쿠버네티스, 마이크로서비스, 추론]
 typora-root-url: ../
+toc: true
 ---
 
 NVIDIA NIM 이란 풀어서 적으면 **'NVIDIA Inference Microservice'** 이다. 한마디로 말해서, 온-프레미스, 데이터 센터나 퍼블릭 클라우드에서 파운데이션 모델의 배포를 가속화하고 데이터를 안전하게 유지할 수 있도록 지원하는 사용하기 쉬운 마이크로서비스 집합체로 구성되어 있다.

@@ -3,6 +3,7 @@ title: "NVLink 와 NVLInk 스위치"
 date: 2023-12-04
 tags: [NVIDIA, GPU, CUDA, NVLink, NVSwitch, GraceHopper, NVLink Switch, NVIDIA Blackwell]
 typora-root-url: ../
+toc: true
 ---
 
 NVLink 와 NVLink Switch 는 대규모 데이터셋을 모델에 더 빠르게 공급하고, GPU 간 데이터를 신속하게 교환하기 위한 고속 멀티-GPU 통신의 기본 구성 요소이다. 

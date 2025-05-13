@@ -3,6 +3,7 @@ title: "NVIDIA DGX"
 date: 2023-12-19
 tags: [NVIDIA, GPU, RDMA, DGX, InfiniBand, Spine-Leaf, NDR, NCCL]
 typora-root-url: ../
+toc: true
 ---
 
 
