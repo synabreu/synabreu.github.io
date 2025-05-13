@@ -325,5 +325,7 @@ defaults:
       share: true
       css: "assets/css/custom.css"
       show_date: true
+            
+date_format: "%Y년 %m월 %d일"
     
 future: true
