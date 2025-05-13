@@ -4,6 +4,7 @@ date: 2025-05-12
 categories: Google
 tags: [구글 클라우드, AI Hypercomputer, Google Cloud Next 25, vLLM, MLPerf, JetStream, MaxStream, MaxText, JAX, 분리형 서빙, disaggregated serving, MaxDiffusion]
 typora-root-url: ../
+toc: true
 ---
 
 지난 구글 클라우드 넥스트25에서 소개한 AI Hypercomputer가 이번에는 구글 클라우드 TPU와 더불어 추론에 대해 업데이트를 한 블로그 글이 올라와서 이를 요약해 보았다.
