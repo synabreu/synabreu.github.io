@@ -6,8 +6,6 @@ typora-root-url: ../
 toc: true
 ---
 
-지난 구글 클라우드 넥스트 25에서 많은 개발자들이 
-
 챗봇과 가상 비서의 구동, 문서 분석 자동화, 고객 참여 향상 등 다양한 분야에서 생성형 AI와 오픈 소스가 산업 전반에 걸쳐 커다란 영향을 끼치고 있다고 생각한다. 예를 들어, GPT-4와 같은 대형 언어 모델(LLM)은 자연어 처리, 대화형 AI, 콘텐츠 생성 분야에서 인공지능의 가능성을 혁신적으로 넓혀 놓았다. 
 
 그러나 LLM이 지닌 막대한 잠재력에도 불구하고, 이를 실제 환경에 효과적으로 배포하는 일은 독특한 도전 과제를 동반한다. 이러한 모델은 막대한 연산 자원, 원활한 확장성, 그리고 효율적인 트래픽 관리가 요구되며, 이는 프로덕션 환경에서 특히 중요하다.
@@ -288,9 +286,4 @@ curl -X POST http://<external-ip>/generate \
   * **A/B 테스트:** 두 가지 버전(A와 B)을 사용자 그룹에 나눠 제공해 어떤 버전이 더 나은 성과를 내는지 비교하는 실험 방식
   * **Knative 등 서버리스 컴포넌트 통합:** Kubernetes 위에서 서버리스 애플리케이션을 손쉽게 배포하고 자동 확장할 수 있게 해주는 플랫폼
 
-
-
-
-
-https://thenewstack.io/build-scalable-llm-apps-with-kubernetes-a-step-by-step-guide/?utm_campaign=trueanthem&utm_medium=social&utm_source=facebook&fbclid=IwY2xjawKOkKBleHRuA2FlbQIxMQBicmlkETFmOEtlWmVoek1tbEc4TWwyAR6BybvIOPMJibaa0QF0e0JW9ZvvhRkorkpfnyHYwiTtXAAIW_P9PCbeO-j_RQ_aem_vNKmIROcHdCBHCf0N4Nhug
 
