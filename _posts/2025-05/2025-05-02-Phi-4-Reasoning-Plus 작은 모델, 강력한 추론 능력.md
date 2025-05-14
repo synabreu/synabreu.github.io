@@ -4,6 +4,7 @@ date: 2025-05-02
 tags: [마이크로소프트, Microsoft, Phi4, Phi-4 Reasoning Plus, Chain-of-Thought, 오픈AI]
 typora-root-url: ../
 toc: true
+categories: [Microsoft, Phi-4]
 ---
 
 
