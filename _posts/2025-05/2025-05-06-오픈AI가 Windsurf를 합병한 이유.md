@@ -4,6 +4,7 @@ date: 2025-05-06
 tags: [오픈AI, OpenAI, 윈드LLM, 쿠버네티스, Kubernetes]
 typora-root-url: ../
 toc: true
+categories: [OpenAI, Windsurf]
 ---
 
 오늘 저의 페이스북에 한 분이 그동안 소문만 무성하던 오픈AI가 Windsurf를 30억 달러에 인수한다는 소식을 게재했다. 그래서 저는 왜 오픈AI가 Windsurf 를 인수했는 지 개인적인 생각을 남기고자 한다.
