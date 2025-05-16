@@ -4,9 +4,8 @@ date: 2023-12-22
 tags: [NVIDIA, GPU, RDMA, DGX, SuperPod, InfiniBand, NCCL, BaseCommand]
 typora-root-url: ../
 toc: true
+categories: [NVIDIA, DGX, GPU, NVLink, CUDA, NCCL, InfiniBand, Base Commnad Platform, Base Command Manager]
 ---
-
-
 
 **NVIDIA Base Command Platform (BCP)**는 NVIDIA가 제공하는 **클라우드 기반의 AI 인프라 운영 및 워크로드 관리 플랫폼**이다. DGX POD, DGX SuperPOD, 또는 기타 GPU 클러스터를 **다중 사용자 환경에서 효율적으로 운영**하고, **모델 훈련 워크플로우를 자동화**할 수 있도록 설계되었다.
 

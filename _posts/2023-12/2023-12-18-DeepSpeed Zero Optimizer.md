@@ -4,6 +4,7 @@ date: 2023-12-18
 tags: [DeepSpeed, 딥스피드, Microsoft, 마이크로소프트, PyTorch, ZeRO optimizer, Mixed Precision, Model Parallelism, Pipeline Parallelism, DeepSpeed-Inference]
 typora-root-url: ../
 toc: true
+categories: [Microsoft, PyTorch, DeepSpeed, GPU, Distributed Training, Transformer]
 ---
 
 **ZeRO (Zero Redundancy Optimizer)**는 DeepSpeed 의 핵심 기술로서, **초대규모 모델 학습을 GPU 여러 개로 확장할 수 있게 해주는 기술**이다. 기존의 DataParallel 방식은 각 GPU가 전체 모델과 옵티마이저 상태를 복사해서 쓰기 때문에 메모리 낭비가 심하다. 따라서,  ZeRO는 이 상태 정보를 분산 저장하고 통신을 최소화하여 **메모리 효율성**과 **확장성**을 크게 향상시킨다. 

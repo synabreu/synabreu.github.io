@@ -4,9 +4,8 @@ date: 2023-12-17
 tags: [DeepSpeed, 딥스피드, Microsoft, 마이크로소프트, PyTorch, ZeRO optimizer, Mixed Precision, Model Parallelism, Pipeline Parallelism, DeepSpeed-Inference]
 typora-root-url: ../
 toc: true
+categories: [Microsoft, PyTorch, DeepSpeed, GPU, Distributed Training, Transformer]
 ---
-
-
 
 DeepSpeed는 **Microsoft에서 개발한 딥러닝 최적화 라이브러리**로, 특히 **대규모 모델 훈련을 효율적이고 확장성 있게 수행**할 수 있도록 설계된 도구이다. DeepSpeed 에 대해 알아보고, 테스트한 코드를 정리해 보도록 하겠다.
 

@@ -1,12 +1,11 @@
 ---
 title: "NVIDIA DGX"
 date: 2023-12-19
-tags: [NVIDIA, GPU, RDMA, DGX, InfiniBand, Spine-Leaf, NDR, NCCL]
+tags: [NVIDIA, GPU, RDMA, DGX, InfiniBand, Spine-Leaf, NDR, NCCL, A100, H100, MultiGPU]
 typora-root-url: ../
 toc: true
+categories: [NVIDIA, DGX, GPU, NVLink, CUDA, NCCL]
 ---
-
-
 
 **NVIDIA DGX는 단일 서버**으로써 고성능 AI 모델 훈련과 추론을 위한 **All-in-One GPU 컴퓨팅 시스템**이다. 기업이나 연구기관이 **멀티-GPU 학습 환경**을 손쉽게 구축할 수 있도록 NVIDIA가 직접 설계한 서버 제품군이며, 대표적으로는 **DGX A100**과 **DGX H100** 모델이 있다.
 
