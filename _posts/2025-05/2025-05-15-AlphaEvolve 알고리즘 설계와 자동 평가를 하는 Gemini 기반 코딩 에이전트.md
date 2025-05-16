@@ -1,6 +1,6 @@
 ---
 title: "AlphaEvolve: 알고리즘 설계와 자동 평가를 하는 Gemini 기반 코딩 에이전트"
-date: 2025-05-12
+date: 2025-05-15
 categories: [Google, DeepMind, Gemini]
 tags: [구글 클라우드, Gemini, AlphaEvolve, Paper, Coding Agent, LLM, Borg, TPU]
 typora-root-url: ../
