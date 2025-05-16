@@ -44,9 +44,7 @@ toc: true
   * Gemini 아키텍처에서 중요한 행렬 곱셈 연산 속도를 23% 향상시켜 Gemini 훈련 시간을 1% 단축했음
   * FlashAttention 커널 구현에서 최대 32.5%의 속도 향상을 달성했음
 
-[동영상 - ]: https://deepmind.google/api/blob/website/media/Code-Evolution-Illustration_compressed.mp4
-
-
+[코드 평가](https://deepmind.google/api/blob/website/media/Code-Evolution-Illustration_compressed.mp4)
 
 * **수학 및 알고리즘 발견의 새로운 개척**
   * 행렬 곱셈과 같은 복잡한 수학 문제에 대한 새로운 접근 방식을 제안함
@@ -68,6 +66,13 @@ toc: true
 
 * 대규모 언어 모델의 창의성과 자동화된 평가의 정확성을 결합하여 알고리즘 발견 및 최적화의 새로운 지평을 열고 있음
 * Google 내부 시스템에 대한 즉각적이고 측정 가능한 영향을 넘어서, 수학 및 컴퓨터 과학의 근본적인 문제에 대한 진전을 이루고 있으며, 미래에는 다양한 과학 및 산업 분야에서 혁신적인 도구가 될 잠재력을 보여주고 있음
+
+
+
+## 6. **참고 자료**
+
+* 블로그: [AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms](https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/)
+
 * 논문: [AlphaEvolve: A coding agent for scientific and algorithmic discovery](https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/AlphaEvolve.pdf)
 * 구글 코랩: [AlphaEvolve's mathematical results](https://colab.research.google.com/github/google-deepmind/alphaevolve_results/blob/master/mathematical_results.ipynb)
 
