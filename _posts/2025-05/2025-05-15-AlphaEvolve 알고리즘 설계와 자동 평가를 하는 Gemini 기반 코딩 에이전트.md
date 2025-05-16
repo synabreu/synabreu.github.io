@@ -25,8 +25,6 @@ toc: true
 
 ## 2. **자동화된 평가 및 검증**
 
-
-
 * 제안된 프로그램은 자동화된 평가 메트릭을 사용하여 검증, 실행 및 점수가 매김
 
 * 이러한 메트릭은 솔루션의 정확성과 품질에 대한 객관적이고 정량화 가능한 평가를 제공함
@@ -44,19 +42,12 @@ toc: true
   * Gemini 아키텍처에서 중요한 행렬 곱셈 연산 속도를 23% 향상시켜 Gemini 훈련 시간을 1% 단축했음
   * FlashAttention 커널 구현에서 최대 32.5%의 속도 향상을 달성했음
 
-
-
-[코드 평가 링크]: https://deepmind.google/api/blob/website/media/Code-Evolution-Illustration_compressed.mp4
-
-
-
-[코드 평가](https://deepmind.google/api/blob/website/media/Code-Evolution-Illustration_compressed.mp4)
-
 * **수학 및 알고리즘 발견의 새로운 개척**
   * 행렬 곱셈과 같은 복잡한 수학 문제에 대한 새로운 접근 방식을 제안함
   * 4x4 복소수 행렬을 48번의 스칼라 곱셈으로 곱하는 알고리즘을 발견하여 1969년 Strassen의 알고리즘을 개선했음
   * 수학 분석, 기하학, 조합론 및 정수론의 50개 이상의 미해결 문제에 적용되어 약 75%의 경우 최첨단 솔루션을 재발견하고 20%의 경우 기존 최적 솔루션을 개선했음
   * 1차원에서 593개의 외부 구체 구성을 발견하여 키싱 넘버 문제에 대한 새로운 하한을 설정했음
+  * [더 빠른 행렬 곱셈 알고리즘을 발견하기 위해 제안한 변경 사항 목록](https://deepmind.google/api/blob/website/media/Code-Evolution-Illustration_compressed.mp4)
 
 
 
