@@ -4,6 +4,7 @@ date: 2023-11-24
 tags: [NVIDIA, GPU, RDMA, Infiniband, RoCE, 인피니밴드]
 typora-root-url: ../
 toc: true
+categories: [NVIDIA, Accelerated Computing, HPC, RDMA, GPU, RoCE]
 ---
 
 HPC&AI 고성능 네트워킹에서 NVIDIA의 인피니티밴드(Infiniband)과 RoCE(RDMA over Converged Ethernet) 기술은 양대 산맥으로 흔히 사용한다.

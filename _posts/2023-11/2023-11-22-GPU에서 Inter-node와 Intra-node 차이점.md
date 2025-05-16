@@ -4,5 +4,6 @@ date: 2023-11-23
 tags: [NVIDIA, GPU, RDMA, 지연, Latency, MPI, NCCL, RoCE, InfiniBand,A100,DeepSpeed, DeepSpeed Zero]
 typora-root-url: ../
 toc: true
+categories: [NVIDIA, Accelerated Computing, HPC, RDMA, GPU, RoCE]
 ---
 
