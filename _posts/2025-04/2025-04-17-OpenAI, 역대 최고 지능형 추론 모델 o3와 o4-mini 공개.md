@@ -4,6 +4,7 @@ date: 2025-04-17
 tags: [오픈AI, OpenAI, 챗GPT, ChatGPT, 멀티모달, SWE-Bench, Claude 3 Sonnet, o3, o4-mini]
 typora-root-url: ../
 toc: true
+categories: [OpenAI, GPT o3, GPT o4-mini]
 ---
 
 OpenAI가 지금까지 등장한 모델 중 가장 지능적인 추론 모델 o3와 경량 고효율 모델 o4-mini를 새롭게 공개했다. 이번 모델들은 단순한 언어 처리 능력을 넘어서, 도구 사용 능력과 시각적 추론 기능까지 통합하며 AI의 새로운 진화를 보여주고 있다. 요약하자면 다음과 같다. 

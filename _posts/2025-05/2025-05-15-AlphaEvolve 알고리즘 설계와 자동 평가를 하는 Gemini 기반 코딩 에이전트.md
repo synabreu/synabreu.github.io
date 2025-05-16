@@ -47,7 +47,7 @@ toc: true
   * 4x4 복소수 행렬을 48번의 스칼라 곱셈으로 곱하는 알고리즘을 발견하여 1969년 Strassen의 알고리즘을 개선했음
   * 수학 분석, 기하학, 조합론 및 정수론의 50개 이상의 미해결 문제에 적용되어 약 75%의 경우 최첨단 솔루션을 재발견하고 20%의 경우 기존 최적 솔루션을 개선했음
   * 1차원에서 593개의 외부 구체 구성을 발견하여 키싱 넘버 문제에 대한 새로운 하한을 설정했음
-  * [더 빠른 행렬 곱셈 알고리즘을 발견하기 위해 제안한 변경 사항 목록](https://deepmind.google/api/blob/website/media/Code-Evolution-Illustration_compressed.mp4)
+  * [데모 동영상 - 빠른 행렬 곱셈 알고리즘을 발견하기 위해 제안한 변경 사항](https://deepmind.google/api/blob/website/media/Code-Evolution-Illustration_compressed.mp4)
 
 
 

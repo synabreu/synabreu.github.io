@@ -4,6 +4,7 @@ date: 2025-01-26
 tags: [NVIDIA, NIM,GPU, CUDA, microservice, NVIDIA API, meta, llama, 쿠버네티스, 마이크로서비스, 추론, 메타, 라마]
 typora-root-url: ../
 toc: true
+categories: [NVIDIA, NIM]
 ---
 
 NVIDIA NIM은 NVIDIA API 카탈로그에서 마우스 몇 번만 클릭하면 GPU 기반 LLM을 테스트할 수 있는 NVIDIA의 클라우드 API 서비스이다. 현재  LLaMA, Mixtral, Gemma, DeepSeek 등 다양한 최신 모델 사용 가능하며, 개발자 친화적인 인터페이스와 무료 크레딧 제공을 제공한다. 그러면, NIM 온라인 웹사이트에서 여러분이 직접 따라해 볼 수 있도록 단계별로 설명하겠다. 

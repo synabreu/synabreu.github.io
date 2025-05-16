@@ -1,5 +1,5 @@
 ---
-title: "Phi-4-Reasoning-Plus: 작은 모델, 강력한 추론 능력"
+title: "Phi-4 Reasoning Plus: 작은 모델, 강력한 추론 능력"
 date: 2025-05-02
 tags: [마이크로소프트, Microsoft, Phi4, Phi-4 Reasoning Plus, Chain-of-Thought, 오픈AI]
 typora-root-url: ../

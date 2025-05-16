@@ -4,6 +4,7 @@ date: 2025-04-15
 tags: [구글, 구글 클라우드, LLM, 쿠버네티스, Kubernetes, 마이크로서비스, Microservice, 도커, Docker, 파이썬, Python, GCP, LLMOps]
 typora-root-url: ../
 toc: true
+categories: [Kubernetes]
 ---
 
 챗봇과 가상 비서의 구동, 문서 분석 자동화, 고객 참여 향상 등 다양한 분야에서 생성형 AI와 오픈 소스가 산업 전반에 걸쳐 커다란 영향을 끼치고 있다고 생각한다. 예를 들어, GPT-4와 같은 대형 언어 모델(LLM)은 자연어 처리, 대화형 AI, 콘텐츠 생성 분야에서 인공지능의 가능성을 혁신적으로 넓혀 놓았다. 
@@ -285,5 +286,4 @@ curl -X POST http://<external-ip>/generate \
   * **카나리 배포(Canary Deployment):** 새 버전을 전체에 적용하기 전에 소수의 사용자에게 먼저 배포하여 안정성을 검증하는 방식
   * **A/B 테스트:** 두 가지 버전(A와 B)을 사용자 그룹에 나눠 제공해 어떤 버전이 더 나은 성과를 내는지 비교하는 실험 방식
   * **Knative 등 서버리스 컴포넌트 통합:** Kubernetes 위에서 서버리스 애플리케이션을 손쉽게 배포하고 자동 확장할 수 있게 해주는 플랫폼
-
 

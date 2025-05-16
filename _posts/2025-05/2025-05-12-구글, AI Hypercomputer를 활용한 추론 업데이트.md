@@ -1,7 +1,7 @@
 ---
 title: "구글, AI Hypercomputer의 추론 업데이트"
 date: 2025-05-12
-categories: Google
+categories: [Google, AI Hypercomputer]
 tags: [구글 클라우드, AI Hypercomputer, Google Cloud Next 25, vLLM, MLPerf, JetStream, MaxStream, MaxText, JAX, 분리형 서빙, disaggregated serving, MaxDiffusion]
 typora-root-url: ../
 toc: true
