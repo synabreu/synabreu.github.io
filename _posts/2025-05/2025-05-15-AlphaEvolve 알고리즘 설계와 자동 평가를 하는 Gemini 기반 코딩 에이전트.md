@@ -2,7 +2,7 @@
 title: "AlphaEvolve: 알고리즘 설계와 자동 평가를 하는 Gemini 기반 코딩 에이전트"
 date: 2025-05-15
 categories: [Google, DeepMind, Gemini]
-tags: [구글 클라우드, Gemini, AlphaEvolve, Paper, Coding Agent, LLM, Borg, TPU]
+tags: [구글 클라우드, Gemini, AlphaEvolve, Paper, Coding Agent, LLM, Borg, TPU, Gemini Flash, Gemini Pro]
 typora-root-url: ../
 toc: true
 ---
@@ -43,6 +43,12 @@ toc: true
 * **AI 훈련 및 추론 향상:** 
   * Gemini 아키텍처에서 중요한 행렬 곱셈 연산 속도를 23% 향상시켜 Gemini 훈련 시간을 1% 단축했음
   * FlashAttention 커널 구현에서 최대 32.5%의 속도 향상을 달성했음
+
+
+
+[코드 평가 링크]: https://deepmind.google/api/blob/website/media/Code-Evolution-Illustration_compressed.mp4
+
+
 
 [코드 평가](https://deepmind.google/api/blob/website/media/Code-Evolution-Illustration_compressed.mp4)
 
