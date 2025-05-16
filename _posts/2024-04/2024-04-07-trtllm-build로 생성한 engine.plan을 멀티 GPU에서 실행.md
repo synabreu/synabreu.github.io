@@ -4,6 +4,7 @@ date: 2024-04-07
 tags: [엔비디아, NVIDIA, TensorRT, TensorRT-LLM, Transformer, 트랜스포머, Multi-GPU, 추론, Inference, 텐서 병렬, Tensor Parallelism, 스트리밍 디코딩]
 typora-root-url: ../
 toc: true
+categories: [NVIDIA, TensorRT-LLM, Tensor Parallelism]
 ---
 
 
@@ -12,7 +13,7 @@ toc: true
 
 
 
-## 1. Tensor Parallel용 `engine.plan` 생성
+## 1. Tensor Parallelism용 `engine.plan` 생성
 
 ```bash
 trtllm-build \

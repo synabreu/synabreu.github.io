@@ -4,6 +4,7 @@ date: 2024-04-03
 tags: [메타, llama, FSDP, PyTorch, ZeRO optimizer, Mixed Precision, Model Parallelism, Pipeline Parallelism, DeepSpeed-Inference, DDP, Distributed Data Parallel]
 typora-root-url: ../
 toc: true
+categories: [NVIDIA, Deep Learning, TensorRT]
 ---
 
 

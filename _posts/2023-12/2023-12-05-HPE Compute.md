@@ -4,6 +4,7 @@ date: 2023-12-05
 tags: [HPE, Compute, NVIDIA, GPU, HPC, AI, CUDA, NCCL, HPE ProLiant, HPE Apollo, Cray XD]
 typora-root-url: ../
 toc: true
+categories: [HPE, HPE Compute, Accelerated Computing, HPC, HPE Cray, HPE Apollo, HPE Greenlake, NVIDIA, GPU]
 ---
 
 
