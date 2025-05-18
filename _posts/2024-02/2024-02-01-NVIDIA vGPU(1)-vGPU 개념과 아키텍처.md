@@ -1,5 +1,5 @@
 ---
-title: "vGPU 개념과 아키텍처"
+title: "NVIDIA vGPU(1)-vGPU 개념과 아키텍처"
 date: 2024-02-01
 tags: [NVIDIA, GPU, RDMA, vGPU, HyperVisor]
 typora-root-url: ../
@@ -9,6 +9,7 @@ categories: [NVIDIA, Accelerated Computing, HPC, GPU, vGPU]
 ---
 
 NVIDIA의 **vGPU (Virtual GPU)**는 물리적인 GPU 리소스를 여러 가상 머신(VM)이나 컨테이너에서 동시에 사용할 수 있도록 해주는 **가상화 기술**을 말한다. NVIDIA의 **vGPU 소프트웨어 스택**을 통해 구현되며, 주로 가상 데스크톱 인프라(VDI), AI, HPC, CAD/CAM, 3D 그래픽, Deep Learning 워크로드 등에서 활용하는 데 사용한다.
+
 
 
 ## 1. vGPU 개념
@@ -29,6 +30,8 @@ NVIDIA의 **vGPU (Virtual GPU)**는 물리적인 GPU 리소스를 여러 가상 
   * **가상 머신 (VM)**: 각 VM은 NVIDIA 드라이버를 설치하여 vGPU를 통해 GPU 리소스를 활용
   * **vGPU 프로파일**: 각 vGPU는 메모리 크기, 성능 수준, CUDA 지원 여부 등을 정의하는 프로파일을 가짐
 
+
+
 ## 2. vGPU 아키텍처 구성도
 
 ![그림 2 - vGPU 아키텍처](/../images/2023-11/vGPU-01.png)
@@ -46,6 +49,8 @@ NVIDIA의 **vGPU (Virtual GPU)**는 물리적인 GPU 리소스를 여러 가상 
   * 각 VM은 **vGPU 프로파일에 따라 GPU 리소스를 분할해 사용**
   * NVIDIA 게스트 드라이버 설치 필요
   * CUDA, OpenGL, DirectX, TensorRT, PyTorch, TensorFlow 등 사용 가능
+
+
 
 ## 3. vGPU 프로파일
 
@@ -65,6 +70,8 @@ NVIDIA의 **vGPU (Virtual GPU)**는 물리적인 GPU 리소스를 여러 가상 
   | `L40-1Q`           | 1GB         | Virtual Workstation (Quadro) |
   | `L40-16Q`          | 16GB        | 고급 그래픽 처리용           |
 
+
+
 ## 4. vGPU 사용 시나리오
 
 | 용도                   | 설명                                          |
@@ -74,6 +81,8 @@ NVIDIA의 **vGPU (Virtual GPU)**는 물리적인 GPU 리소스를 여러 가상 
 | AI Inference           | 추론 워크로드를 병렬로 처리                   |
 | HPC Simulation         | 수치해석 또는 병렬 시뮬레이션 처리            |
 | 클라우드 게임 스트리밍 | GPU 리소스를 플레이어 단위로 분리             |
+
+
 
 ## 5. vGPU 장점 및 고려사항
 
@@ -85,6 +94,8 @@ NVIDIA의 **vGPU (Virtual GPU)**는 물리적인 GPU 리소스를 여러 가상 
   * **라이선스 필요**: vGPU 기능은 **NVIDIA vGPU 라이선스** 필요
   * **성능 분할**에 따른 **성능 저하 가능성**
   * 일부 고성능 워크로드는 **전용 GPU가 더 적합**
+
+
 
 ## 6. 관련 제품군
 
