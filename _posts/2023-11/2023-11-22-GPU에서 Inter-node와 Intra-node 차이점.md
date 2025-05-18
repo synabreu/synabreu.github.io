@@ -53,16 +53,20 @@ NCCL(NVIDIA Collective Communications Library)에서 **intra-node**와 **inter-n
 
 * 서로 다른 물리적 노드(서버, 머신)에 있는 GPU 또는 프로세스 간의 통신
 
-* 예시
+* 예시 
+
+  * Node 0: GPU0, GPU1
+
+  * Node 1: GPU2, GPU3
 
   * **Intra-node**:
 
     * GPU0 ↔ GPU1 (같은 머신) → intra-node
-
+  
   * **Inter-node (또는 Cross-node)**:
 
-    * Node 0: GPU0, GPU1
-    * Node 1: GPU2, GPU3
+    * 
        → GPU1이 GPU2와 통신하는 경우 → **inter-node / cross-node**
-
+  
     
+  
