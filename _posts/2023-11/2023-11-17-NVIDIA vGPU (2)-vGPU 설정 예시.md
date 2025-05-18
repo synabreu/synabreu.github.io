@@ -1,6 +1,6 @@
 ---
 title: "NVIDIA vGPU (1) - vGPU 설정 예시"
-date: 2023-11-19
+date: 2023-11-17
 tags: [NVIDIA, GPU, RDMA, vGPU, HyperVisor]
 typora-root-url: ../
 toc: true

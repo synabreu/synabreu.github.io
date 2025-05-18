@@ -1,6 +1,6 @@
 ---
 title: "NVIDIA vGPU (1) - vGPU 개념과 아키텍처"
-date: 2023-11-17
+date: 2023-11-16
 tags: [NVIDIA, GPU, RDMA, vGPU, HyperVisor]
 typora-root-url: ../
 toc: true
