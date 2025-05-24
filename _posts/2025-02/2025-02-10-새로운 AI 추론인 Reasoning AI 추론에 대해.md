@@ -4,6 +4,7 @@ date: 2025-02-10
 tags: [NVIDIA, 엔비디아, Inference, Reasoning AI]
 typora-root-url: ../
 toc: true
+category: [NVIDIA]
 ---
 
 
