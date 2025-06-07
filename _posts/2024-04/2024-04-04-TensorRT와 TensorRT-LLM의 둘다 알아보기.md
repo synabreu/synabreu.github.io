@@ -4,12 +4,12 @@ date: 2024-04-04
 tags: [엔비디아, NVIDIA, TensorRT, TensorRT-LLM, Transformer, 트랜스포머]
 typora-root-url: ../
 toc: true
-categories: [NVIDIA, TensorRT, TensorRT-LLM]
+categories: [NVIDIA, TensorRT]
 ---
 
 
 
-어제 알아본 TensorRT와 TensorRT-LLM**은 **어떠한 차이점이 있을까? TensorRT는 모든 모델에 적용 가능한 범용 스포츠카 엔진이라면, TensorRT-LLM은 GPT·LLaMA만을 위한 F1 머신 엔진이라고 할 수 있다.  Transformer 기반 LLM에 최적화된 기능과 성능을 원한다면 TensorRT-LLM이 압도적이다. 
+어제 알아본 TensorRT와 TensorRT-LLM은 어떠한 차이점이 있을까? TensorRT는 모든 모델에 적용 가능한 범용 스포츠카 엔진이라면, TensorRT-LLM은 GPT·LLaMA만을 위한 F1 머신 엔진이라고 할 수 있다.  Transformer 기반 LLM에 최적화된 기능과 성능을 원한다면 TensorRT-LLM이 압도적이다. 
 
 둘 다 NVIDIA에서 만든 딥러닝 추론 최적화 엔진이지만, 용도와 최적화 대상이 다르다. 이번에는 TensorRT 와 TensorRT-LLM의 차이에 대해 알아보고, TensorRT-LLM에 대해 좀 더 상세히 알아보자!
 

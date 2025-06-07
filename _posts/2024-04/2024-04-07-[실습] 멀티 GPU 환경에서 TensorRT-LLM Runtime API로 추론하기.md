@@ -4,7 +4,7 @@ date: 2024-04-07
 tags: [엔비디아, NVIDIA, TensorRT, TensorRT-LLM, Transformer, 트랜스포머, Multi-GPU, 추론, Inference, 텐서 병렬, Tensor Parallelism, 스트리밍 디코딩]
 typora-root-url: ../
 toc: true
-categories: [NVIDIA]
+categories: [NVIDIA, TensorRT]
 ---
 
 계속해서 TensorRT-LLM에 대해 알아보고 있는 데, trtllm-build로 생성한  ` engine.plan `을 멀티 GPU에서 병렬로 실행하는 방법에 대해 좀 더 알아보자! 참고로 이 방법은 NVIDIA TensorRT-LLM의 텐서 병렬 (Tensor Parallelism) 기능을 사용해야 한다.

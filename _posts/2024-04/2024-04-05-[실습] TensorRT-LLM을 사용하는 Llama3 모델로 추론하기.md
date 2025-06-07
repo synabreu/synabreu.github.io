@@ -1,5 +1,5 @@
 ---
-title: "TensorRT-LLM을 사용하는 LLaMa3 모델로 추론하기"
+title: "[실습] TensorRT-LLM을 사용하는 LlaMa3 모델로 추론하기"
 date: 2024-04-05
 tags: [엔비디아, NVIDIA, TensorRT, TensorRT-LLM, Transformer, 트랜스포머, Multi-GPU, 추론, Inference, 텐서 병렬, Tensor Parallelism, 스트리밍 디코딩]
 typora-root-url: ../
