@@ -20,6 +20,7 @@ categories: [OpenAI, Python]
 * 4월 16일: 개발자들이 터미널 환경에서 자연어를 사용하여 코드를 작성, 수정 및 실행할 수 있도록 지원하는 경량의 오픈소스 코딩 에이전트인 Codex CLI 정식 발표
 * 6월 3일: Codex가 작업 실행 중 인터넷에 접근할 수 있는 기능이 추가되어, 의존성 설치, 패키지 업그레이드, 외부 리소스를 필요로 하는 테스트 실행.  [기본적으로 비활성화되어 있으며, Plus, Pro 및 Team 사용자들이 특정 환경에서 도메인 및 HTTP 메서드에 대한 세부적인 제어를 통해 활성화할 수 있음.](https://help.openai.com/en/articles/11428266-codex-changelog)
 * 6월 4일: Codex CLI의 Rust 기반 재작성 소식이 발표. 보안성과 성능 향상을 목표로 하며, Node.js 및 TypeScript 기반에서 벗어나 네이티브 Rust 구현으로 전환되었음. 이를 통해 설치 시 의존성이 줄어들고, 메모리 사용량이 감소하며, 실행 속도가 향상될 것으로 기대됨.
+* **주의: Rust 기반의 Codex CLI를 설치해 봤는 데, 아직 버그가 많아서 제대로 동작 안했다. Node.js 용으로 반드시 설치하기 바란다.**
 
 
 
@@ -93,37 +94,7 @@ categories: [OpenAI, Python]
 
   ![그림 13 - Codex 모델](/../images/2025-06/codexcli-13.png)
 
-
-
-## 6. Codex 를 사용한 Hello, World 파이썬 앱
-
-* 그러면 간단히 앱이 어떻게 생성되는 지, Python 언어를 사용해서 Hello, World 문자열을 출력해보자.
-
-   ![그림 14 - codex 명령](/../images/2025-06/codexcli-14.png)
-
-* 이제 codex 가 자동적으로 HelloWorld 폴더에 파이썬 코드를 생성한다. 이때, 여러 개의 코드가 존재한다면 파일 하나 씩 사람이 확인할 수 있는 옵션(y)를 선택할 수 있고, 그렇지 않고 자동적으로 생성하고 싶다면, 옵션(a)를 선택하면 된다. 아래의 그림은 최종 생성 화면이다.
-
-  ![그림 15 - Codex 생성 결과](/../images/2025-06/codexcli-15.png)
-
-* 생성한 Hello, Python 소스를 실행하는 것은 두 가지 방법이 있다. 첫번쩨, 코드가 생성된 디렉토리에서 직접 `python3 hello.py` 명령을 실행하는 방법이 있다.
-
-  ![그림 16 - 명령창에서 Hello World 파이썬앱 실행](/../images/2025-06/codexcli-16.png)
-
-* 두 번째 방법은 codex 창에서 `python3 hello.py` 명령을 하는 경우이다. 
-
-  ![](/../images/2025-06/codexcli-17.png)
-
-* 그러면 codex가 자동적으로 실행하는 데, 간단한 코드일지라도 내부의 처리가 많아서 아래의 그림에서 보는 것 같이 명령 창에서 파이썬 코드를 실행하는 것 보다는 내부적으로 처리하는 것이 많고 시간이 조금 더 오래 걸린다.
-
-   ![그림 18 - 내부 동작](/../images/2025-06/codexcli-18.png)
-
-* 자동적으로 내부 처리가 끝나면, 아래의 그림과 같이 codex의 실행 결과를 확인할 수 있다.
-
-  ![그림 19 - Codex 결과 화면](/../images/2025-06/codexcli-19.png)
-
-
-
-## 7. 참고
+## 6. 참고
 
 * 문서: [Codex in ChatGPT](https://help.openai.com/en/articles/11369540-codex-in-chatgpt)
 
