@@ -4,7 +4,7 @@ date: 2025-06-06
 tags: [오픈AI, OpenAI, CodexCLI, Python, nodejs, ViveCoding, 바이브코딩]
 typora-root-url: ../
 toc: true
-categories: [OpenAI, Python]
+categories: [OpenAI]
 ---
 
 이번 주 오픈AI에서 Codex에 관련 주요 업데이트가 있었다. Codex CLI의 첫 릴리즈는 지난 4월 16일에 이루어졌는 데, 개인적으로 바빠서 정식 릴리즈 기념으로 한번 정리해 보고자 한다. 
@@ -68,7 +68,7 @@ categories: [OpenAI, Python]
 
   ![그림 8 - Create new secret key](/../images/2025-06/codexcli-08.png)
 
-* 명령 창에서  `set OPENAI_API_KEY=<YOUR SECRET KEY>` 설정한다. 이때 <YOUR_SECRET_KEY> 부분에 위에서 복사한 Secret Key 를 그대로 복사하고 실행한다.
+* 명령 창에서  `set OPENAI_API_KEY=<YOUR SECRET KEY>` 설정한다. 이때 <YOUR_SECRET_KEY> 부분에 위에서 복사한 Secret Key 를 그대로 복사하고 실행한다. 맥 사용자는 set 대신 export 를 사용하면 된다.
 
   ![그림 9 - OPENAI API 설정](/../images/2025-06/codexcli-09.png)
 
