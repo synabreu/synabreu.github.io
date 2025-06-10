@@ -7,8 +7,6 @@ toc: true
 categories: [Microsoft, Phi-4]
 ---
 
-
-
 마이크로소프트도 OpenAI 외에 Phi-4 파운데이션 모델도 계속해서 업그레이드 시키고 있다. 이번에 새롭게 업그레이드된 Phi-4 Reasoning Plus는 작은 모델이지만, 강력한 추론 능력을 가진다. Phi-4 Reasoning Plus에 대해 다음과 같이 요약을 해본다.
 
 
