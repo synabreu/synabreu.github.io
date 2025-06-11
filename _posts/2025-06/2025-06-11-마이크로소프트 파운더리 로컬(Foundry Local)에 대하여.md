@@ -1,5 +1,5 @@
 ---
-title: "파운더리 로컬(Foundry Local)에 대하여"
+title: "마이크로소프트 파운더리 로컬(Foundry Local)에 대하여"
 date: 2025-06-11
 tags: [Microsoft, 마이크로소프트, Windows Foundry, Foundry Local, Windows Azure, Azure AI Foundry, AI Agent, Ollama]
 typora-root-url: ../
