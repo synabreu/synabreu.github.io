@@ -1,5 +1,5 @@
 ---
-title: "초거대 언어 모델(LLM)을 Kubernetes로 확장하기"
+title: "[실습] 초거대 언어 모델(LLM)을 Kubernetes로 확장하기"
 date: 2025-04-15
 tags: [구글, 구글 클라우드, LLM, 쿠버네티스, Kubernetes, 마이크로서비스, Microservice, 도커, Docker, 파이썬, Python, GCP, LLMOps]
 typora-root-url: ../
