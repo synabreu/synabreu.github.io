@@ -1,6 +1,6 @@
 ---
 title: "마이크로소프트 파운드리 로컬(Foundry Local)에 대하여"
-date: 2025-06-11
+date: 2025-06-09
 tags: [Microsoft, 마이크로소프트, Windows Foundry, Foundry Local, Windows Azure, Azure AI Foundry, AI Agent, Ollama]
 typora-root-url: ../
 toc: true
