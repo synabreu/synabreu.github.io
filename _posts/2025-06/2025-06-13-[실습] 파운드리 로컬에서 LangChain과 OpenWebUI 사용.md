@@ -100,7 +100,7 @@ categories: [Microsoft, Azure]
 
 
 
-## 2. Open Web UI 설치 및 사용 
+## 2. Open WebUI 설치 및 사용 
 
 * 정의
   * 로컬 또는 클라우드에서 실행되는 오픈소스 기반의 LLM 사용자 인터페이스
@@ -108,10 +108,46 @@ categories: [Microsoft, Azure]
   * 자체 호스팅 가능하며, 프라이버시와 보안에 유리
   * 멀티 사용자 지원, 다중 채팅 세션, 플러그인 기능 등 제공
 
+* 주요 특징
 
+  * Open-source ChatGPT 스타일 웹 UI
+  * **LocalAI**, **Ollama**, **LM Studio** 등과 연동 가능
+  * 자체 호스팅 가능하며, 프라이버시와 보안에 유리
+  * 멀티 사용자 지원, 다중 채팅 세션, 플러그인 기능 등 제공
+  * 웹 브라우저에서 실행되며 직관적인 인터페이스
+  * `Docker`, `pip`, `ollama` 등 다양한 방식으로 설치 가능
+  * 로컬에서 작동하므로 API Key 없이도 모델 실행 가능 (Ollama 등과 연동 시)
 
+* 깃허브 소스: [https://github.com/open-webui/open-webui](https://github.com/open-webui/open-webui)
 
+* Open WebUI 사용하려면, 먼저 open-webui 설치해야 한다.
+
+  ```bash
+  pip install open-webui
+  ```
+
+  ![그림 2 - open webui 설치](/../images/2025-06/foundry-local-13.PNG)
+
+* Open WebUI가 설치완료 하면,  `open-webui servee` 명령어로 open-webui 를 실행할 수 있다.  그러면, 아래의 그림과 같이 `http://localhost:8080/auth?redirect=%2F` 를 자동적으로 실행한다. 그렇지 않으면 수동으로 웹 브라우저를 띄워 웹 주소를 넣어 주면 된다. 
+
+  ![그림 3 - OpenWebUI 초기화면](/../images/2025-06/foundry-local-14.PNG)
+
+* 그런 후, 위의 그림에서 Get started 를 마우스로 클릭하면, Open WebUI 메인으로 동작한다.
+
+  ![그림 4 - OpenWebUI 메인 화면](/../images/2025-06/foundry-local-15.PNG)
+
+*  `Select a model` 를 선택하면,  `Phi-3-mini-4k-instruct-generic-cpu` 모델을 선택한다.
+
+  ![그림5 - 모델 선택](/../images/2025-06/foundry-local-16.PNG)
+
+* 이제 프롬프트 창에서 ,  `what is Foundry Local?` 입력하면 다음과 같은 결과가 나타난다.
+
+  ![그림6 - 프롬프트 실행](/../images/2025-06/foundry-local-17.PNG)
 
 
 
 ## 3. 참고
+
+* 깃허브 소스: foundry_langchain.py
+
+  

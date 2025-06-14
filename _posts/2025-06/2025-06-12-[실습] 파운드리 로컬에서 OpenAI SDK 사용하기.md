@@ -7,7 +7,7 @@ toc: true
 categories: [Microsoft, Azure]
 ---
 
-이제 파운드리 로컬을 사용해서 본격적으로 파이썬 프로그래밍을 한 번 해보자! 내 노트북에서 phi-3-mini-4k 모델을 다운로드했기 때문에 기본적인 OpenAI SDK를 사용해서 모델 추론하는 예제와, Open Web UI와 함께 사용하는 방법, 그리고 LangChain 과 통합하는 방법에 대해 알아보자!
+이제 파운드리 로컬을 사용해서 본격적으로 파이썬 프로그래밍을 한 번 해보자! 내 노트북에서 phi-3-mini-4k 모델을 다운로드했기 때문에 기본적인 OpenAI SDK를 사용해서 모델 추론하는 예와, Stream Response 과 Requests 라이브러리를 사용하는 방법에 대해 정리해 보았다. 
 
 
 
@@ -252,7 +252,6 @@ categories: [Microsoft, Azure]
 ## 4. 예제 소스 코드 
 
 * 깃허브 예제 소스 코드
-
 
 
 
