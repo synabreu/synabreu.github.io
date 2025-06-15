@@ -1,6 +1,6 @@
 ---
 title: "[실습] 파운드리 로컬에서 LangChain과 OpenWebUI 사용"
-date: 2025-06-12
+date: 2025-06-13
 tags: [Microsoft, 마이크로소프트, Windows Foundry, Foundry Local, Windows Azure, Azure AI Foundry, AI Agent, Ollama, OpenAI, Visual Studio Code, LangChain, Open Web UI]
 typora-root-url: ../
 toc: true
