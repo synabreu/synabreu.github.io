@@ -64,7 +64,7 @@ categories: [OpenAI]
 
 * 결론 - OpenAI는 가장 진보된 추론 모델의 비용을 대폭 낮춤으로써 생성 AI 분야에서 프리미엄 성능이 빠르게 저렴해지고 있으며, 개발자는 경제적으로 확장 가능한 옵션을 점점 더 많이 확보할 수 있다는 신호 전달
 
-* 참고: https://venturebeat.com/ai/openai-announces-80-price-drop-for-o3-its-most-powerful-reasoning-model/
+* 참고: [https://venturebeat.com/ai/openai-announces-80-price-drop-for-o3-its-most-powerful-reasoning-model/](https://venturebeat.com/ai/openai-announces-80-price-drop-for-o3-its-most-powerful-reasoning-model/)
 
 
 
