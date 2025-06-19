@@ -98,7 +98,7 @@ categories: [Microsoft, Azure]
 
       ![그림18 - 로컬 모델 위치](/../images/2025-06/AIToolkit-18.png)
 
-    * `Phi-3-mini-4k-instruct-generic-cpu` 와 같은경우, `model.onnx.data` 파일이 약 2.65 기가정도 되는 것을 확인할 수 있다. 그 외 token 과 inference 관련 정보들에 관해 포함되어 있다. 
+    * `Phi-4-mini-instruct-cuda-gpu` 와 같은경우, `model.onnx.data` 파일이 약 3.7 기가정도 되는 것을 확인할 수 있다. 그 외 token 과 inference 관련 정보들에 관해 포함되어 있다. 
 
   ![그림19 - 모델 상세 정보](/../images/2025-06/AIToolkit-19.png)
 
@@ -110,7 +110,7 @@ categories: [Microsoft, Azure]
   
     * **Context instructions:** system prompt 에 사용할 내용
   
-      ![그림 20 - Model Reference](/../images/2025-06/AIToolkit-20.png)
+      ![그림 20 - Model References](/../images/2025-06/AIToolkit-20.png)
   
     * **Inference Parameters**
   
@@ -124,7 +124,7 @@ categories: [Microsoft, Azure]
   
   * 파이썬 소스 코드 실행
   
-    ![그림21 - 파이썬 코드 실행](/../images/2025-06/AIToolkit-21.PNG)
+    ![그림21 - foundry_cpu_phi.py 코드 실행](/../images/2025-06/AIToolkit-21.PNG)
 
 
 
@@ -144,10 +144,17 @@ categories: [Microsoft, Azure]
 
 * 플레이그라운드에서는 사용자 프롬프트를 이용해서 모델을 테스트하거나, 다양한 모델 추론 파라미터를 조정해서 사용할 수 있다. GPU를 이용하면 CPU를 사용할 떄 훨씬 빠른 실행할 수 있다.
 
-  ![그림23 - 플레이그라운드 사용](/../images/2025-06/AIToolkit-23.PNG)
+  ![그림25 - 플레이그라운드 사용](/../images/2025-06/AIToolkit-25.PNG)
 
 * 모델 카탈로그에서 `View Code` 를 누르면, 지금까지 파라미터를 설정한 근거를 바탕으로 파이썬 코드를 생성한다. 이를 파이썬으로 실행하면 아래와 같은 결과가 나타난다.   
 
-  ![모델16 - 모델 실행](/../images/2025-06/AIToolkit-24.PNG)
+  ![모델16 - foundry_gpu_local.py 모델 실행](/../images/2025-06/AIToolkit-26.PNG)
 
   
+
+
+
+## 5. 참고
+
+* [AI Tools for VIsual Studio Code 다운로드](https://marketplace.visualstudio.com/items?itemName=ms-windows-ai-studio.windows-ai-studio)
+* [Github 예제 소스 코드](https://github.com/synabreu/foundry_local_project)
