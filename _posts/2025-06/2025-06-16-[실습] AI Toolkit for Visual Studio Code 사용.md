@@ -7,9 +7,9 @@ toc: true
 categories: [Microsoft, Azure]
 ---
 
-이번 마이크로소프트 빌드 2025 행사는 AI 개발자들에게 좀 더 모델과 에이전트, 앱 개발을 사용하기 쉽게 하기 위해 촛점을 맞추었다.  VS Code 내에서 생성형 AI 앱 개발을 전방위 지원하기 위해 AI Toolkit for Visual Studio Code를 출시했다. 
+이번 마이크로소프트 빌드 2025 행사는 AI 개발자들에게 좀 더 모델과 에이전트, 앱 개발을 사용하기 쉽게 하기 위해 촛점을 맞추었다.  VS Code 내에서 생성형 AI 앱 개발을 전방위 지원하기 위해 [AI Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-windows-ai-studio.windows-ai-studio)를 출시했다. 
 
-그렇다면, AI Toolkit 이 무엇이고, 어떠한 주요 특징이 있는지 정리해 보겠다. 또한, AI Toolkit 설치 방법과 모델 카탈로그와 카드, 그리고 플레이그라운드에서 모델 파라미터를 조정하고 작성한 파이썬 코드로 실행한 방법도 포함한다.
+그렇다면, AI Toolkit (이하, AI Toolkit for Visual Studio Code 줄임말)이 무엇이고, 어떠한 주요 특징이 있는지 정리해 보겠다. 또한, AI Toolkit 설치 방법과 모델 카탈로그와 카드, 그리고 플레이그라운드에서 모델 파라미터를 조정하고 작성한 파이썬 코드로 실행한 방법도 포함한다.
 
 
 
@@ -37,7 +37,7 @@ categories: [Microsoft, Azure]
 
 * AI Toolkit 을 설치하려면, 먼저 Visual Studio Code 가 설치되어 있어야 한다.
 
-*  `Extentions` 아이콘을 누른 후, 검색 창에서  `AI Toolkit for Visual Studio Code` AI Toolkit 를 입력한다.
+*  `Extentions` 아이콘을 누른 후, 검색 창에서  `AI Toolkit for Visual Studio Code` 를 입력해서 찾은 후에 `Install`버튼을 눌러 설치한다.  
 
   ![그림8 - Extentions](/../images/2025-06/AIToolkit-08.PNG)
 
@@ -45,7 +45,7 @@ categories: [Microsoft, Azure]
 
   ![](/../images/2025-06/AIToolkit-09.PNG)
 
-* 그러면, 이제 AI Toolkit에서 지원한 모델 카탈로그가 나타난다. Popular Models 과 GitHub Models 섹션에서 다양한 모델들이 나타난다. 대표적인 모델은 아래와 같다. 
+* 그러면, 이제 AI Toolkit에서 지원한 모델 카탈로그가 나타난다. Popular Models 과 GitHub Models, ONNX Models 카탈로그 섹션 등에서 다양한 모델들이 나타난다. 대표적인 모델은 아래와 같다. 
 
   ![](/../images/2025-06/AIToolkit-10.PNG)
 
@@ -66,15 +66,15 @@ categories: [Microsoft, Azure]
 
 ## 3. 모델 플레이그라운드
 
-* 플레이그라운드를 사용하려면, 먼저 모델을 다운로드해야 한다. 모델 다운로드는 간단하게 `Add` 버튼을 눌러 모델을 로컬 PC에서 다운로드 실행할 수 있다. 또한, 아래와 같이 모델에 대해 상세한 카탈로그 정보를 보려면 사각형을 누르면 된다. 
+* 처음 LLM 기반 챗봇 애플리케이션을 개발할 때, 이 플레이그레이드를 이용한다. 만일 플레이그라운드를 사용하려면, 먼저 모델을 다운로드해야 한다. 모델 다운로드는 간단하게 `Add` 버튼을 눌러 모델을 로컬 PC에서 다운로드 실행할 수 있다. 또한, 아래와 같이 모델에 대해 상세한 카탈로그 정보를 보려면 사각형을 누르면 된다. 
 
   ![그림12 - 모델 카탈로그 리스트](/../images/2025-06/AIToolkit-12.PNG)
 
-* 아래의 그림은 Phi=4-Mini-instruct ONNX models 를 다운로드 하는 상태를 보여주는 화면이다. 모델 카탈로그는 모델의 간단한 정보와 모델 실행(Model Run)은 어떻게 하는 지에 대해 CPU 와 GPU 버전에 따라 실행시킬 수 있도록 정보를 제공해 준다.
+* 사각형을 누른 후, 아래의 그림과 같이 Phi-4-Mini-instruct ONNX models 를 다운로드 하는 상태를 보여주는 화면이다. 모델 카탈로그는 모델의 간단한 정보와 모델 실행(Model Run)은 어떻게 하는 지, 또한 CPU 와 GPU 버전 지원에 따라 실행시킬 수 있도록 정보를 제공해 준다.
 
   ![그림13 - 모델 카탈로그 상세 정보](/../images/2025-06/AIToolkit-13.PNG)
 
-* Phi-4-Mini-instruct ONNX 모델을 다운로드하면, 플레이그라운드를 아래와 같이 사용할 수 있도록 자동적으로 넘어간다. 
+* Phi-4-Mini-instruct ONNX 모델을 다운로드 완료하면, 플레이그라운드를 아래와 같이 사용할 수 있도록 자동적으로 넘어간다. 
 
   ![그림14 - 모델 플레이그라운드](/../images/2025-06/AIToolkit-14.PNG)
 
@@ -92,29 +92,39 @@ categories: [Microsoft, Azure]
 
     ![그림 17 - View Code](/../images/2025-06/AIToolkit-17.PNG)
 
+  * 로컬PC의 모델 다운로드 위치
+
+    * 아래의 보듯이 탐색기를 통해 `C:\Users\<사용자명>\.foundry\cache\models\Microsoft\`폴더에 가면, 현재 내가 다운로드 받은 모델 리스트를 볼 수 있다. 
+
+      ![그림18 - 로컬 모델 위치](/../images/2025-06/AIToolkit-18.png)
+
+    * `Phi-3-mini-4k-instruct-generic-cpu` 와 같은경우, `model.onnx.data` 파일이 약 2.65 기가정도 되는 것을 확인할 수 있다. 그 외 token 과 inference 관련 정보들에 관해 포함되어 있다. 
+
+  ![그림19 - 모델 상세 정보](/../images/2025-06/AIToolkit-19.png)
+
   * **Model Preferences**
 
-    * **Model:** 현재 로컬로 다운로드한 모델. ex) Phi-4:latest
-
+    * **Model:** 현재 로컬로 다운로드한 모델
+  
     * **Browse Models:** 새로운 모델을 검색하고 다운로드 받기 위해 모델 카탈로그 화면 이동
-
+  
     * **Context instructions:** system prompt 에 사용할 내용
-
-      ![그림18 - Model Reference](/../images/2025-06/AIToolkit-18.png)
-
+  
+      ![그림 20 - Model Reference](/../images/2025-06/AIToolkit-20.png)
+  
     * **Inference Parameters**
-
-      * Max response length (tokens): 기본적으로 2,048 개 토큰. 모델이 생성할 수 있는 최대 토큰 수 (단어의 조각). 응답의 길이를 제한하여 처리 시간 또는 비용을 조절함.
-      * Temperature: 0.8로 조정. 출력의 **무작위성(창의성)**을 조절하는 값. **값이 낮을수록**: 결정적이고 예측 가능한 응답 생성 (정답 위주, 논리적). **값이 높을수록**: 창의적이고 다양성 있는 응답 생성 (실험적, 문학적).
-      * Top P: 0.1로 설정함(모델이 매우 제한된 확률 상위 후보만 사용 → **응답 다양성 낮음**, **정확도 높음**). 확률 상위 **P%** 단어들만 고려하여 샘플링하는 방식. 확률 누적합이 **P 이하**가 될 때까지 후보 단어만 남겨두고 그 안에서 선택.
-      * Frequency penalty: **같은 단어가 반복해서 등장하지 않도록** 억제하는 계수. **값이 클수록**: 동일 단어가 자주 등장할수록 점수를 깎음 → 반복 줄임.
-      * Presence penalty:  **이미 언급된 단어의 재등장을 억제**하여 새로운 주제가 등장할 가능성을 높임. 
+  
+      * **Max response length (tokens):** 기본적으로 2,048 개 토큰. 모델이 생성할 수 있는 최대 토큰 수 (단어의 조각). 응답의 길이를 제한하여 처리 시간 또는 비용을 조절함.
+      * **Temperature:** 0.8로 조정. 출력의 **무작위성(창의성)**을 조절하는 값. 값이 낮을수록: 결정적이고 예측 가능한 응답 생성 (정답 위주, 논리적). **값이 높을수록:** 창의적이고 다양성 있는 응답 생성 (실험적, 문학적).
+      * **Top P:** 0.1로 설정함(**모델이 매우 제한된 확률 상위 후보만 사용 → 응답 다양성 낮음, 정확도 높음**). 확률 상위 P% 단어들만 고려하여 샘플링하는 방식. 확률 누적합이 P 이하가 될 때까지 후보 단어만 남겨두고 그 안에서 선택하는 방식. 
+      * **Frequency penalty:** **같은 단어가 반복해서 등장하지 않도록** 억제하는 계수. **값이 클수록**: 동일 단어가 자주 등장할수록 점수를 깎음 → 반복 줄임.
+      * **Presence penalty:**  **이미 언급된 단어의 재등장을 억제**하여 새로운 주제가 등장할 가능성을 높임. 
         * Frequency는 **빈도수 기반 억제**, Presence는 **존재 여부 자체에 따른 억제**
         * 보통 `Top P`와 `Temperature`는 서로 보완 관계.
-
+  
   * 파이썬 소스 코드 실행
-
-    ![그림19 - 파이썬 코드 실행](/../images/2025-06/AIToolkit-19.PNG)
+  
+    ![그림21 - 파이썬 코드 실행](/../images/2025-06/AIToolkit-21.PNG)
 
 
 
@@ -122,15 +132,15 @@ categories: [Microsoft, Azure]
 
 * GPU를 지원하는 모델을 사용하기 위해서는 왼쪽 AI Toolkit 아이콘을 클릭해서 MODELS 섹션에서 Catalog 를 선택하면 모델 카탈로그가 나타난다. 여기에서 검색 필터에서 `gpu`를 입력하면, 현재 모델들 중에 GPU를 지원하는 모델리스트가 나타난다. 
 
-  ![](/../images/2025-06/AIToolkit-20.png)
+  ![그림22 - GPU 선택](/../images/2025-06/AIToolkit-22.png)
 
 * GPU를 지원하는 모델 중  `Phi 4 Mini (DirectML/CUDA - Small standard)` 모델을 선택해서 Add 하면 로컬로 다운로드 시작한다. 
 
-  ![](/../images/2025-06/AIToolkit-21.PNG)
+  ![그림23 - GPU 모델 선택](/../images/2025-06/AIToolkit-23.PNG)
 
 *  `Phi 4 Mini (DirectML/CUDA - Small standard)` 모델 다운로드 완료하면, Added 라고 녹색으로 표시된다. 그리고 아래를 보시면 `Try PLayground` 버튼을 눌러 플레이그라운드를 실행시킬 수 있다.
 
-  ![](/../images/2025-06/AIToolkit-22.PNG)
+  ![모델24 - ](/../images/2025-06/AIToolkit-24.PNG)
 
 * 플레이그라운드에서는 사용자 프롬프트를 이용해서 모델을 테스트하거나, 다양한 모델 추론 파라미터를 조정해서 사용할 수 있다. GPU를 이용하면 CPU를 사용할 떄 훨씬 빠른 실행할 수 있다.
 
