@@ -37,8 +37,9 @@ categories: [OpenAI]
 ## 3. Deep Research 실행 데모
 
 <video width="720" height="480" controls>
-  <source src="/../images/2025-06/deep_research-nvidia.mp4" type="video/mp4">
+  <source src="/../images/2025-06/deep_research-v2.mp4" type="video/mp4">
 </video>
+
 
 * 데모 동영상 설명
 
@@ -137,6 +138,6 @@ categories: [OpenAI]
 
 ## 7. 차기 버전 고려
 
-* 상용 Bing (Azure Search) 이나 Google Search 로 사용
-* MCP 연동 
+* 상용 Bing (Azure Search) 이나 Google Search 로 사용 
 * 레거시 RDB 검색 또는 RAG로 비정형 데이터 시스템과 연동
+* MCP 서버와의 연동으로 외부 API 사용 검토
