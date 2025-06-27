@@ -1,5 +1,5 @@
 ---
-title: "Amazon Bedrock Flow"
+title: "Amazon Bedrock Flow: 프롬프트 관리 및 플로우"
 date: 2024-12-10
 tags: [오픈AI, OpenAI, Open Agents SDK, Swarm, Visual Studio Code, Multi-Agents, 멀티 에이전트]
 typora-root-url: ../

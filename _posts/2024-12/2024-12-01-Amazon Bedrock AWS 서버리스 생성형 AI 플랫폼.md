@@ -1,5 +1,5 @@
 ---
-title: "ㅁWS 서버리스 생성형 AI 플랫폼, Amazon Bedrock"
+title: "Amazon Bedrock: AWS 서버리스 생성형 AI 플랫폼"
 date: 2024-12-01
 tags: [아마존, Amazon, AWS, Bedrock, Agent, 생성형AI, Generative AI]
 typora-root-url: ../
