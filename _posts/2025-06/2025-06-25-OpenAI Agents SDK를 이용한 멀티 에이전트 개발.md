@@ -1,7 +1,7 @@
 ---
-title: "OpenAI Agents SDK에서 멀티 에이전트 사용 후기"
+title: "OpenAI Agents SDK를 이용한 멀티 에이전트 개발"
 date: 2025-06-25
-tags: [Microsoft, 마이크로소프트, Windows Foundry, Foundry Local, Windows Azure, Azure AI Foundry, AI Agent, Ollama, OpenAI, Visual Studio Code, LangChain, Open Web UI]
+tags: [오픈AI, OpenAI, Open Agents SDK, Swarm, Visual Studio Code, Multi-Agents, 멀티 에이전트]
 typora-root-url: ../
 toc: true
 categories: [OpenAI]
