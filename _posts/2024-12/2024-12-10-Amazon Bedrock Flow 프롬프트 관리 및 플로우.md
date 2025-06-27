@@ -55,7 +55,7 @@ categories: [AWS]
 
 
 
-## 2.  **LangChain Expression Language + LangGraph **
+## 4.  LangChain Expression Language + LangGraph
 
 * **LangGraph** (또는 **LangChain Flow**라고도 불리며, **LangGraph** 기반으로 동작)
 
@@ -77,7 +77,7 @@ categories: [AWS]
 
 
 
-## 3.  **LangFlow** (비공식 커뮤니티 프로젝트)
+## 5.  **LangFlow** (비공식 커뮤니티 프로젝트)
 
 * LangChain의 체인 구성 요소를 드래그 앤 드롭으로 시각적으로 설계할 수 있는 **웹 기반 GUI 도구**
 
@@ -96,7 +96,7 @@ categories: [AWS]
 
 
 
-## 4.  **LangGraph vs. LangFlow**
+## 6.  **LangGraph vs. LangFlow**
 
 | 항목      | **LangGraph (공식)**       | **LangFlow (커뮤니티)**         |
 | --------- | -------------------------- | ------------------------------- |
@@ -108,14 +108,14 @@ categories: [AWS]
 
 
 
-## 5. 요약
+## 7. 요약
 
 * 비개발자, AWS 환경 중심, GUI로 빠르게 LLM 워크플로 만들고 싶은 경우 -> Amazon Bedrock Flow
 * 개발자, 다양한 LLM 사용, 복잡한 에이전트 논리 및 상태 전이 설계가 필요한 경우 -> LangGraph (LangChain Flow)
 
 
 
-## 6. 관련 공식 문서
+## 8. 관련 문서
 
 * [Amazon Bedrock Flow 공식 소개](https://aws.amazon.com/bedrock/) 
 * [AWS re:Invent 2023 – Bedrock Flow 발표 세션](https://www.youtube.com/watch?v=jzIZcgaTruA&t=54s)
