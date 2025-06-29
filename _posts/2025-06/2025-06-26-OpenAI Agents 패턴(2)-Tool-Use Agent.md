@@ -5,14 +5,25 @@ tags: [오픈AI, OpenAI, Open Agents SDK, Swarm, Visual Studio Code, Multi-Agent
 typora-root-url: ../
 toc: true
 categories: [OpenAI]
-
 ---
+
+에이전트는 도구를 사용할 수 있으며, 에이전트는 LLM과 협력해 어떤 도구를 사용할지(또는 사용할 필요가 없는지)를 결정한다. 이번 노트에서는 단일 도구를 사용한 단일 에이전트 패턴에 대해 알아보자!
 
 
 
 ## 1. 단일 도구를 사용한 단일 에이전트 패턴
 
-* 에이전트는 툴을 사용할 수 있으며, **에이전트는 LLM과 협력하여 필요한 경우 어떤 툴을 사용할지 결정**합니다. 아래는 **툴을 사용하는 에이전트의 데이터 흐름 다이어그램**
+* 단순한 에이전트와 유사하지만, 에이전트가 활용하는 추가적인 과정인 도구(tool)를 확인할 수 있음
+
+* 에이전트가 LLM에 요청을 보내면, 응답에는 도구가 필요한지 여부가 포함되어 있음
+
+* 만일 도구가 필요하다면, 에이전트는 해당 도구를 호출하고 그 결과를 다시 LLM에 제출함
+
+* 다시 LLM의 응답을 통해 또 다른 도구 호출이 필요한지 여부가 결정됨
+
+* 에이전트는 LLM이 더 이상 도구의 입력을 필요로 하지 않을 때까지 이 과정을 반복함
+
+* 그런 다음 에이전트는 사용자에게 응답할 수 있음
 
   ​       
 
@@ -59,7 +70,8 @@ if st.button("Send"):
         st.markdown(response)
 ```
 
-* **Agents 와 Wikipedia 라이브러리 import (**Wikipedia는 Tool로 사용)
-* **도구(Tool) 정의** – `@function_tool` decorator를 사용한 함수 정의
-* 도구를 실행하는 에이전트 함수(run_agent)  정의
-* Streamlit 앱에서 에이전트를 실행하고 결과를 출력
+* 프로그램 플로우
+  * **Agents 와 Wikipedia 라이브러리 import (**Wikipedia는 Tool로 사용)
+  * **도구(Tool) 정의** – `@function_tool` decorator를 사용한 함수 정의
+  * 도구를 실행하는 에이전트 함수(run_agent)  정의
+  * Streamlit 앱에서 에이전트를 실행하고 결과를 출력
