@@ -19,11 +19,13 @@ categories: [OpenAI]
 ## 2. 프로그램 소스 분석
 
 ```python
+# 1. Agents와 Wikipedia 라이브러리 import
 import streamlit as st
 import asyncio
 from agents import Agent, Runner, function_tool
 import wikipedia
 
+# 2. 도구(Tool) 정의 – `@function_tool` decorator를 사용한 함수 정의
 @function_tool
 def wikipedia_lookup(q: str) -> str:
     """Look up a query in Wikipedia and return the result"""
@@ -37,12 +39,12 @@ research_agent = Agent(
     tools=[wikipedia_lookup],
 )
 
+# 3. 도구를 실행하는 에이전트 함수 정의
 async def run_agent(input_string):
     result = await Runner.run(research_agent, input_string)
     return result.final_output
 
-# Streamlit UI
-
+# 4. Streamlit 앱에서 에이전트를 실행하고 결과를 출력
 st.title("Simple Tool-using Agent")
 st.write("This agent uses Wikipedia to look up information.")
 
@@ -57,4 +59,7 @@ if st.button("Send"):
         st.markdown(response)
 ```
 
-* **Agents 와 Wikipedia 라이브러리 import** (Wikipedia는 Tool로 사용)
+* **Agents 와 Wikipedia 라이브러리 import (**Wikipedia는 Tool로 사용)
+* **도구(Tool) 정의** – `@function_tool` decorator를 사용한 함수 정의
+* 도구를 실행하는 에이전트 함수(run_agent)  정의
+* Streamlit 앱에서 에이전트를 실행하고 결과를 출력
