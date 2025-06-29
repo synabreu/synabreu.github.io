@@ -11,8 +11,6 @@ categories: [OpenAI]
 
 
 
-
-
 ## 1. 에이전트 기반 핸드오프 소스
 
 ```python
