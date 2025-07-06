@@ -1,5 +1,5 @@
 ---
-title: "vLLM(3)-왜 안나와 MS Phi-2 모델 실행 소스 분석"
+title: "vLLM(3)-MS Phi-2 모델 실행 소스 분석"
 date: 2025-03-03
 tags: [LLM, vLLM, OpenSource, 오픈소스]
 typora-root-url: ../
