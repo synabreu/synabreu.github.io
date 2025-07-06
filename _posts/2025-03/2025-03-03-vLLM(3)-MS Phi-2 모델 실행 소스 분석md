@@ -1,0 +1,42 @@
+---
+title: "vLLM(3)-MS Phi-2 모델 실행 소스 분석"
+date: 2025-03-03
+tags: [LLM, vLLM, OpenSource, 오픈소스]
+typora-root-url: ../
+toc: true
+categories: [vLLM, OpenSource]
+---
+
+현재 제 노트북은 GPU 용량이 8GB 밖에 되지 않으므로 vLLM은 그 한도 내에서 실행할 수 밖에 없다. 그래서 SLM(Small Language Model) 들 중 하나인 마이크로소프트 Phi2 모델을 실행하는 소스로 vLLM이 어떻게 동작하는 지 한 번 알아보도록 하겠다.
+
+
+
+## **1. 패키지 소프트웨어 설치**
+
+```
+pip install vllm python-dotenv torch
+```
+
+* `vllm`: 고속 LLM 추론을 위한 라이브러리
+* `python-dotenv`: `.env` 파일에서 환경변수를 로드하기 위한 유틸리티
+* `torch`: PyTorch, 딥러닝 프레임워크 (`import torch`용)
+
+
+
+## **2. import문으로 패키지 컴포넌트 추가**
+
+```python
+import os
+from vllm import LLM, SamplingParams
+from dotenv import load_dotenv
+import torch
+```
+
+
+
+## **3. FlashAttention 활성화**
+
+```python
+os.environ["VLLM_USE_V1"] = "0"
+```
+
