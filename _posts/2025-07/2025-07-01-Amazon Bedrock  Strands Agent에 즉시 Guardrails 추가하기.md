@@ -1,6 +1,6 @@
 ---
-title: "Amazon Bedrock: Strands 에이전트에 즉시 Guardrail 추가하기"
-date: 2025-07-02
+title: "Amazon Bedrock: Strands Agent에 즉시 Guardrails 추가하기"
+date: 2025-07-01
 tags: [아마존, Amazon, AWS, Amazon Bedrock, Agent, 생성형AI, Generative AI, AgenticAI, Stradns Agents SDK]
 typora-root-url: ../
 toc: true
