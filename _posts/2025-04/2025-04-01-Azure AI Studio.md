@@ -1,6 +1,6 @@
 ---
 title: "Azure AI Studio"
-date: 2025-05-24
+date: 2025-04-01
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Studio, Azure OpenAI Service, Azure Cognitive Search, Azure Machine Learning, Azure Functions]
 typora-root-url: ../
 toc: true
