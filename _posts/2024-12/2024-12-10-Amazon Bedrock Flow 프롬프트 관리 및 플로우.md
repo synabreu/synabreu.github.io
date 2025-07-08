@@ -1,13 +1,4 @@
----
-title: "Amazon Bedrock Flow: 프롬프트 관리 및 플로우"
-date: 2024-12-10
-tags: [오픈AI, OpenAI, Open Agents SDK, Swarm, Visual Studio Code, Multi-Agents, 멀티 에이전트]
-typora-root-url: ../
-toc: true
-categories: [AWS]
----
-
-지난 여름에 AWS는 베드락(Bedrock) 서비스에서 **Prompt Management 및 Prompt Flows**를 발표했다. 추후 이  기능은 Bedrock Flows 라는 이름으로 불리게 되었다.  현재 베드락 플로우 서비스는 전 세계 리전에 모두 사용하게 되었다. 
+ 베드락(Bedrock) 서비스에서 **Prompt Management 및 Prompt Flows**를 발표했다. 추후 이  기능은 Bedrock Flows 라는 이름으로 불리게 되었다.  현재 베드락 플로우 서비스는 전 세계 리전에 모두 사용하게 되었다. 
 
 **Amazon Bedrock**은 다양한 AI 모델을 **서버리스 API로 제공**하여, **프롬프트 기반 생성형 AI 애플리케이션을 손쉽게 구축**할 수 있게 해주는 AWS 플랫폼이다. 따라서, Bedrock Flows 는 Amazon Bedrock 의 부속 서비스라고 부를 수 있다. 그렇다면, 오늘은 아마존 베드락 플로우에 대해 한 번 정리해 보도록 하겠다. 
 
