@@ -44,9 +44,9 @@ categories: [Microsoft, Azure]
 
 
 
-## 3. 개발 도구 통합   
+## 3.  **Azure AI Foundry** 개발 도구 통합   
 
-* **Copilot Studio:** 비즈니스용 생성형 AI 챗봇을 누구나 쉽게 만들 수 있는 Microsoft의 로우코드 플랫폼
+* **Copilot Studio:** 비즈니스용 생성형 AI 챗봇을 누구나 쉽게 만들 수 있는 Microsoft의 로우코드 플랫폼. AI 기반 코파일럿을 구축하기 위한 도구. 
 
 * **Visual Studio**: 전문 개발자를 위한 통합 개발 환경(IDE)
 
@@ -56,16 +56,7 @@ categories: [Microsoft, Azure]
 
   
 
-## 4. 주요 포함 서비스   
-
-* **Azure OpenAI Service** (기존에는 독립적이었지만, 이제는 Foundry의 일부)
-* **Azure AI Search:** 텍스트 기반 검색 또는 벡터 검색, AI 기반 인덱싱과 같은 AI 기반의 검색 엔진을 애플리케이션에 쉽게 통합할 수 있도록 도와주는 Azure의 검색 서비스. 이전 서비스 명은 **Azure Cognitive Search.** 
-* **Azure AI Agent Service:** AI 에이전트를 만들고 실행할 수 있도록 지원하는 Azure의 통합 에이전트 플랫폼
-* **AI Content Safety:** 유해하거나 부적절한 콘텐츠를 자동으로 감지하고 필터링하는 Azure의 AI 기반 안전성 서비스
-
-
-
-## 5. 엔터프라이즈 기능   
+## 4. 엔터프라이즈 기능   
 
 * Foundry는 기업 고객을 위해 **모델 커스터마이징 및 거버넌스 기능**을 제공함
   * 모델 파인튜닝
