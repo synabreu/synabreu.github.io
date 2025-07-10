@@ -4,14 +4,8 @@ date: 2025-05-24
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure AI Studio]
 typora-root-url: ../
 toc: true
-categories: [Microsoft, Azure]오
+categories: [Microsoft, Azure]
 ---
-
-
-
-Azure AI Foundry 에 대해 자세히 설명해 보자. 
-
-
 
 오늘은 Azure AI Foundry의 흥미로운 탄생의 비밀(?)을 밝히고자 한다. Azure AI Foundry에 대해 이야기하려면, 그 배경부터 살펴보는 것이 이 서비스를 이해하기 쉽기 때문이다. 
 
