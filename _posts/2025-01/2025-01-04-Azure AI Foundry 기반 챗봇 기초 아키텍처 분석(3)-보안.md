@@ -1,6 +1,6 @@
 ---
-title: "Basic Azure AI Foundry Chat 아키텍처 분석(2)-신뢰성"
-date: 2025-01-02
+title: "Azure AI Foundry 기반 챗봇 기초 아키텍처 분석(3)-보안"
+date: 2025-01-04
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor]
 typora-root-url: ../
 toc: true
@@ -50,17 +50,47 @@ categories: [Microsoft, Azure]
 
 * App Service, Azure AI Foundry 프로젝트 및 포털 사용자에 대해 설정해야 할 역할 할당 표
 
-  | 대상                       | 역할 예시                                     |
-  | -------------------------- | --------------------------------------------- |
-  | App Service 관리형 ID      | Foundry Agent Service에 액세스할 수 있는 역할 |
-  | Foundry 프로젝트 관리형 ID | AI Search 등 리소스에 대한 데이터 조회 권한   |
-  | 사용자                     | Foundry Portal을 통한 프로젝트 관리 권한      |
+  | 리소스                            | 역할                     | 범위                     |
+  | --------------------------------- | ------------------------ | ------------------------ |
+  | App Service                       | Azure AI User            | Azure AI Foundry account |
+  | Azure AI Foundry project          | Search Index Data Reader | AI Search                |
+  | Portal user (for each individual) | Azure AI Developer       | Azure AI Foundry account |
 
 * 실제 역할은 Azure Portal 또는 CLI에서 프로젝트 환경에 맞게 설정
 
 
 
-## 5. 참고 사항
+## 5. 네트워크 보안 (Network Security)
 
-* [Design review checklist for Security](https://learn.microsoft.com/en-us/azure/well-architected/security/checklist)
-* [Basic Azure AI Foundry chat reference architecture](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/architecture/basic-azure-ai-foundry-chat)
+* 엔드 투 엔드 챗봇 솔루션을 쉽게 학습할 수 있도록 하기 위해, Basic 챗봇 아키텍처는 **네트워크 보안(Network Security)** 을 구현하지 않음
+  * **ID를 경계(perimeter)** 로 사용하고 **퍼블릭 클라우드 구성요소**를 기반으로 구성함
+  * AI Search, Azure AI Foundry, App Service 같은 서비스는 **인터넷에서 직접 접근 가능**하며, 이로 인해 아키텍처의 공격 표면(attack surface)이 넓어짐
+*  Basic 챗봇 아키텍처는 **아웃바운드 트래픽(egress traffic)** 을 제한하지 않음
+  * 에이전트는 OpenAPI 스펙을 기반으로 어떤 **퍼블릭 엔드포인트**에도 연결되도록 설정할 수 있음
+  * **프라이빗 데이터의 외부 유출(data exfiltration)** 은 네트워크 제어만으로는 방지할 수 없음
+
+
+
+## 6. 마이크로소프트 디펜더(Microsoft Defender)
+
+* 챗봇 기초 아키텍처에서는 **Microsoft Defender 클라우드 워크로드 보호 계획**을 어떤 서비스에도 활성화할 필요는 없음
+
+* 프로덕션 환경으로 전환할 경우, **기본 보안 아키텍처의 보안 지침**을 따라야 하며, 여기에는 워크로드를 보호하기 위한 **여러 Defender 계획**이 포함해야 함
+
+  
+
+## 7. Azure Policy를 통한 거버넌스 (Governance through Policy)
+
+* 챗봇 기초 아키텍처는 **Azure Policy를 통한 거버넌스**를 구현하지 않음
+* 프로덕션 환경으로의 이전을 고려할 때, 기본 아키텍처에서 제안하는 **거버넌스 권장 사항**을 따라야 함
+* 권장 사항은 **워크로드 구성 요소 전체에 Azure Policy를 적용**하는 방식
+
+
+
+## 8. 참고 사항
+
+* [Basic Azure AI Foundry 챗봇 레퍼런스 아키텍처](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/architecture/basic-azure-ai-foundry-chat)
+
+* [Baseline Azure AI Foundry 챗봇 레퍼런스 아키텍처 - 네트워킹](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-chat#networking)
+
+  
