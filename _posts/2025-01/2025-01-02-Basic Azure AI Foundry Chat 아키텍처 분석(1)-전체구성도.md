@@ -64,10 +64,6 @@ Azure AI Foundry와 Azure OpenAI 언어 모델을 활용하여 챗 애플리케�
   * AI Search는 **RAG(Retrieval-Augmented Generation)** 패턴에서 **지식 저장소(Knowledge Store)** 역할을 함
   * RAG 패턴은 프롬프트로부터 적절한 쿼리를 추출하고, AI Search를 질의하여 그 결과를 **Azure OpenAI 모델의 그라운딩 데이터**로 활용함
 
-* * * * 
-
-
-
 
 
 ## 5. 참고 레퍼런스
@@ -75,5 +71,7 @@ Azure AI Foundry와 Azure OpenAI 언어 모델을 활용하여 챗 애플리케�
 * [기본 웹 애플리케이션 아키텍처 디자인](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/basic-web-app)
 
 * [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
+
 * [Baseline Azure AI Foundry chat reference architecture](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-chat)
-* 
+
+  
