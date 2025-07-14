@@ -1,5 +1,5 @@
 ---
-title: "Azure AI Foundry 기반 챗봇 기초 아키텍처 분석(3)-보안"
+title: "Azure AI Foundry 기반 챗봇 베이직 아키텍처 분석(3)-보안"
 date: 2025-01-04
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor]
 typora-root-url: ../
@@ -7,7 +7,7 @@ toc: true
 categories: [Microsoft, Azure]
 ---
 
-보안은 고의적인 공격과 귀중한 데이터 및 시스템의 오용으로부터 보호해 주는 보장을 제공한다.  Basic Azure AI Foundry 서비스에서 챗봇 아키텍처 디자인에서 고려사항들 중에 아키텍처가 구현하는 주요 보안 권장 사항에 대해 노트에 정리한다. 
+보안은 고의적인 공격과 귀중한 데이터 및 시스템의 오용으로부터 보호해 주는 보장을 제공한다.  Azure AI Foundry 서비스에서 챗봇 베이직 아키텍처 디자인에서 고려사항들 중에 아키텍처가 구현하는 주요 보안 권장 사항에 대해 노트에 정리한다. 
 
 
 
@@ -73,7 +73,7 @@ categories: [Microsoft, Azure]
 
 ## 6. 마이크로소프트 디펜더(Microsoft Defender)
 
-* 챗봇 기초 아키텍처에서는 **Microsoft Defender 클라우드 워크로드 보호 계획**을 어떤 서비스에도 활성화할 필요는 없음
+* 챗봇 베이직 아키텍처에서는 **Microsoft Defender 클라우드 워크로드 보호 계획**을 어떤 서비스에도 활성화할 필요는 없음
 
 * 프로덕션 환경으로 전환할 경우, **기본 보안 아키텍처의 보안 지침**을 따라야 하며, 여기에는 워크로드를 보호하기 위한 **여러 Defender 계획**이 포함해야 함
 
@@ -81,8 +81,8 @@ categories: [Microsoft, Azure]
 
 ## 7. Azure Policy를 통한 거버넌스 (Governance through Policy)
 
-* 챗봇 기초 아키텍처는 **Azure Policy를 통한 거버넌스**를 구현하지 않음
-* 프로덕션 환경으로의 이전을 고려할 때, 기본 아키텍처에서 제안하는 **거버넌스 권장 사항**을 따라야 함
+* 챗봇 베이직 아키텍처는 **Azure Policy를 통한 거버넌스**를 구현하지 않음
+* 프로덕션 환경으로의 이전을 고려할 때, 베이직 아키텍처에서 제안하는 **거버넌스 권장 사항**을 따라야 함
 * 권장 사항은 **워크로드 구성 요소 전체에 Azure Policy를 적용**하는 방식
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Azure AI Foundry 기반 챗봇 기초 아키텍처 분석(1)-전체구성"
+title: "Azure AI Foundry 기반 챗봇 베이직 아키텍처 분석(1)-전체구성"
 date: 2025-01-02
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor]
 typora-root-url: ../
@@ -11,7 +11,7 @@ Azure AI Foundry와 Azure OpenAI 언어 모델을 활용하여 챗 애플리케�
 
 
 
-## 1. 기본 Azure AI Foundry Chat 아키텍처 조건
+## 1. 베이직 Azure AI Foundry Chat 아키텍처 조건
 
 * Azure AI Foundry와 Azure OpenAI 언어 모델을 사용하여 챗 애플리케이션을 실행하는 데 도움이 되는 기본 아키텍처
 * 챗봇 아키텍처는 **Azure App Service**에서 실행되는 클라이언트 사용자 인터페이스(UI)를 포함
@@ -32,7 +32,7 @@ Azure AI Foundry와 Azure OpenAI 언어 모델을 활용하여 챗 애플리케�
 
 
 
-## 3. 컴포넌트
+## 3. 베이직 챗봇 컴포넌트
 
 * 기본 사항
   * Basic App Service 웹 애플리케이션 아키텍처와 동일함. (채팅 UI 기반)

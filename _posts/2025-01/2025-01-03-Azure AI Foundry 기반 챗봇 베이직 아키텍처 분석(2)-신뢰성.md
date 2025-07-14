@@ -1,5 +1,5 @@
 ---
-title: "Azure AI Foundry 기반 챗봇 기초 아키텍처 분석(2)-신뢰성"
+title: "Azure AI Foundry 기반 챗봇 베이직 아키텍처 분석(2)-신뢰성"
 date: 2025-01-03
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor]
 typora-root-url: ../
