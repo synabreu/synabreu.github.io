@@ -82,5 +82,34 @@ az deployment group create -f ./infra-as-code/bicep/main.bicep \
 
 
 
+## 3. Azure AI Foundry Agent 서비스에 에이전트 배포
 
+* 주요 개요
+  * 챗봇 시나리오를 테스트하기 위해 **AI 에이전트**를 배포하게 됨
+  * 에이전트는 **GPT 모델**과 함께 **Bing 검색을 통한 그라운딩 데이터**를 사용하는 구조
+  * AI 에이전트를 배포하려면 **Azure AI Foundry의 데이터 플레인 접근 권한**이 필요함
+  * 챗봇 아키텍처에서는 인터넷을 통해 **Azure AI Foundry 포털과 리소스**에 접근
+* 배포 순서
+  * **Azure 포털에 접속**하여 본인의 구독을 연다.
+  * 리소스 그룹 내에서 `projchat`이라는 이름의 **Azure AI Foundry 프로젝트**로 이동함
+  * **[Go to Azure AI Foundry portal]** 버튼을 클릭하여 Azure AI Foundry 포털을 염.
+    * 이 버튼을 클릭하면 자동으로 `'Chat project'`로 이동
+    *  https://ai.azure.com 에서 모든 Foundry 계정과 프로젝트에 접근할 수 있으므로, Azure 포털을 통해 접근할 필요는 없음
+  * 왼쪽 사이드 메뉴에서 **[Agents]** 를 클릭함
+  * 상단의 **[+ New agent]** 버튼을 클릭함
+  * **Setup 패널**에서 에이전트 이름을 **'Baseline Chatbot Agent'** 로 변경함
+  * **Knowledge 섹션**에서 **[+ Add]** 버튼을 클릭함
+  * 팝업 창에서 **지식 유형(Knowledge type)** 으로 **‘Grounding with Bing Search’** 를 선택함
+  * 기존 연결 중에서 이름이 **‘bingaiagent’** 인 항목을 선택한 후,**[Connect]** 버튼을 클릭함
+
+
+
+## 4. Azure AI Foundry 포털의 Playground에서 에이전트 테스트
+
+* 개요: **Azure AI Foundry 포털의 Playground 기능**을 통해 오케스트레이션 에이전트를 직접 호출하여 테스트해 봄
+* 테스트 절차
+  * **[Try in playground]** 버튼을 클릭함
+  * **최근 인터넷 콘텐츠를 기반으로 그라운딩 데이터가 필요한 질문**을 입력함
+    * "오늘 서울 날씨 어때?", "최근에 있었던 주요 뉴스는 무엇인가요?"
+  * 질문을 입력하면, UI 상에 **그라운딩된 응답**이 나타남. -> 이 응답은 Bing 검색을 기반으로 최신 데이터를 활용해 생성된 결과
 
