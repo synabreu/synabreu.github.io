@@ -1,6 +1,6 @@
 ---
-title: "Azure OpenAI 종단간 챗봇 사례 분석(1)-솔루션 아키텍처 개요"
-date: 2025-01-07
+title: "Azure OpenAI 종단간 챗봇 사례 분석(2)-소스분석"
+date: 2025-01-08
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor]
 typora-root-url: ../
 toc: true
@@ -160,7 +160,7 @@ categories: [Microsoft, Azure]
   * Application Insights 로 사용자 요청 및 에이전트 로그 수집
 * **CI/CD**: Dependabot 자동 업데이트, CodeQL 취약점 검사
 
-* wwwroot/Program.cs
+* **wwwroot/Program.cs**
 
   ```c#
   using Microsoft.Extensions.Options;
@@ -211,7 +211,7 @@ categories: [Microsoft, Azure]
   app.Run();
   ```
 
-* Controlls/ChatController.cs
+* **Controlls/ChatController.cs**
 
   ```ChatController.cs
   using Microsoft.AspNetCore.Mvc;
@@ -281,7 +281,7 @@ categories: [Microsoft, Azure]
   }
   ```
 
-* Views/Home/Index.cshtml
+* **Views/Home/Index.cshtml**
 
   ```html
   <html>
