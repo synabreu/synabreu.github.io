@@ -61,5 +61,5 @@ Azure OpenAI 종단간 챗봇 사례 분석은 챗 애플리케이션과 AI 오�
 
 ## 5. 참고 레퍼런스
 
-* [openai-end-to-end-basic](https://github.com/Azure-Samples/openai-end-to-end-basic](https://github.com/Azure-Samples/openai-end-to-end-basic)
+* [openai-end-to-end-basic](https://github.com/Azure-Samples/openai-end-to-end-basic)
 
