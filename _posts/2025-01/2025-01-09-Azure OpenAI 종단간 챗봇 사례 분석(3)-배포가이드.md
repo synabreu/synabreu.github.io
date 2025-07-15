@@ -1,6 +1,6 @@
 ---
 title: "Azure OpenAI 종단간 챗봇 사례 분석(3)-배포가이드"
-date: 2025-01-07
+date: 2025-01-09
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor]
 typora-root-url: ../
 toc: true
