@@ -22,6 +22,7 @@ categories: [Microsoft, Azure]
 
 ## 2. 주요 구조
 
+```bash
 /
 ├── .devcontainer/               – 개발 컨테이너(config)
 ├── .github/                     – 워크플로우: Dependabot, CodeQL, 보안 검사
@@ -34,6 +35,7 @@ categories: [Microsoft, Azure]
 ├── CONTRIBUTING.md             – 기여 안내 :contentReference[oaicite:9]{index=9}
 ├── README.md                   – 프로젝트 소개 및 참조
 ├── LICENSE.md, SECURITY.md     – 라이선스 및 보안 정책
+```
 
 
 
