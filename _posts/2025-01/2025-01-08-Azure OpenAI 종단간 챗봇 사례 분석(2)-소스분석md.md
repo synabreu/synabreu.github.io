@@ -215,7 +215,7 @@ categories: [Microsoft, Azure]
 
 * **Controlls/ChatController.cs**
 
-  ```ChatController.cs
+  ```c#
   using Microsoft.AspNetCore.Mvc;
   using Microsoft.Extensions.Options;
   using Azure;
