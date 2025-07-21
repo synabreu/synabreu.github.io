@@ -1,13 +1,11 @@
 ---
 title: "새로운 AI 추론인 Reasoning AI 추론에 대해"
-date: 2025-02-10
+date: 2025-01-27
 tags: [NVIDIA, 엔비디아, Inference, Reasoning AI]
 typora-root-url: ../
 toc: true
 category: [NVIDIA]
 ---
-
-
 
 작년 오픈AI가 GPT-4o 부터 시작해서 Reasoning AI 추론에 대해 선을 보인 후, 많은 연구소와 기업들이 Reasoning AI 추론을 각 모델마다 적용시키고 평가해왔다. 그렇다면, Reasoning AI 추론이란 무엇일까? 
 
