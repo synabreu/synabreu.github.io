@@ -1,6 +1,6 @@
 ---
 title: "Azure AI Foundry(3)-프로젝트와 허브"
-date: 2025-05-25
+date: 2025-05-26
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure AI Studio]
 typora-root-url: ../
 toc: true
