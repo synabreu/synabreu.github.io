@@ -1,6 +1,6 @@
 ---
 title: "[실습] Azure AI Foundry(1)-Azure OpenAI 리소스 생성"
-date: 2025-02-02
+date: 2025-05-27
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor]
 typora-root-url: ../
 toc: true
@@ -132,3 +132,4 @@ categories: [Microsoft, Azure]
 * `synabreu-azure-openai-test01` 리소스에 대해 한 눈에 살펴 볼 수 있다. 
 
   ![그림11 - 리소스](/../images/2025-02/AzureOAI-11.png)
+

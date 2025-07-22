@@ -1,6 +1,6 @@
 ---
-title: "Azure OpenAI(2)-GPT 모델 배포"
-date: 2025-02-03
+title: "Azure AI Foundry(5)-Azure OpenAI GPT 모델 배포"
+date: 2025-05-28
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor]
 typora-root-url: ../
 toc: true
@@ -79,8 +79,8 @@ Azure OpenAI 에서 리소스 생성을 완료 했다면, Azure AI Foundry를 �
 
 * 그러면, 새로운 Visual Studio Code Online가 새 탭으로 자동적으로 생성되고, 프로젝트에서 소스 코드들이 생성된다. 아래의 그림을 보면, `sh install sh` 명령어가 자동적으로 실행된다. 
 
-  ![](/../images/2025-02/AzureModel-10.png)
+  ![그림10 - VS Code 자동 실행](/../images/2025-02/AzureModel-10.png)
 
 * `run_model.py` 파일 소스를 파악한다음, 명령 창에서 `python3 run_model.py`실행하면, JSON 형식으로 답변이 나오는 것을 여러분들의 눈으로 확인할 수 있다. 
 
-  ![](/../images/2025-02/AzureModel-11.png)
+  ![그림11 - 소스파일 실행](/../images/2025-02/AzureModel-11.png)
