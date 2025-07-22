@@ -1,5 +1,5 @@
 ---
-title: "Azure OpenAI(1)-리소스 생성"
+title: "[실습] Azure AI Foundry(1)-Azure OpenAI 리소스 생성"
 date: 2025-02-02
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor]
 typora-root-url: ../
@@ -7,11 +7,11 @@ toc: true
 categories: [Microsoft, Azure]
 ---
 
+지난 달에 Azure AI Foundry 챗봇 베이직 아키텍처와 종단간 챗봇 사례 분석들을 했다. 그렇다면, 이제 실제로 애저 포털에서 Azure OpenAI 리소스를 만드는 실습을 노트에 정리하고자 한다. 그렇게 하기 위해서는 먼저 **애저 계정과 구독(subscription)을 생성**해야 함을 잊지 말기를 바란다. 
 
 
-지난 달에 Azure AI Foundry 챗봇 베이직 아키텍처와 종단간 챗봇 사례 분석들을 했다. 그렇다면, 이제 실제로 애저 포털에서 Azure OpenAI 리소스를 만들기 위해서는 먼저 **애저 계정과 구독(subscription)을 생성**해야 한다. 
 
-<img src="/../images/2025-02/AzureOAI-01.png" alt="그림1 - 구독 정보" style="zoom: 50%;" />
+<img src="/../images/2025-02/AzureOAI-01.png" alt="그림1 - 구독 정보"  />
 
 
 
@@ -31,11 +31,11 @@ categories: [Microsoft, Azure]
 
 * 애저 포털 화면 최상단에 있는 검색 창에 `azure openai`를 입력한다. `서비스`항목 중 `[Azure OpenAI]`가 나오면 클릭한다.
 
-  <img src="/../images/2025-02/AzureOAI-03.png" style="zoom:50%;" />
+  <img src="/../images/2025-02/AzureOAI-03.png" />
 
 * Azure OpenAI의 리소스 관리 화면으로 이동하면 좌측 상단의 `만들기' 또는 'Azure OpenAI 만들기` 버튼을 클릭한다. 
 
-  ![](/../images/2025-02/AzureOAI-04.png)
+  ![그림4-Azure OpenAI 만들기](/../images/2025-02/AzureOAI-04.png)
 
 
 
@@ -113,7 +113,7 @@ categories: [Microsoft, Azure]
 
 * 검토 및 제출 화면에서는 지금까지 설정한 항목을 검토할 수 있도록 한 눈에 볼 수 있다. 지금까지 설정한 것이 맞다면, `[만들기]`버튼을 클릭하면 된다. 
 
-  <img src="/../images/2025-02/AzureOAI-08.png" style="zoom:50%;" />
+  <img src="/../images/2025-02/AzureOAI-08.png" />
 
 
 
@@ -129,6 +129,6 @@ categories: [Microsoft, Azure]
 
   ![그림10 - 리소스로 이동](/../images/2025-02/AzureOAI-10.png)
 
-* 검토 및 제출
+* `synabreu-azure-openai-test01` 리소스에 대해 한 눈에 살펴 볼 수 있다. 
 
-* 
+  ![그림11 - 리소스](/../images/2025-02/AzureOAI-11.png)
