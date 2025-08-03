@@ -1,6 +1,6 @@
 ---
 title: "MS 에이전틱 데브옵스(Agentic DevOps)"
-date: 2025-07-21
+date: 2025-07-07
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor, Agentic DevOps, Github Copilot, DevOps, MLOps, Software Factory]
 typora-root-url: ../
 toc: true
@@ -69,14 +69,81 @@ Microsoft의 50 주년을 기념하면서 처음 가졌던 비전이 '소프트�
   * 감사 로그(audit log)와 브랜치 보호 기능이 기본으로 내장되어 있어, 모든 제안된 변경 사항은 배포 전에 검토하는 기능도 포함됨
   * 반복적인 작업을 대신 처리해주는 가장 새로운 팀원으로, 개발자들이 정말 중요한 일에 집중할 수 있다.
 
-  
+* [새로운 애플리케이션 현대화](https://techcommunity.microsoft.com/blog/appsonazureblog/reimagining-app-modernization-for-the-era-of-ai/4414793?previewMessage=true)
+
+  * 프로덕션 배포는 끝이 아니라 시작이며, 레거시 코드를 유지 관리한다고 해서 개발 속도가 느려져서는 안됨
+  * GitHub Copilot은 이제 레거시 Java 및 .NET 애플리케이션 전반에 걸쳐 코드 평가, 종속성 업데이트, 문제 해결 작업을 처리함으로써 스택 현대화를 지원함. (메인프레임 현대화도 제공될 예정)
+  * GitHub Copilot은 업데이트 계획을 자동으로 생성하고 실행하며, 변경 사항에 대한 전체 가시성과 제어, 명확한 요약 정보를 제공함. -> 그 결과, 더 안전하고 유지 관리가 용이하며 비용 효율적인 애플리케이션이 탄생함
+  * 기술 부채에 짓눌리지 말고, 그 부채를 해결해 나가라. -> 과거를 정리하느라 발목 잡히지 않을 때, 진정한 혁신을 위한 길이 열리고 다음을 위한 개발에 집중할 수 있음
+
+* [새 Azure 사이트 신뢰성 엔지니어링(SRE) 에이전트](https://techcommunity.microsoft.com/blog/azurepaasblog/introducing-azure-sre-agent/4414569)
+
+  * 개발자들은 개발에 집중하고, 문제는 코파일러 에이전트가 유지한다는 개념
+  * 새로운 Azure용 SRE 에이전트는 프로덕션 시스템을 24시간 모니터링하고, 실시간으로 사고에 대응하며, 문제가 발생하면 자동으로 문제를 해결해줌으로써 개발자들이 심야 알림의 스트레스로부터 자유로워질 수 있도록 돕는다.
+  * SRE 에이전트는 [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service), [Azure App Service](https://azure.microsoft.com/en-us/products/app-service), 서버리스, 데이터베이스 환경 전반의 상태와 성능을 지속적으로 추적하며, 전 세계적으로 Azure 기반 서비스를 운영해온 Microsoft의 깊은 운영 지식을 기반으로 동작함.
+  * SRE 에이전트는 문제의 근본 원인을 함께 분석하거나 자동으로 해결함으로써 빠른 문제 해결을 가능하게 함.
+  * 복구 작업이 수행되거나 수리 항목이 식별되면, 해당 내용이 GitHub 이슈로 자동 기록되어 팀이 후속 조치를 취하고 문제를 완전히 종결할 수 있도록 돕는다.
+  * 더 빠른 복구, 줄어든 야간 호출, 자가 복구 능력을 갖춘 시스템 덕분에 애플리케이션은 더욱 탄탄해지고, 팀은 휴식을 취하며 명료한 상태로 다음을 준비할 수 있다.
+
+* [깃허브 모델(Github Models)](https://docs.github.com/en/github-models)
+
+  * 깃허브 모델은 AI 애플리케이션 개발을 더욱 쉽게 만들어 줌
+
+  * GitHub Copilot이 개발자가 코드를 작성하는 방식을 바꿨다면, Azure AI Foundry는 개발자가 무엇을 만들 수 있는지를 바꾸고 있다. -> GitHub 워크플로우 안에서도 깃허브 모델을 직접 활용 가능해짐.
+
+  * 새로운 네이티브 통합을 통해 OpenAI, Meta, Microsoft, Mistal, Cohere 등 다양한 최신 모델을 GitHub 내에서 직접 실험할 수 있다.
+
+  * 성능과 가격을 나란히 비교하고, 애플리케이션이나 에이전트에 가장 적합한 모델을 선택하며, 단순하고 통합된 API로 모델을 손쉽게 교체할 수 있다.
+
+  * GitHub Action에서 직접 모델이나 에이전트를 호출하여 오프라인 평가 과정을 간소화하거나, 현재 열려 있는 이슈들을 요약하는 데에도 활용할 수 있다.
+
+  * 내장된 엔터프라이즈용 가이드라인 덕분에 모델 선택은 보안성, 책임성, 팀 정책과의 정합성을 유지한다.
+
+  * 개발자의 일상은 에이전트가 단순히 보조하는 것을 넘어서, 주도적으로 개입하고, 빠르게 대응하며, 어떤 시간에도 시스템을 안정적으로 운영하는 새로운 시대에 접어들었다.
+
+    ``
+
+    <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/7fUVPrySVwI"
+            title="Agentic DevOps in Action"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
+
+* [Visual Studio Code에서의 GitHub Copilot을 오픈소스로 공개](https://code.visualstudio.com/blogs/2025/05/19/openSourceAIEditor)
+
+  * GitHub Copilot이 Visual Studio Code에서 진화하면서, AI는 테스트부터 보안까지 개발자 경험의 핵심 요소로 자리 잡았다.
+  * GitHub Copilot 확장 기능의 AI 기반 기능들이 이제 세계에서 가장 인기 있는 개발 도구를 구동하는 **동일한 오픈소스 저장소**의 일부가 된다. 
+  * 투명성, 커뮤니티 주도의 혁신, 그리고 **AI 기반 개발의 미래를 함께 만들어 갈 수 있도록 개발자에게 더 큰 목소리를 부여하겠다는 마이크로소프트의 의지**를 반영한 것
 
 
 
 
+## 5. 결론
 
-## 5. 참고
+* AI 에이전트가 중심이 되는 이 새로운 소프트웨어 개발 시대가 **클라우드로의 전환만큼이나 혁신적일 것**이라고 믿음
+* AI 에이전트 변화는 마찰을 줄이고 복잡성을 낮추며, 수십 년간 팀의 발목을 잡아왔던 비용 구조를 근본적으로 재설계한다.
+* 무엇보다 중요한 것은, 개발자가 자주 이야기하지 않는 한 가지를 되돌려준다는 점이 바로 **"즐거움"**이다.
+* 백로그를 비우고, 반복적인 일을 내려놓고, 개발자가 진심으로 만들고 싶어 하는 것에 집중할 때, 개발자들이 단순히 개발 속도만 높이는 것이 아니라, **우리가 오랫동안 꿈꿔온 미래를 직접 열어가게 된다.**
+
+
+
+## 6. 더 살펴 볼 것
+
+* [BRK100](https://build.microsoft.com/en-US/sessions/BRK100?source=sessions): Reimagining Software Development and DevOps with Agentic AI
+* [BRK113](https://build.microsoft.com/en-US/sessions/BRK113?source=sessions): The Agent Awakens: Collaborative Development with GitHub Copilot
+* [BRK118](https://build.microsoft.com/en-US/sessions/BRK118?source=sessions): Accelerate Azure Development with GitHub Copilot, VS Code & AI
+* [BRK131](https://build.microsoft.com/en-US/sessions/BRK131?source=sessions): Java App Modernization Simplified with AI
+* [BRK102](https://build.microsoft.com/en-US/sessions/BRK102?source=sessions): Agent Mode in Action: AI Coding with Vibe and Spec-Driven Flows
+* [BRK101](https://build.microsoft.com/en-US/sessions/BRK101?source=sessions): The Future of .NET App Modernization Streamlined with AI
+
+
+
+## 7. 참고 블로그
 
 * [에이전트 기반 워크플로우(agentic workflows)](https://github.blog/ai-and-ml/github-copilot/copilot-ask-edit-and-agent-modes-what-they-do-and-when-to-use-them/)
 * [GitHub Copilot: Meet the new coding agent](https://github.blog/news-insights/product-news/github-copilot-meet-the-new-coding-agent/)
-* 
+* [Reimagining App Modernization for the Era of AI](https://techcommunity.microsoft.com/blog/appsonazureblog/reimagining-app-modernization-for-the-era-of-ai/4414793?previewMessage=true)
+* [Introducing Azure SRE Agent](https://techcommunity.microsoft.com/blog/azurepaasblog/introducing-azure-sre-agent/4414569)
+* [Reinventing Software Development](https://techcommunity.microsoft.com/blog/AppsonAzureBlog/building-the-agentic-future/4414743)
