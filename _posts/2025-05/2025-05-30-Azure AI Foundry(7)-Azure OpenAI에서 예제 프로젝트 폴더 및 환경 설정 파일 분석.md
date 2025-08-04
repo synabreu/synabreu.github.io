@@ -1,6 +1,6 @@
 ---
-title: "Azure AI Foundry(6)-Azure OpenAI에서 예제 프로젝트 폴더 및 환경 설정 파일 분석"
-date: 2025-05-29
+title: "Azure AI Foundry(7)-Azure OpenAI에서 예제 프로젝트 폴더 및 환경 설정 파일 분석"
+date: 2025-05-30
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor]
 typora-root-url: ../
 toc: true
