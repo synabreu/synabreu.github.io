@@ -35,6 +35,8 @@ Azure AI Foundry Agent Service로 첫 번째 에이전트를 생성하는 과정
 
 ## 5. 참고
 
+* []
+
 * [Choose your setup](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/environment-setup#choose-your-setup)
 
   

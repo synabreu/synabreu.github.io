@@ -1,5 +1,5 @@
 ---
-title: "-Azure AI Foundry(4)-Azure AI Foundry 소개"
+title: "Azure AI Foundry(4)-Azure AI Foundry 소개"
 date: 2025-05-27
 tags: [마이크로소프트, Microsoft, Build 2025, Azure AI Foundry, Azure, Azure AI Foundry SDK, Azure OpenAI Studio, Azure OpenAI Service, Azure Machine Learning, Azure App Service, Azure Key Vault, Azure Monitor]
 typora-root-url: ../
