@@ -33,9 +33,10 @@ categories: [Microsoft, Azure]
 * Visual Studio Code 에서 **환경 변수(environment variables)**를 정의하고, 개발 중인 애플리케이션이나 개발 도구가 해당 변수들을 자동으로 불러올 수 있게 하는 설정 파일인 `.env` 파일에서 Azure AI Foundry project endpoint 를 설정하기 위해 아래와 같이 복사한다.
 
   ![그림5 - Azure AI Foundry project endpoint 설정](/../images/2025-07/VSCode-Agent05.png)
+  
 * BASIC-AGENT 프로젝트 파일에서 .env 파일을 생성하고 다음과 같이 설정한다. <> 부분 안의 문자열은 여러분이 애저에서 설정한 값들이다. 보안 관계상 이 노트에서는 값을 표시지 않았다. 
 
-  ```.env
+  ```py
   AZURE_PROJECT_NAME=<YOUR-PROJECT-NAME>
   
   AZURE_MODEL_NAME=gpt-4o
@@ -46,6 +47,10 @@ categories: [Microsoft, Azure]
   AZURE_RESOURCE_GROUP=<YOUR-AZURE-RESOURCE-GROUP>
   AZURE_SUBSCRIPTION_ID=<YOUR-AZURE-SUBSCRIPTION-ID>
   ```
+  
+  * 환경 변수(.env) 구성 내용
+
+
   | 변수명                          | 설명                                                                                  | 용도                                                                                                                                                                                |
   | ------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
   | `AZURE_PROJECT_NAME`          | Azure AI Foundry에서 생성한 AI 프로젝트의 이름                              | 에이전트, 모델, 지식 등을 관리하는 단위 프로젝트 이름. SDK에서 프로젝트를 지정할 때 사용함.                                                                                         |
@@ -54,6 +59,10 @@ categories: [Microsoft, Azure]
   | `URE_PROJECT_ENDPOINT`        | 해당 AI 프로젝트의 REST API Endpoint URL                                    | `AIProjectClient`나 `AgentsClient`가 이 엔드포인트를 통해 에이전트, 프로젝트, 지식 등을 API로 제어함. 예) `https://<subdomain>.services.ai.azure.com/api/projects/<project>` |
   | `AZURE_RESOURCE_GROUP`        | Azure 리소스 그룹 이름                                                      | AI Foundry 프로젝트가 속해 있는 리소스 그룹. 리소스 배포와 관리를 위한 논리적 그룹입니다. 인프라 및 보안 정책에도 영향을 줌.                                                 |
   | `AZURE_SUBSCRIPTION_ID`       | Azure 구독 ID                                                               | Azure 리소스를 소유하고 결제하는 단위인 구독의 고유 식별자로, 프로젝트, 에이전트 등을 만들거나 연결할 때 이 ID가 필요함.                                               |
+
+
+
+## 3. sample_agents.py 파일 분석 및 실생
 
 * `sample_agents.py` 파일을 생성하고 아래의 내용을 추가해 넣어라.
 
