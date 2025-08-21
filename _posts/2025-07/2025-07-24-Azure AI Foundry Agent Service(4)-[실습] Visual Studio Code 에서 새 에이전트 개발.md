@@ -8,6 +8,8 @@ categories: [Microsoft, Azure]
 ---
 지난 실습에서 Azure AI Foundry Agent Service 의 Foundry Portal 을 이용하여 새 에이전트 생성할 수 있도록 환경 설정과 Agents Playground 에서 테스트를 했다. 그렇다면, 이번 노트는 윈도우11 운영체제에서 Visual Studio Code 개발 도구를 이용해서 직접 코딩을 통해 에이전트 개발하는 방법에 대해 정리해보겠다.
 
+
+
 ## 1. Visual Studio Code 에서 Basic-Agent 프로젝트 설정
 
 * Visual Studio Code 에서 `New WIndows` 메뉴를 실행해 `Basic-Agent` 폴더를 생성한다.  그런 후, 해당 프로젝트 폴더에서 새 `Terminal Window`를 실행시켜  **Azure AI Agent Service 및 프로젝트 관리 기능**을 위한 클라이언트 라이브러리로 `pip install azure-ai-projects` 명령으로 설치한다.
@@ -34,7 +36,7 @@ categories: [Microsoft, Azure]
 
   ![그림5 - Azure AI Foundry project endpoint 설정](/../images/2025-07/VSCode-Agent05.png)
   
-* BASIC-AGENT 프로젝트 파일에서 .env 파일을 생성하고 다음과 같이 설정한다. <> 부분 안의 문자열은 여러분이 애저에서 설정한 값들이다. 보안 관계상 이 노트에서는 값을 표시지 않았다. 
+* sample-agent.py 파일에서 .env 파일을 생성하고 다음과 같이 설정한다. <> 부분 안의 문자열은 여러분이 애저에서 설정한 값들이다. 보안 관계상 이 노트에서는 값을 표시지 않았다. 
 
   ```py
   AZURE_PROJECT_NAME=<YOUR-PROJECT-NAME>
@@ -47,7 +49,7 @@ categories: [Microsoft, Azure]
   AZURE_RESOURCE_GROUP=<YOUR-AZURE-RESOURCE-GROUP>
   AZURE_SUBSCRIPTION_ID=<YOUR-AZURE-SUBSCRIPTION-ID>
   ```
-  
+
   * 환경 변수(.env) 구성 내용
 
 
@@ -62,7 +64,7 @@ categories: [Microsoft, Azure]
 
 
 
-## 3. sample_agents.py 파일 분석 및 실생
+## 3. sample_agents.py 파일 분석 및 실행
 
 * `sample_agents.py` 파일을 생성하고 아래의 내용을 추가해 넣어라.
 
@@ -117,3 +119,6 @@ categories: [Microsoft, Azure]
 
   
 
+## 4. 예제 소스 공개
+
+* 
