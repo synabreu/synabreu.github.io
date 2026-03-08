@@ -6,7 +6,7 @@ author_profile: true
 ---
 저의 경력서, Resume: Jinho Seo, Contact: synabreu@outlook.com
 
-* [영어 버전은 여기에!](https://synabreu.github.io/about/about-eng.md)
+* [영어 버전은 여기에!](https://synabreu.github.io/_pages/about-eng.md)
 
 ---
 
