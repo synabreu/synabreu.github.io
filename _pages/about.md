@@ -5,7 +5,22 @@ layout: single
 author_profile: true
 ---
 
-안녕하세요? 시나브로 테크 노트 블로그 작성자인 서진호입니다. 링크드인에서 알 수 없이 계속해서 계속 차단을 당해서 저의 경력 사항을 한글과 영문 버전을 공개합니다.
+Resume: Jinho Seo, Contact: synabreu@outlook.com
 
-* 한글 버전
-* [영문 버전](/_pages/about-eng.md)
+---
+
+**Professional Summary**
+
+With over 2o years of experience across the PC, web,
+mobile, cloud, and AI industries, I most recently served as a Senior AI
+Infrastructure and Cloud Solutions Architect at HPE. At HPE, I led enterprise
+AI transformation initiatives across the APAC & India regions, focusing on
+HPE Cray XD–based data center and AI hardware infrastructure, including GPUs,
+storage, network fabrics, and large-scale distributed training and inference
+systems. I leverage strong technical leadership to deliver measurable business outcomes
+through executive advisory, technical evangelism, software ecosystem adoption,
+and partner ecosystem collaboration, with a proven track record of driving
+impact over eight years at Microsoft.
+
+---
+
