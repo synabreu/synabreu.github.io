@@ -4,44 +4,30 @@ permalink: /about/
 layout: single
 author_profile: true
 ---
-저의 경력서, Resume: Jinho Seo, Contact: synabreu@outlook.com
 
+* [한글 버전은 여기에!](about-kor.md)
 * [영어 버전은 여기에!](about-eng.md)
 
 ---
 
-**Professional Summary**
+안녕하세요? 시나브로 테크 노트 블로그 작성자인 서진호입니다.
 
-With over 20 years of experience across the PC, web, mobile, cloud, and AI industries,I most recently served as a Senior AI Infrastructure and Cloud Solutions Architect at HPE. At HPE, I led enterprise AI transformation initiatives across the APAC & India regions, focusing on HPE Cray XD–based data center and AI hardware infrastructure, including GPUs, storage, network fabrics, and large-scale distributed training and inference systems. I leverage strong technical leadership to deliver measurable business outcomes through executive advisory, technical evangelism, software ecosystem adoption, and partner ecosystem collaboration, with a proven track record of driving
-impact over eight years at Microsoft.
+- 💼 **나는 어떤 사람일까요?**
 
----
+  최근에 HPE 에서 **시니어 HPC & AI 프리세일즈 솔루션 아키텍트(Sr. HPC&AI Presales Solution Architect)**로 활동하며 다양한 국내 및 아태지역(APAC) 기업들에게 고성능 컴퓨팅(HPC) 및 대규모 AI 인프라 구축에서 HPE Cray 시스템과 NVIDIA 기반의 생성형 AI, LLM(대규모 언어 모델) 솔루션을 고객 맞춤형으로 설계하고, RAG 기반 AI 에이전트, 벡터 데이터베이스 등을 포함한 엔터프라이즈 AI 아키텍처를 제안해왔습니다. 또한, NVIDIA, Intel, AMD 등과 공동 워크숍을 주최하고, 고객 PoC 수행을 통해 기술 도입을 이끌었습니다.
 
-**Work Expriences**
+  소프트리프(Softleaf)사에 **Data & AI 솔루션 아키텍트 팀장**으로 근무하며,  AWS 인프라 및 AI 솔루션 개발 팀을 이끌었습니다. AWS 기반의 다양한 개발과 CI/CD 배포, 도커 및 쿠버네티스, 세이지메이커, MLOps 도구(Kubeflow, MLflow)를 활용해 클라우드 네이티브 환경에서 AI 솔루션을 구축하고, DevOps 기반의 머신러닝 프로젝트를 성공적으로 수행했습니다. 언제나 새로운 기술을 습득하기 위해 [AWS 데이터 기반 과학 책(2023)을](https://www.hanbit.co.kr/store/books/look.php?p_code=B6134249359) 번역 했고, [AWS Certified Machine Learning Speciality 자격증(2021)도](https://www.credly.com/badges/df625075-2dc8-45cc-95d1-a3994d476e2b) 인증받았습니다.
 
-**Sr. HPC&AI Presales – Solution Architect, APAC & India, HPE – 2023. 10 ~ 2025.01**
+  Microsoft Korea에서는 **시니어 테크니컬 에반젤리스트(Senior Technical Evangelist)로** 활동하며, 삼성SDS, LG CNS 등 주요 엔터프라이즈 고객사와 함께 .NET 및 Azure 기반의 솔루션을 공동 개발하고, Visual Studio와 Windows Mobile 앱 생태계 확산에 기여했습니다. Imagine Cup에서 수상자를 배출한 개발자 커뮤니티를 운영하며, 개발자 교육, 세미나, 해커톤 등을 통해 기술 전파와 생태계 조성에 앞장섰습니다.
 
-* Assessed clients' business needs and challenges to craft customized proposals utilizing generative AI solutions and delivered compelling presentations to expand visibility for large-scale HPC and AI hardware and software deals in the financial, public sectors, and research areas, focusing on the Korean IT market, which contributed to revenue growth.
-* Led the adoption and sales of HPE Cray XD’s hyperscale data center hardware/software solutions, providing technical support to enterprise customers to resolve HPC challenges, while designing and executing Proof of Concepts (PoCs) to validate the effectiveness of large-scale AI solutions based on HPE AI/LLM software (HPE MLDM, MLDLE GenAI Studio, MLIS) for multi-GPU configurations.
-* Collaborated with the HPC & AI sales team to develop strategies that maximize hardware and software value, actively engaged with enterprise customers and H/W·S/W partners, and served as a technical speaker at NVIDIA-HPE AI Workshops and joint events with Intel and AMD.
-* Proven experience in engaging with enterprise customers and HW/SW partners, promoting advanced HPE and NVIDIA technologies, and fostering adoption of innovative solutions by leveraging HPE Cray Systems based on NVIDIA GPUs and NVIDIA AI Enterprise Software covering NVIDIA NIM, Dynamo, TensorRT-LLM. Nemo Framework.
-* Leveraged NCCL’s key communication patterns, including All-Reduce and All-to-All, to synchronize model parameters and exchange partial model weights across multiple GPUs in a multi-node setup. This approach significantly enhanced the efficiency of distributed training, enabling faster convergence and optimized resource utilization for large-scale deep learning models.
-* Extended single GPU code to multi-node using the Determined Trial API for HPE MLDE, implemented a checkpoint recovery strategy with AWS/GCP Spot Instances, leveraging HPE MLDE's automatic fault tolerance, and implemented an automated HPO pipeline by showing the demo of the ASHA (Adaptive Successive Halving) algorithm on HPE MLDE.
-* Designed architecture for a heterogeneous cluster environment by separating Kubernetes and Slurm and implemented an HPE MLDE abstraction layer on the Slurm backend to improve the utilization of existing HPC resources.
-* Demonstrated a workflow where models trained in MLDE are automatically converted to ONNX format and deployed to KServe in MLIS for inference, improving operational efficiency by 50% and ensuring stable service scalability, effectively addressing deployment delays caused by the
-  separation of model training, serving, and inference environments.
-* Translated and analyzed the core architecture of the HPE Slingshot network fabric, compared it with NVIDIA InfiniBand and  Spectrum-X to highlight key differences, and developed Korean technical white papers and proposals to present the advantages and unique capabilities of each network solution for high-performance computing environments.
-* Proposed storage architecture features for HPE Cray ClusterStor E1000/E2000 systems, based on the open-source Lustre parallel  file system, certified with GPUDirectStorage to ensure ultra-low-latency data  access and prevent GPU idle times in the Exascale era. Additionally, compared and positioned these features against WEKA, VAST Data, IBM Storage Scale, and Dell ObjectScale system.
-* Rapidly prototyped multi-agent systems integrating Retrieval-Augmented Generation (RAG) with vector databases across hybrid cloud environments and delivered hands-on demonstrations of Agentic AI frameworks and vLLM to enterprise clients, accelerating the adoption of cutting-edge LLM solutions.
+  그외 더 저의 경력 사항이 궁금하시면, [저의 링크드인의 프로필](https://www.linkedin.com/in/jinhoseo/)을 읽어 보세요 :)
+- 📌 **자격 분야**
 
-**Head of Data & AI Solutions Architect, Softleaf – 2022. 12 ~ 2023.09**
-
-* Led a team of 12 solution developers and AWS infrastructure engineers to improve operational efficiency, to resolve operational management issues related to AWS infrastructure environment in team projects, and to monitor audit and visibility controls using CloudWatch Logs and Metrics.
-* Modernized a monolithic architecture into a container-based structure using AWS ECS and built a DevOps (CI/CD) pipeline with GitLab, AWS Code Pipeline, and Jenkins, reducing deployment time from hours to minutes while significantly improving availability and operational stability.
-* Architected Auto Scaling and Elastic Load Balancing configurations to support elastic traffic patterns and high availability and implemented blue/green and rolling deployment strategies to enable zero-downtime releases.
-* Consulted enterprise clients across various industries on cloud-based Big Data and AI strategies, cost optimization, and governance guidelines, establishing long-term strategic partnerships through direct collaboration with C-level executives.
-* Provided guidelines for building an end-to-end automated MLOps using MLflow and Kubeflow within Amazon SageMaker, significantly accelerating model development cycles and improving productivity and consistency for data scientists.
-
-
-**AI/ML Solution Consulting, Self-employed – 2017. 06 ~ 2022. 10**
+  - [HPE Sales Certified - AI and As-a-Service Solutions [2025]](https://www.credly.com/badges/3079546e-e600-4da7-a34b-c0325dd85a9c/linked_in_profile)
+  - [NVIDIA-Certified Associate: AI Infrastructure and Operations](https://www.credly.com/badges/129a5d89-41ed-4452-8ab6-14dff03eb815)
+  - [Microsoft Most Valuable Professional(MVP) Alumni [2023]](https://www.credly.com/badges/1124f543-2494-4b23-8143-ff2c48a4189d)
+  - [AWS Certified Machine Learning Speciality [2021]](https://www.credly.com/badges/df625075-2dc8-45cc-95d1-a3994d476e2b)
+- 📚 **기술 스택**   AWS, Azure, GoogleCloud, NVIDIA, PyTorch, OpenAI, Anthropic 등
+- 🧠 **현재 관심 분야**
+  NVIDIA AI Factory, LLM 파인튜닝 및 추론 최적화, RAG 및 Vector DB, MCP, Agentic AI
 
