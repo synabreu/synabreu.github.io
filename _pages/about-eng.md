@@ -1,17 +1,16 @@
 ---
-title: "About English"
+title: "Curriculum Vitae - English Version"
 permalink: /about-eng/
 layout: single
 author_profile: true
 ---
-
-Resume: Jinho Seo, Contact: synabreu@outlook.com
+Contact Info: Jinho Seo, Contact: synabreu@outlook.com
 
 ---
 
 **Professional Summary**
 
-With over 20 years of experience across the PC, web, mobile, cloud, and AI industries, I most recently served as a Senior AI Infrastructure and Cloud Solutions Architect at HPE. At HPE, I led enterprise AI transformation initiatives across the APAC & India regions, focusing on HPE Cray XD–based data center and AI hardware infrastructure, including GPUs, storage, network fabrics, and large-scale distributed training and inference systems. I leverage strong technical leadership to deliver measurable business outcomes through executive advisory, technical evangelism, software ecosystem adoption, and partner ecosystem collaboration, with a proven track record of driving
+With over 25 years of experience across the PC, web, mobile, cloud, and AI industries, I most recently served as a Senior AI Infrastructure and Cloud Solutions Architect at HPE. At HPE, I led enterprise AI transformation initiatives across the APAC & India regions, focusing on HPE Cray XD–based data center and AI hardware infrastructure, including GPUs, storage, network fabrics, and large-scale distributed training and inference systems. I leverage strong technical leadership to deliver measurable business outcomes through executive advisory, technical evangelism, software ecosystem adoption, and partner ecosystem collaboration, with a proven track record of driving
 impact over eight years at Microsoft.
 
 ---
@@ -23,7 +22,7 @@ impact over eight years at Microsoft.
 * Assessed clients' business needs and challenges to craft customized proposals utilizing generative AI solutions and delivered compelling presentations to expand visibility for large-scale HPC and AI hardware and software deals in the financial, public sectors, and research areas, focusing on the Korean IT market, which contributed to revenue growth.
 * Led the adoption and sales of HPE Cray XD’s hyperscale data center hardware/software solutions, providing technical support to enterprise customers to resolve HPC challenges, while designing and executing Proof of Concepts (PoCs) to validate the effectiveness of large-scale AI solutions based on HPE AI/LLM software (HPE MLDM, MLDE Gen AI Studio, MLIS) for multi-GPU configurations.
 * Collaborated with the HPC & AI sales team to develop strategies that maximize hardware and software value, actively engaged with enterprise customers and H/W·S/W
-partners, and served as a technical speaker at NVIDIA-HPE AI Workshops and joint events with Intel and AMD.
+  partners, and served as a technical speaker at NVIDIA-HPE AI Workshops and joint events with Intel and AMD.
 * Proven experience in engaging with enterprise customers and HW/SW partners, promoting advanced HPE and NVIDIA technologies, and fostering adoption of innovative solutions by leveraging HPE Cray Systems based on NVIDIA GPUs and NVIDIA AI Enterprise Software covering NVIDIA NIM, Dynamo, TensorRT-LLM. Nemo Framework.
 * Leveraged NCCL’s key communication patterns, including All-Reduce and All-to-All, to synchronize model parameters and exchange partial model weights across multiple GPUs in a multi-node setup. This approach significantly enhanced the efficiency of distributed training, enabling faster convergence and optimized resource utilization for large-scale deep learning models.
 * Extended single GPU code to multi-node using the Determined Trial API for HPE MLDE, implemented a checkpoint recovery strategy with AWS/GCP Spot Instances, leveraging HPE MLDE's automatic fault tolerance, and implemented an automated HPO pipeline by showing the demo of the ASHA (Adaptive Successive Halving) algorithm on HPE MLDE.
@@ -54,7 +53,7 @@ partners, and served as a technical speaker at NVIDIA-HPE AI Workshops and joint
 * Guided IT executives as the trusted advisor of the full value of the cloud, and helped them staff, trained and aligned customers and partners to deliver on their large-scale cloud transformation solutions by deploying business cases and technical training contents, Hands-on coding tutorials and demonstration codes in-depth knowledge of Microsoft technologies (C#, SQL, Windows Azure) and Universal App Development, Azure Infrastructure and platform mobile cloud services with SK T- Academy, MDS Academy and Cloud MSP. Resulted in 20% YoY Increasing .NET projects and developers.
 * Contributed to grow sales revenues for cross-selling and up-selling of Visual Studio Tools by 3% YoY by overcoming business and technical challenges and long-term strategic relationships with 50 key accounts to demonstrate new Visual C++ features, Visual Studio for .NET Mobile solutions, especially the Communication Sectors (Samsung, LG Display, Hynix).
 * Drove an engagement at the CXO levels for customer’s business within their devices and carrier’s ecosystem and developed strategic roadmaps by executing co-promoting with SKT/Samsung Electronics and KT/Nokia by contributing to publishing Top/Feature apps by +1K apps. E.g., Windows Mobile App Development Contests with SKT/Samsung Electronics, KT/Nokia, LG, and HTC. Webinars, webcasts and social media campaigns, App Hackathons, 3rd Party meetups, pitching ideas to start- ups campaigns. Resulted to achieve the outstanding WW ranking of 1st selling smartphones 2009 by +1M devices.
-* Provided thought leadership of the Phone/Embedded & Windows Azure Cloud by developing the marketing technology program, launching new products and go-to-market sales strategy, and gaining the required support to execute territory coverage programs. academic curriculum adopting in special cases with promotion of Public Sectors Sales.  
+* Provided thought leadership of the Phone/Embedded & Windows Azure Cloud by developing the marketing technology program, launching new products and go-to-market sales strategy, and gaining the required support to execute territory coverage programs. academic curriculum adopting in special cases with promotion of Public Sectors Sales.
 * Advised and incubated the next Microsoft developers and influencers who are 100 MVPs/Community leaders/Developer experts as part of the Microsoft tech trainers and advocate speakers by engaging in C#/Java/Windows CE/Azure Cloud developer communities, Microsoft Student Partners. Resulting in the final winners of Imagine Cup 2006, 2009, 2010.
 * Thrived in a fast-paced dynamic environment with limited direction, balancing competing priorities, and managing several time-sensitive projects simultaneously by diffusing customers best cases and app templates integrating on Windows Phone, Windows 8 UX styles, Windows Azure Cloud to offline and online as social networks channels (blogs, books, MSDN, Twitter, Facebook) with developer’s audience managers and product marketing team.
 
@@ -88,6 +87,7 @@ partners, and served as a technical speaker at NVIDIA-HPE AI Workshops and joint
 ---
 
 **Certifications**
+
 * NVIDIA Base Command Manager Administration Software, NVIDIA, 2026
 * Oracle Cloud Infrastructure 2025 Generative AI Professional, Oracle, 2025
 * Oracle Cloud Infrastructure 2025 AI Foundations Associate, Oracle, 2025
@@ -97,6 +97,7 @@ partners, and served as a technical speaker at NVIDIA-HPE AI Workshops and joint
 * AWS Certified Machine Learning – Specialty by Amazon Web Services, 2021
 
 **Honors & Awards**
+
 * Microsoft MCB Asia Star Awards – Korea Team, Microsoft, 2010
 * Microsoft C&O Champions Club Award – Harmony, Microsoft, 2010
 * Korea Software Development grand prize Award – V3Pro’97, The Ministry of Information and Communication. South Korea. 1996
@@ -104,18 +105,21 @@ partners, and served as a technical speaker at NVIDIA-HPE AI Workshops and joint
 ---
 
 **Books Publishing**
+
 * [Published the Korean translation book of “Data Science on AWS”](https://www.hanbit.co.kr/store/books/look.php?p_code=B6134249359), Hanbit Media, 2023
-* [Microsoft's IT Strategy and Future](https://www.hanbit.co.kr/store/books/look.php?p_code=B7446042540), co-authored by Seo Jin-ho and five others, Hanbit Media, 2006
+* [Microsoft&#39;s IT Strategy and Future](https://www.hanbit.co.kr/store/books/look.php?p_code=B7446042540), co-authored by Seo Jin-ho and five others, Hanbit Media, 2006
 
 ---
 
 **Papers**
+
 * Upstage Start-up: Analysis of destructive AI Startup Strategy based on new generative AI Platform, Business Paper of AI Strategic Management master’s degree, assist university, 2024
 
 **Articles & Columns**
-* [The "Post-GPU" era envisioned by AWS, Google, and AMD](https://www.technologyreview.kr/aws%c2%b7%ea%b5%ac%ea%b8%80%c2%b7amd%ea%b0%80-%ec%84%a4%ea%b3%84%ed%95%9c-%ed%8f%ac%ec%8a%a4%ed%8a%b8-gpu-%ec%8b%9c%eb%8c%80/), MIT Technology Review Journal Korea, Feb. 2026 
-* [NVIDIA's Vision: Why They're Building an 'AI Factory’?](https://www.technologyreview.kr/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84%eb%8a%94-%ec%99%9c-ai-%ed%8c%a9%ed%86%a0%eb%a6%ac%eb%a5%bc-%eb%a7%8c%eb%93%a4%ea%b3%a0-%ec%9e%88%eb%8a%94%ea%b0%80/), MIT Technology Review Journal Korea, Jan. 2026 
-* [Review of DeepSeek's mHC Paper: A Study on Manifold Hyper-Connections](https://brunch.co.kr/@synabreu/160), BrunchStory, Jan. 2026
+
+* [The &#34;Post-GPU&#34; era envisioned by AWS, Google, and AMD](https://www.technologyreview.kr/aws%c2%b7%ea%b5%ac%ea%b8%80%c2%b7amd%ea%b0%80-%ec%84%a4%ea%b3%84%ed%95%9c-%ed%8f%ac%ec%8a%a4%ed%8a%b8-gpu-%ec%8b%9c%eb%8c%80/), MIT Technology Review Journal Korea, Feb. 2026
+* [NVIDIA&#39;s Vision: Why They&#39;re Building an &#39;AI Factory’?](https://www.technologyreview.kr/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84%eb%8a%94-%ec%99%9c-ai-%ed%8c%a9%ed%86%a0%eb%a6%ac%eb%a5%bc-%eb%a7%8c%eb%93%a4%ea%b3%a0-%ec%9e%88%eb%8a%94%ea%b0%80/), MIT Technology Review Journal Korea, Jan. 2026
+* [Review of DeepSeek&#39;s mHC Paper: A Study on Manifold Hyper-Connections](https://brunch.co.kr/@synabreu/160), BrunchStory, Jan. 2026
 * [NVIDIA Unveils Next-Generation GPU Rubin CPX](https://brunch.co.kr/@synabreu/157), BrunchStory, 2025
 * [Reinventing Amazon through AWS](https://brunch.co.kr/@synabreu/151), National Information Society Agency (NIA), Digital Service Issue Research, December. 2021
 * [Microsoft Enterprise Strategy: The Trojan Horse for the Metaverse](https://brunch.co.kr/@synabreu/150), National Information Society Agency (NIA), Digital Service Issue Research, November. 2021
@@ -133,10 +137,6 @@ partners, and served as a technical speaker at NVIDIA-HPE AI Workshops and joint
 * Designing a Cloud Strategy for Success, Research Report, BespinGlobal, 2020
 * Preparing for the Machine Learning Revolution: Strategies for Success, Research Report, BespinGlobal, 2020
 * [Will Software Developers Become Unemployed in the Age of Artificial Intelligence? M-Tech Section](https://www.mk.co.kr/news/business/7840242), Maeil Business Newspaper, Aug. 2018.
-* [Crisis-Hit Tesla: Taking the "Bigger and Faster" Route to Power Through?](https://www.mk.co.kr/news/business/8060299), Maeil Business Newspaper, Aug. 2018.
+* [Crisis-Hit Tesla: Taking the &#34;Bigger and Faster&#34; Route to Power Through?](https://www.mk.co.kr/news/business/8060299), Maeil Business Newspaper, Aug. 2018.
 
 ---
-
-
-
-

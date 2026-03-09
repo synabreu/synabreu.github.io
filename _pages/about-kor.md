@@ -1,0 +1,142 @@
+---
+title: "Curriculum Vitae - Korean version"
+permalink: /about-kor/
+layout: single
+author_profile: true
+---
+
+연락처: Jinho Seo, Contact: synabreu@outlook.com
+
+---
+
+**경력 요약**
+
+PC, 웹, 모바일, 클라우드 및 AI 산업 전반에 걸쳐 25년 이상의 경력을 보유하고 있으며, 가장 최근에는 HPE에서 시니어 AI 인프라 및 클라우드 솔루션 아키텍트로 역임했습니다. HPE에서는 APAC 및 인도 지역의 기업용 AI 전환 이니셔티브를 주도하였으며, 특히 HPE Cray XD 기반의 데이터 센터와 GPU, 스토리지, 네트워크 패브릭, 대규모 분산 학습 및 추론 시스템을 포함한 AI 하드웨어 인프라에 주력했습니다. 또한, 마이크로소프트에서의 8년 실적을 포함하여 경영진 자문, 기술 에반젤리즘, 소프트웨어 및 파트너 생태계 협업을 통한 강력한 기술 리더십을 바탕으로 가시적인 비즈니스 성과를 창출해 온 검증된 전문가입니다.
+
+---
+
+**경력 사항**
+
+**HPE, APAC&인도 지역, 시니어 HPC&AI 프리세일즈 솔루션 아키텍트 – 2023. 10 ~ 2025.01**
+
+* 국내 IT 시장을 중심으로 금융, 공공, 연구 기관의 비즈니스 요구사항과 당면 과제를 분석해 멀티 GPU 환경에서 HPE AI/LLM 소프트웨어(HPE MLDM, MLDE Gen AI Studio, MLIS) 기반 대규모 AI 솔루션의 유효성을 검증하기 위한 개념 증명(PoC) 및 맞춤형 제안을 수립했음.  
+* HPE Cray XD 하이퍼스케일 데이터 센터 하드웨어 및 소프트웨어 솔루션의 도입과 판매를 주도했음. 100 여 개의 국내 기업 방문으로 고객의 대규모 HPC&AI 과제 해결, 기업 맞춤형 LLM 도입 전략 제시 및 고도화된 AI 워크플로우 채택 가속화 주도해 하드웨어/소프트웨어 계약 수주를 위한 기술 프레젠테이션을 수행했음. 
+* 멀티 GPU 환경에서 HPE AI/LLM 소프트웨어(HPE MLDM, MLDE Gen AI Studio, MLIS) 기반 대규모 AI 솔루션의 유효성을 검증하기 위한 개념 증명(PoC) 실행 및 하이브리드 RAG 통합 멀티 에이전트 시스템, 에이전틱AI 프레임워크 및 vLLM 고성능 추론 엔진 실무 시연(Hands-on Demo) 수행.  
+* HPC/AI 영업 전략 수립 및 하드웨어·소프트웨어 가치 최적화 제안. 기업 고객 및 파트너사(H/W, S/W) 협업 네트워크 구축. NVIDIA-HPE AI 워크숍 및 Intel·AMD 공동 이벤트 기술 스피커 역임 등 대외 테크 에반젤리즘 수행
+* 엔터프라이즈 고객 및 하드웨어·소프트웨어 파트너사들과의 풍부한 협업 경험을 바탕으로 HPE 및 NVIDIA의 첨단 기술 도입을 추진했음. 특히 NVIDIA GPU 기반의 HPE Cray 시스템을 활용해 NVIDIA NIM, Dynamo, TensorRT-LLM, NeMotron를 포함한 NVIDIA AI Enterprise 소프트웨어 기반 혁신 솔루션의 확산과 채택을 성공적으로 이끌었음
+* NCCL 기반 분산 학습 최적화: 멀티 노드 GPU 환경에서 All-Reduce/All-to-All 패턴을 통한 파라미터 동기화 구현. 대규모 딥러닝 모델의 분산 학습 효율성 제고 및 빠른 수렴(Convergence) 유도. 하드웨어 리소스 사용량 최적화를 통한 대규모 학습 파이프라인 고도화 수행
+* 분산 학습 및 HPO 자동화 구현: HPE MLDE(Determined AI) 기반 다중 노드 확장 및 Trial API 적용. AWS/GCP 스팟 인스턴스 비용 최적화 모델 구축 및 자동 결함 허용(Fault Tolerance) 기반 체크포인트 복구 전략 수립. ASHA 알고리즘을 활용한 하이퍼파라미터 최적화(HPO) 파이프라인 자동화 및 기술 시연 수행.
+* 이기종 클러스터 아키텍처 설계 및 최적화: Kubernetes와 Slurm 환경의 논리적 분리를 통한 안정적 운영 환경 구축 제안 및 Slurm 백엔드와 연동된 HPE MLDE 추상화 레이어(Abstraction Layer) 구현으로 기존 HPC 인프라 활용 극대화 및 작업 스케줄링 효율성 제고.
+* 학습부터 추론에 이르는 환경 분리로 발생하는 배포 병목 현상을 해결하고자,MLDE-ONNX-KServe로 이어지는 통합 워크플로우를 구축했음. 모델 변환 및 배포 과정을 자동화함으로써 기존 대비 운영 효율을 50% 개선하였으며, 부하에 따른 유연한 확장이 가능한 안정적인 추론 서비스 환경을 실현했음.
+* HPE Slingshot 네트워크 패브릭의 핵심 아키텍처를 분석하고 이를 NVIDIA InfiniBand 및 Spectrum-X와 비교하여 기술적 차별점을 도출했음. 이를 바탕으로 고성능 컴퓨팅(HPC) 환경에 최적화된 네트워크 솔루션별 강점과 고유 기능을 제시하는 RFI/RFC용 국문 기술 백서 및 제안서를 제작해 전문적인 기술 가이드를 제공했음.
+* 초저지연 데이터 접근용으로 엑사스케일 시대의 GPU 유휴 시간을 방지하고 GPUDirect Storage(GDS) 인증을 받은 오픈소스 Lustre 병렬 파일 시스템 기반의 HPE Cray ClusterStor E1000/E2000 시스템을 위한 스토리지 아키텍처를 제안했음. 특히, 이와 경쟁사의 제품인 WEKA, VAST Data, DDN EXAScaler, IBM Spectrum Scale과 비교 분석한 리서치 자료 제공했음.
+
+**(주)소프트리프, 데이터 & AI 솔루션 아키텍트 부서장, – 2022. 12 ~ 2023.09**
+
+* AWS 인프라 기반 프로젝트의 운영 난제를 해결하기 위해 12인 규모의 엔지니어링 팀을 총괄했음. 특히, DevOps(CI/CD) 및 도커, 쿠버네티스 관리, CloudWatch를 통한 정밀 모니터링 및 감사 로그 시스템을 도입해 인프라 운영의 가시성을 확보했으며, 이를 통해 팀 전체의 운영 프로세스를 최적화하고 관리 효율을 극대화했음. 
+* 애플리케이션 현대화 및 DevOps 체계 구축: 모놀리식 구조의 AWS ECS 컨테이너화 수행. GitLab, Jenkins, AWS CodePipeline 기반의 End-to-End CI/CD 자동화 구현. 배포 리드타임 최적화 및 고가용성 아키텍처 확보를 통한 운영 리스크 감소.
+* 탄력적 인프라 및 무중단 배포 아키텍처 설계: Auto Scaling 및 ELB 기반의 고가용성(HA) 환경 구축. 블루/그린 및 롤링 배포 전략 수립을 통한 배포 리스크 관리. 서비스 가동시간(Uptime) 극대화를 위한 Zero-downtime 배포 파이프라인 구현 및 운영.
+* 엔터프라이즈 전략 컨설팅 및 파트너십 강화: 클라우드 기반 빅데이터/AI 로드맵 수립 및 도입 자문. 클라우드 비용 최적화(FinOps) 및 전사적 거버넌스 가이드라인 수립 지원. C-level 경영진 대상 전략 세션 주도 및 기술 에반젤리즘을 통한 장기적 사업 기회 확보.
+* Amazon SageMaker 기반 MLOps 자동화 체계 수립: MLflow(실험 관리) 및 Kubeflow(파이프라인) 통합 가이드라인 제시. 엔드-투-엔드 모델 생애주기 자동화 구현을 통한 개발 리드타임 단축. 표준화된 MLOps 환경 제공으로 데이터 사이언티스트의 업무 일관성 및 생산성 제고.
+
+**AI/ML 솔루션 컨설텅, – 2017. 06 ~ 2022. 10**
+
+* Active Learning 및 Auto-labeling 기술을 활용하여 HR AI 매칭 프로젝트와 SK하이닉스 반도체 수율 검증 테스트 기반의 컴퓨터 비전 PoC 프로젝트 실행. 특히, SK C&C 플랫폼 비즈니스 팀과 협력하여 'SK 이천서브포럼 2021'에서 최우수 AI 활용 사례(Best AI Case)를 발표했음.
+* 대학교 계절학기 IT 전문 강사 역임: 클라우드 컴퓨팅 및 Amazon EC2 인프라 활용법 교육. 컨테이너화 기술(Docker/Kubernetes) 및 가상화 아키텍처 강의. Python 데이터 분석 및 아두이노 IoT 융합 실습 과정 운영 등 폭넓은 기술 커리큘럼 설계 및 교수 수행.
+* 공공 부문 클라우드 교육 콘텐츠 제작 및 교수: 고용노동부·메가존 협업 재취업 지원 웹캐스트 60회차 제작. AWS 영역: 인프라 기본(EC2, S3, VPC) 및 컨테이너 오케스트레이션(Kubernetes) 실습 지도 및 GCP 영역: 데이터 파이프라인(ETL), 데이터 웨어하우징(BigQuery ML), 엔드-투-엔드 AI 플랫폼(Vertex AI) 기반 데이터 분석 역량 강화 교육.
+* 한국지능정보사회진흥원(NIA) 및 과학기술정보통신부 AI 허브를 통해 클라우드/머신러닝 품질 관리 및 모니터링, AI 학습용 라벨링 데이터, 구글 AI 연구 논문에 관한 월간 리포트를 정기적으로 발행했음.
+
+**마이크로소프트, 개발자및 플랫폼 부서, 시니어 테크니컬 이벤젤리스트-모바일/임베디드 분야 — 2005.12 ~ 2012.9**
+
+* 고객사, 주요 채널 파트너, ISV 및 솔루션 대행사와 협력 관계를 구축하여 목표(KPI/ROI) 달성을 위한 공동 실행 계획을 수립하고 실질적인 가치를 창출했음. 특히, 삼성 SDS, LG CNS와 함께 엔터프라이즈 솔루션 캠페인을 수행하며 월간 세미나, 컨퍼런스, 기술 브리핑(Breakfast Briefing), PoC 프로젝트 및 공동 아키텍처 설계 회의를 주도했음.
+* IT 경영진의 Trusted Advisor로서 클라우드의 전사적 가치를 제시하고, 고객사 및 파트너사의 인력 구성, 교육, 조직 정렬을 지원하여 대규모 클라우드 전환을 성공적으로 이끌었음. Microsoft 기술(C#, SQL, Azure) 및 유니버설 앱 개발에 대한 깊은 지식을 바탕으로 비즈니스 케이스와 기술 교육 콘텐츠, 핸즈온 튜토리얼을 배포했으며, SK T-아카데미 및 주요 MSP와의 협력을 통해 .NET 프로젝트 및 개발자 수를 전년 대비 20% 증가시켰음.
+* 삼성, LG 디스플레이, 하이닉스 등 통신 및 제조 분야의 50개 주요 고객사와 장기적인 전략적 관계를 구축하고 기술적 과제를 해결함으로써, Visual Studio 툴의 교차 판매(Cross-selling) 및 추가 판매(Up-selling) 매출을 전년 대비 3% 성장시켰음. 특히, 신규 Visual C++ 기능과 .NET 모바일 솔루션을 시연하여 고객사의 비즈니스 요구사항을 성공적으로 충족시켰음.
+* 디바이스 및 통신사 생태계 내 고객 비즈니스를 위해 CXO 레벨의 인게이지먼트를 주도했으며, SKT/삼성전자 및 KT/노키아와의 공동 프로모션을 통해 전략적 로드맵을 수립했음. 이를 통해 1,000개 이상의 주요 앱(Top/Feature apps) 출시에 기여했으며, SKT/삼성전자, KT/노키아 등과 공동 주관한 Windows Mobile 앱 개발 공모전 및 해커톤, 스타트업 피칭 캠페인 등을 통해 2009년 스마트폰 판매 세계 1위(100만 대 이상 판매)라는 압도적인 성과를 달성했음.
+* 모바일·임베디드 및 Windows Azure 클라우드 분야의 Thought Leadership을 발휘해 마케팅 기술 프로그램 개발, 신제품 출시 및 시장 진입(GTM) 영업 전략 수립을 주도했음. 또한, 영업 권역별 프로그램 실행을 위한 지원 체계를 구축하였으며, 공공 부문 영업 활성화를 위해 대학 교육 과정 내 기술 채택을 이끌어내는 차별화된 성과를 거두었음.
+* 국내 개발자에게 인기있는 C#, Java, Windows CE, Azure 클라우드 개발자 커뮤니티와 Microsoft Student Partners(MSP) 활동을 통해 100여 명의 MVP, 커뮤니티 리더, 기술 전문가들을 자문하고 육성했음. 테크 트레이너 및 에반젤리스트로서 차세대 개발자 성장을 지원한 결과, 2006년, 2009년, 2010년 이매진 컵(Imagine Cup) 세계 대회 최종 우승자를 배출하는 성과를 거두었음.
+* 불확실성이 높은 환경에서 자기 주도적으로 우선순위를 조정하며 다수의 타임 민감형 프로젝트를 완수했음. 예) 개발자 오디언스 매니저 및 프로덕트 마케팅 팀과 협력하여 Windows Phone, Windows 8 UX 스타일, Windows Azure 클라우드가 통합된 앱 템플릿을 제작 및 성공 사례를 발굴하고, MSDN 및 다양한 소셜 미디어 채널을 통해 전략적으로 확산시켰음. 마케팅 및 개발자 관계(DevRel) 조직 간의 시너지를 창출하고, 기술 솔루션의 시장 수용도를 높였음.
+
+**(주)닷넷소프트, 모바일 애플리케이션 팀장 — 2001.09 ~ 2005. 08**
+
+* B2B 클라우드 솔루션 개발 팀 리딩 및 비즈니스 핵심 프로세스의 클라우드 전환 및 대규모 트래픽 처리 시스템 안정화: 6명의 소프트웨어 엔지니어 인사 관리 및 기술 가이드 제공. 비즈니스 이해관계자(Stakeholders)와의 협업을 통한 요구사항 정의 및 로드맵 수립. 대규모 클라우드 기반 ERP, SCM 시스템 구축 및 모바일 데이터 동기화 솔루션 구현. 
+* 엔터프라이즈 모바일 B2B 솔루션 및 SI 프로젝트 수행: .NET 프레임워크(C#), MS-SQL, Oracle, SOA(웹 서비스) 기반의 N-tier 서비스 지향 아키텍처를 활용하여 모바일 데이터 동기화 및 멀티 디바이스 관리 문제를 해결했음. 특히 롯데정보통신 기술연구소, GS건설, 대림/우림건설, 롯데제과/삼강, 롯데마트, SCD제약, 삼성생명 등 다양한 기업의 모바일 B2B 현업 업무 앱(LOB), ERP, SCM 시스템 통합(SI) 프로젝트를 성공적으로 완수했음.
+* 엔터프라이즈 SFA(영업 자동화) 시스템 구축 및 대규모 배포: 롯데삼강에 ERP와 모바일 애플리케이션 서버(MAS) 간 오프라인 데이터 동기화 및 실시간 영수증 출력 아키텍처를 적용하여, 150여 개의 .NET 모바일 SFA(영업 자동화) 앱을 배포하고 전년 대비 매출 10% 성장을 견인했음. 롯데제과의 경우, Windows CE.NET 기반의 .NET 어셈블리를 활용해 모바일 앱 자동 버전 업데이트 문제를 해결함으로써 후지쯔 PDA 2,000대 규모의 대규모 SFA 배포를 완수했음.
+* 엔터프라이즈 모바일 포털 및 KM 시스템 현대화: 롯데정보통신 기술연구소 및 Microsoft 컨설팅 서비스(MCS)와 협업하여, 기존 모바일 그룹웨어를 디지털 대시보드, 인터넷 포털, 지식 관리 시스템(KM)으로 전환했음. 이를 모바일 웹 브라우저 환경에 최적화하여 구현함으로써 롯데그룹 임직원들의 시스템 활용도를 획기적으로 높였음.
+
+**(주)신텍정보시스템, 웹 개발자 – 1999. 08 – 2000.8**
+
+* 대규모 엔터프라이즈 웹 애플리케이션 아키텍처 설계 및 구축: MS Windows Server(IIS) 플랫폼을 기반으로 3계층(3-tier) 웹 애플리케이션 아키텍처를 설계해 쇼핑몰 및 B2B LOB(현업 업무) 시스템 통합(SI) 프로젝트를 수행했음. 특히, 웅진닷컴, 대우 쇼핑몰, LG MRP/MRO 비즈니스 워크플로우 시스템 등 다수의 대기업 웹 애플리케이션 구축을 성공적으로 이끌었음.
+* 셋톱박스 보안 게이트웨이 및 IPS/IDPS 시스템 개발: (주)퓨처시스템 R&D 팀과 협업하여 셋톱박스(Set-top box) 기반의 웹 게이트웨이 및 설정 시스템을 구축했으며, 이를 통해 안전한 웹 트래픽(Secured Web Traffic)을 15% 증가시켰음. 특히, Linux Tomcat 서버와 SQLite 환경에서 침입 방지 시스템(IPS) 및 침입 탐지 방지 시스템(IDPS)의 HTTP 스팸 필터링 및 모니터링 데몬 서비스를 구현하여 보안성을 대폭 강화했음. 
+* 웹 기반 텔레포니 통합(CTI) 및 주문 관리 시스템 개발: 대우 하이마트 쇼핑몰을 대상으로 상담원을 통한 주문 취소, 반품 및 교환 등 고객의 온디맨드 요구사항을 해결하는 시스템을 구축했음. 특히, 로그온 트래킹, 웹 채팅, 사후 서비스(AS) 해피콜 알림 기능을 포함한 웹 기반 텔레포니 통합(CTI) 시스템을 개발하여 고객 응대 효율성을 극대화했음.
+
+**(주)안랩, 소프트웨어 엔지니어 – V3Pro’95/97 – 1995. 12 ~ 1997.02**
+
+* 개인용 보안 데스크톱 솔루션 개발: 윈도우 95/97 환경에서 안티바이러스 엔진과 사용자 인터페이스(UI)를 연결하는 개인용 보안 데스크톱 애플리케이션을 설계, 구현 및 배포폰 제작했음.
+
+---
+
+**학력**
+
+* Franklin University Switzerland, Switzerland – MBA of Artificial Intelligence, 2024
+* Seoul School of Integrated Sciences & Technologies (aSSIST), Korea – Master of Science AI, 2023
+* Stanford University, USA — Stanford Advanced Project Management Certificate, 2017
+* Soongsil Cyber University, Korea - Bachelor’s degree in business administration, Transferred. 2009
+
+---
+
+**자격 인증**
+
+* NVIDIA Base Command Manager Administration Software, NVIDIA, 2026
+* Oracle Cloud Infrastructure 2025 Generative AI Professional, Oracle, 2025
+* Oracle Cloud Infrastructure 2025 AI Foundations Associate, Oracle, 2025
+* NVIDIA 인증 어소시에이트: AI 인프라 및 운영 (NCA-AIIO), NVIDIA, 2024
+* NVIDIA AI Advisor – Technical Sales, NVIDIA, 2024
+* HPE AI WW Ambassador, HPE Sales Certified – AI and AS-a-Service Solutions, HPE, 2024
+* AWS 공인 머신러닝 전문가, AWS Certified Machine Learning – Specialty by Amazon Web Services, 2021
+
+**수상 업적**
+
+* Microsoft MCB Asia Star Awards – Korea Team, Microsoft, 2010
+* Microsoft C&O Champions Club Award – Harmony, Microsoft, 2010
+* Microsoft MVP(Most Valuable Professional) - Windows Mobile Debices, Microsoft, 2001 - 2006
+* 대한민국 소프트웨어 대상(정보통신부 장관상) – V3Pro’97, 정보통신부, 1996
+
+---
+
+**출판 저서**
+
+* [AWS 데이터 과학책 번역 도서 출판했음](https://www.hanbit.co.kr/store/books/look.php?p_code=B6134249359), (주)한빛미디어, 2023
+* [마이크로소프트의 IT 전략 및 미래 ](https://www.hanbit.co.kr/store/books/look.php?p_code=B7446042540), 공동 저서, (주)한빛미디어, 2006
+
+---
+
+**논문**
+
+* 신규 생성형 AI 플랫폼 기반의 파괴적 AI 스타트업 전략 연구(Upstage 사례 중심), 서울과학종합대학원대학교(aSSIST) AI 전략 경영 석사 과정 논문, 2024년
+
+
+**Articles & Columns**
+
+* [The &#34;Post-GPU&#34; era envisioned by AWS, Google, and AMD](https://www.technologyreview.kr/aws%c2%b7%ea%b5%ac%ea%b8%80%c2%b7amd%ea%b0%80-%ec%84%a4%ea%b3%84%ed%95%9c-%ed%8f%ac%ec%8a%a4%ed%8a%b8-gpu-%ec%8b%9c%eb%8c%80/), MIT Technology Review Journal Korea, Feb. 2026
+* [NVIDIA&#39;s Vision: Why They&#39;re Building an &#39;AI Factory’?](https://www.technologyreview.kr/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84%eb%8a%94-%ec%99%9c-ai-%ed%8c%a9%ed%86%a0%eb%a6%ac%eb%a5%bc-%eb%a7%8c%eb%93%a4%ea%b3%a0-%ec%9e%88%eb%8a%94%ea%b0%80/), MIT Technology Review Journal Korea, Jan. 2026
+* [Review of DeepSeek&#39;s mHC Paper: A Study on Manifold Hyper-Connections](https://brunch.co.kr/@synabreu/160), BrunchStory, Jan. 2026
+* [NVIDIA Unveils Next-Generation GPU Rubin CPX](https://brunch.co.kr/@synabreu/157), BrunchStory, 2025
+* [Reinventing Amazon through AWS](https://brunch.co.kr/@synabreu/151), National Information Society Agency (NIA), Digital Service Issue Research, December. 2021
+* [Microsoft Enterprise Strategy: The Trojan Horse for the Metaverse](https://brunch.co.kr/@synabreu/150), National Information Society Agency (NIA), Digital Service Issue Research, November. 2021
+* [Exploring MSA (Micro Service Architecture) through Software Design and Architecture Trends](https://brunch.co.kr/@synabreu/149), National Information Society Agency (NIA), Digital Service Issue Research, October. 2021
+* [Hybrid Cloud Computing, Cloud PC Opening a New Era](https://brunch.co.kr/@synabreu/148), National Information Society Agency (NIA), Digital Service Issue Research, September. 2021
+* [Advancements and Prospects of Content Creation Technology through Artificial Intelligence, Trends in the One-Person Media Industry Webzine Vol. 3](https://brunch.co.kr/@synabreu/147), September Issue 2021. Korea Radio Promotion Association (RAPA). The Ministry of Science and ICT (MSIT)
+* [Graph DB for Visualizing Vast and Complex Data](https://brunch.co.kr/@synabreu/146), National Information Society Agency (NIA), Digital Service Issue Research, Aug. 2021
+* [Xcode Cloud, continuously supporting development and operations](https://brunch.co.kr/@synabreu/144), National Information Society Agency (NIA), Digital Service Issue Research, July 2021
+* [A new Google machine learning cloud powered by Vertex AI](https://brunch.co.kr/@synabreu/140), National Information Society Agency (NIA), Digital Service Issue Research, June 2021
+* [How did the U.S. big tech companies continue to grow their cloud business?](https://brunch.co.kr/@synabreu/138), National Information Society Agency (NIA), Digital Service Issue Research, May 2021
+* [NVIDIA Redesigns AI Data Centers with Grace CPU](https://brunch.co.kr/@synabreu/132), BrunchStory, Apr 2021
+* [How to Accelerate Artificial Intelligence at Scale](https://brunch.co.kr/@synabreu/108), BrunchStory, Apr 2021
+* [Leveraging Cloud Infrastructure for Enhanced Data Insights and Agility](https://brunch.co.kr/@synabreu/116), BrunchStory, Mar 2021
+* On-premises application cloud strategy, Research Report, BespinGlobal, 2020
+* Designing a Cloud Strategy for Success, Research Report, BespinGlobal, 2020
+* Preparing for the Machine Learning Revolution: Strategies for Success, Research Report, BespinGlobal, 2020
+* [Will Software Developers Become Unemployed in the Age of Artificial Intelligence? M-Tech Section](https://www.mk.co.kr/news/business/7840242), Maeil Business Newspaper, Aug. 2018.
+* [Crisis-Hit Tesla: Taking the &#34;Bigger and Faster&#34; Route to Power Through?](https://www.mk.co.kr/news/business/8060299), Maeil Business Newspaper, Aug. 2018.
+
+---
