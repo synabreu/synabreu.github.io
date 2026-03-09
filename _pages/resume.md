@@ -40,3 +40,15 @@ impact over eight years at Microsoft.
 * Translated and analyzed the core architecture of the HPE Slingshot network fabric, compared it with NVIDIA InfiniBand and  Spectrum-X to highlight key differences, and developed Korean technical white papers and proposals to present the advantages and unique capabilities of each network solution for high-performance computing environments.
 * Proposed storage architecture features for HPE Cray ClusterStor E1000/E2000 systems, based on the open-source Lustre parallel  file system, certified with GPUDirectStorage to ensure ultra-low-latency data  access and prevent GPU idle times in the Exascale era. Additionally, compared and positioned these features against WEKA, VAST Data, IBM Storage Scale, and Dell ObjectScale system.
 * Rapidly prototyped multi-agent systems integrating Retrieval-Augmented Generation (RAG) with vector databases across hybrid cloud environments and delivered hands-on demonstrations of Agentic AI frameworks and vLLM to enterprise clients, accelerating the adoption of cutting-edge LLM solutions.
+
+**Head of Data & AI Solutions Architect, Softleaf – 2022. 12 ~ 2023.09**
+
+* Led a team of 12 solution developers and AWS infrastructure engineers to improve operational efficiency, to resolve operational management issues related to AWS infrastructure environment in team projects, and to monitor audit and visibility controls using CloudWatch Logs and Metrics.
+* Modernized a monolithic architecture into a container-based structure using AWS ECS and built a DevOps (CI/CD) pipeline with GitLab, AWS Code Pipeline, and Jenkins, reducing deployment time from hours to minutes while significantly improving availability and operational stability.
+* Architected Auto Scaling and Elastic Load Balancing configurations to support elastic traffic patterns and high availability and implemented blue/green and rolling deployment strategies to enable zero-downtime releases.
+* Consulted enterprise clients across various industries on cloud-based Big Data and AI strategies, cost optimization, and governance guidelines, establishing long-term strategic partnerships through direct collaboration with C-level executives.
+* Provided guidelines for building an end-to-end automated MLOps using MLflow and Kubeflow within Amazon SageMaker, significantly accelerating model development cycles and improving productivity and consistency for data scientists.
+
+
+**AI/ML Solution Consulting, Self-employed – 2017. 06 ~ 2022. 10**
+
