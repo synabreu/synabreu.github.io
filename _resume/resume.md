@@ -10,23 +10,14 @@ Resume: Jinho Seo, Contact: synabreu@outlook.com
 
 **Professional Summary**
 
-With over 2o years of experience across the PC, web,
-mobile, cloud, and AI industries, I most recently served as a Senior AI
-Infrastructure and Cloud Solutions Architect at HPE. At HPE, I led enterprise
-AI transformation initiatives across the APAC & India regions, focusing on
-HPE Cray XD–based data center and AI hardware infrastructure, including GPUs,
-storage, network fabrics, and large-scale distributed training and inference
-systems. I leverage strong technical leadership to deliver measurable business outcomes
-through executive advisory, technical evangelism, software ecosystem adoption,
-and partner ecosystem collaboration, with a proven track record of driving
+With over 20 years of experience across the PC, web, mobile, cloud, and AI industries, I most recently served as a Senior AI Infrastructure and Cloud Solutions Architect at HPE. At HPE, I led enterprise AI transformation initiatives across the APAC & India regions, focusing on HPE Cray XD–based data center and AI hardware infrastructure, including GPUs, storage, network fabrics, and large-scale distributed training and inference systems. I leverage strong technical leadership to deliver measurable business outcomes through executive advisory, technical evangelism, software ecosystem adoption, and partner ecosystem collaboration, with a proven track record of driving
 impact over eight years at Microsoft.
 
 ---
 
 **Work Expriences**
 
-**Sr. HPC&AI Presales – Solution
-Architect, APAC & India, HPE – 2023. 10 ~ 2025.01**
+**Sr. HPC&AI Presales – Solution Architect, APAC & India, HPE – 2023. 10 ~ 2025.01**
 
 * Assessed clients' business needs and challenges to craft customized proposals utilizing generative AI solutions and delivered compelling presentations to expand visibility for large-scale HPC and AI hardware and software deals in the financial, public sectors, and research areas, focusing on the Korean IT market, which contributed to revenue growth.
 * Led the adoption and sales of HPE Cray XD’s hyperscale data center
