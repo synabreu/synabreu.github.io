@@ -29,7 +29,7 @@ partners, and served as a technical speaker at NVIDIA-HPE AI Workshops and joint
 * Designed architecture for a heterogeneous cluster environment by separating Kubernetes and Slurm and implemented an HPE MLDE abstraction layer on the Slurm backend to improve the utilization of existing HPC resources.
 * Demonstrated a workflow where models trained in MLDE are automatically converted to ONNX format and deployed to KServe in MLIS for inference, improving operational efficiency by 50% and ensuring stable service scalability, effectively addressing deployment delays caused by the separation of model training, serving, and inference environments.
 * Translated and analyzed the core architecture of the HPE Slingshot network fabric, compared it with NVIDIA InfiniBand and  Spectrum-X to highlight key differences, and developed Korean technical white papers and proposals to present the advantages and unique capabilities of each network solution for high-performance computing environments.
-* Proposed storage architecture features for HPE Cray ClusterStor E1000/E2000 systems, based on the open-source Lustre parallel  file system, certified with GPUDirectStorage to ensure ultra-low-latency data  access and prevent GPU idle times in the Exascale era. Additionally, compared and positioned these features against WEKA, VAST Data, IBM Storage Scale, and Dell ObjectScale system.
+* Proposed storage architecture features for HPE Cray ClusterStor E1000/E2000 systems, based on the open-source Lustre parallel  file system, certified with GPUDirectStorage to ensure ultra-low-latency data  access and prevent GPU idle times in the Exascale era. Additionally, compared and positioned these features against WEKA, VAST Data, DDN EXAScaler, and IBM Spectrum Scale.
 * Rapidly prototyped multi-agent systems integrating Retrieval-Augmented Generation (RAG) with vector databases across hybrid cloud environments and delivered hands-on demonstrations of Agentic AI frameworks and vLLM to enterprise clients, accelerating the adoption of cutting-edge LLM solutions.
 
 **Head of Data & AI Solutions Architect, Softleaf – 2022. 12 ~ 2023.09**
@@ -103,13 +103,13 @@ partners, and served as a technical speaker at NVIDIA-HPE AI Workshops and joint
 ---
 
 **Books Publishing**
-* Published the Korean translation book of “Data Science on AWS”, Hanbit Media, 2023
-* Microsoft's IT Strategy and Future, co-authored by Seo Jin-ho and five others, Hanbit Media, 2006
+* [Published the Korean translation book of “Data Science on AWS”](https://www.hanbit.co.kr/store/books/look.php?p_code=B6134249359), Hanbit Media, 2023
+* [Microsoft's IT Strategy and Future](https://www.hanbit.co.kr/store/books/look.php?p_code=B7446042540), co-authored by Seo Jin-ho and five others, Hanbit Media, 2006
 
 ---
 
 **Papers**
-* •	Upstage Start-up: Analysis of destructive AI Startup Strategy based on new generative AI Platform, Business Paper of AI Strategic Management master’s degree, assist university, 2024
+* Upstage Start-up: Analysis of destructive AI Startup Strategy based on new generative AI Platform, Business Paper of AI Strategic Management master’s degree, assist university, 2024
 
 **Articles & Columns**
 * [The "Post-GPU" era envisioned by AWS, Google, and AMD](https://www.technologyreview.kr/aws%c2%b7%ea%b5%ac%ea%b8%80%c2%b7amd%ea%b0%80-%ec%84%a4%ea%b3%84%ed%95%9c-%ed%8f%ac%ec%8a%a4%ed%8a%b8-gpu-%ec%8b%9c%eb%8c%80/), MIT Technology Review Journal Korea, Feb. 2026 
@@ -126,13 +126,14 @@ partners, and served as a technical speaker at NVIDIA-HPE AI Workshops and joint
 * [A new Google machine learning cloud powered by Vertex AI](https://brunch.co.kr/@synabreu/140), National Information Society Agency (NIA), Digital Service Issue Research, June 2021
 * [How did the U.S. big tech companies continue to grow their cloud business?](https://brunch.co.kr/@synabreu/138), National Information Society Agency (NIA), Digital Service Issue Research, May 2021
 * [NVIDIA Redesigns AI Data Centers with Grace CPU](https://brunch.co.kr/@synabreu/132), BrunchStory, Apr 2021
-* [How to Accelerate Artificial Intelligence at Scale, BrunchStory](https://brunch.co.kr/@synabreu/108), BrunchStory, Apr 2021
+* [How to Accelerate Artificial Intelligence at Scale](https://brunch.co.kr/@synabreu/108), BrunchStory, Apr 2021
 * [Leveraging Cloud Infrastructure for Enhanced Data Insights and Agility](https://brunch.co.kr/@synabreu/116), BrunchStory, Mar 2021
 * On-premises application cloud strategy, Research Report, BespinGlobal, 2020
 * Designing a Cloud Strategy for Success, Research Report, BespinGlobal, 2020
 * Preparing for the Machine Learning Revolution: Strategies for Success, Research Report, BespinGlobal, 2020
 * [Will Software Developers Become Unemployed in the Age of Artificial Intelligence? M-Tech Section](https://www.mk.co.kr/news/business/7840242), Maeil Business Newspaper, Aug. 2018.
 * [Crisis-Hit Tesla: Taking the "Bigger and Faster" Route to Power Through?](https://www.mk.co.kr/news/business/8060299), Maeil Business Newspaper, Aug. 2018.
+
 ---
 
 
