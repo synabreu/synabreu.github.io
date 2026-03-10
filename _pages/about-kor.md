@@ -77,10 +77,10 @@ PC, 웹, 모바일, 클라우드 및 AI 산업 전반에 걸쳐 25년 이상의 
 
 **학력**
 
-* Franklin University Switzerland, Switzerland – MBA of Artificial Intelligence, 2024
-* Seoul School of Integrated Sciences & Technologies (aSSIST), Korea – Master of Science AI, 2023
-* Stanford University, USA — Stanford Advanced Project Management Certificate, 2017
-* Soongsil Cyber University, Korea - Bachelor’s degree in business administration, Transferred. 2009
+* 프랭클린 대학교 스위스(Franklin University Switzerland), 스위스 - 2024년 AI 경영학 석사 취득 및 졸업
+* 서울종합과학대학원대학교(aSSIST), 한국 - 2024년 AI 경영학 석사 취득 및 졸업
+* 스탠퍼드 대학교, 미국 - 2017년 Stanford Advanced Project Management Certificate 취득
+* 숭실사이버대학교 (Soongsil Cyber University), 한국 - 2009년 경영학 학사(Bachelor of Business Administration) 취득 및 졸업
 
 ---
 
@@ -91,14 +91,15 @@ PC, 웹, 모바일, 클라우드 및 AI 산업 전반에 걸쳐 25년 이상의 
 * Oracle Cloud Infrastructure 2025 AI Foundations Associate, Oracle, 2025
 * NVIDIA 인증 어소시에이트: AI 인프라 및 운영 (NCA-AIIO), NVIDIA, 2024
 * NVIDIA AI Advisor – Technical Sales, NVIDIA, 2024
-* HPE AI WW Ambassador, HPE Sales Certified – AI and AS-a-Service Solutions, HPE, 2024
+* HPE AI WW Ambassador, HPE, 2024
+* HPE 인증 세일즈 – AI 및 AS-a-Service 솔루션, HPE, 2024
 * AWS 공인 머신러닝 전문가, AWS Certified Machine Learning – Specialty by Amazon Web Services, 2021
 
 **수상 업적**
 
 * 마이크로소프트 MCB 아시아 스타 어워즈 – 한국팀, Microsoft, 2010
 * 마이크로소프트 C&O 챔피온 클럽 어워즈 – 하모니, Microsoft, 2010
-* 마이크로소프트 MVP(Most Valuable Professional) - Windows Mobile Debices, Microsoft, 2001 - 2006
+* 마이크로소프트 MVP(Most Valuable Professional) - Windows Mobile Devices, Microsoft, 2001 - 2006
 * 대한민국 소프트웨어 대상(정보통신부 장관상) – V3Pro’97, 정보통신부, 1996
 
 ---
@@ -110,7 +111,7 @@ PC, 웹, 모바일, 클라우드 및 AI 산업 전반에 걸쳐 25년 이상의 
 
 ---
 
-**논문 및 리포트**
+**논문**
 
 * 신규 생성형 AI 플랫폼 기반의 파괴적 AI 스타트업 전략 연구(Upstage 사례 중심), 서울과학종합대학원대학교(aSSIST) AI 전략 경영 석사 과정 논문, 2024년
 
