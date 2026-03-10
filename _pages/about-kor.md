@@ -139,5 +139,6 @@ PC, 웹, 모바일, 클라우드 및 AI 산업 전반에 걸쳐 25년 이상의 
 * [인공지능을 대규모로 가속화하려면?](https://brunch.co.kr/@synabreu/116), 브런치스토리, 2021년 3월 컬럼
 * [인공지능 시대, SW 개발자도 실업자 될까?](https://www.mk.co.kr/news/business/7840242), 매일경제, 2018년 8월 컬럼
 * [위기의 테슬라 `더 크고 더 빠른` 차로 정면돌파?](https://www.mk.co.kr/news/business/8060299), 매일경제, 2018년 8월 컬럼
+* [포켓PC 프로그래머, 닷넷소프트 서진호과장](http://www.hkrecruit.co.kr/news/articleView.html?idxno=6240), 월간 리크루트 2003년 1월 인터뷰
 
 ---
