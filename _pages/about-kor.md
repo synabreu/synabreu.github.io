@@ -96,9 +96,9 @@ PC, 웹, 모바일, 클라우드 및 AI 산업 전반에 걸쳐 25년 이상의 
 
 **수상 업적**
 
-* Microsoft MCB Asia Star Awards – Korea Team, Microsoft, 2010
-* Microsoft C&O Champions Club Award – Harmony, Microsoft, 2010
-* Microsoft MVP(Most Valuable Professional) - Windows Mobile Debices, Microsoft, 2001 - 2006
+* 마이크로소프트 MCB 아시아 스타 어워즈 – 한국팀, Microsoft, 2010
+* 마이크로소프트 C&O 챔피온 클럽 어워즈 – 하모니, Microsoft, 2010
+* 마이크로소프트 MVP(Most Valuable Professional) - Windows Mobile Debices, Microsoft, 2001 - 2006
 * 대한민국 소프트웨어 대상(정보통신부 장관상) – V3Pro’97, 정보통신부, 1996
 
 ---
@@ -110,33 +110,34 @@ PC, 웹, 모바일, 클라우드 및 AI 산업 전반에 걸쳐 25년 이상의 
 
 ---
 
-**논문**
+**논문 및 리포트**
 
 * 신규 생성형 AI 플랫폼 기반의 파괴적 AI 스타트업 전략 연구(Upstage 사례 중심), 서울과학종합대학원대학교(aSSIST) AI 전략 경영 석사 과정 논문, 2024년
 
+**리서치 리포트**
 
-**Articles & Columns**
+* 온-프레미시스 클라우드 애플리케이션 전략, 베스핀글로벌, 2020년 리서치 리포트
+* 성공적인 클라우드 전략 디자인, 베스핀글로벌 2020년 리서치 리포트
+* 혁신적인 머신러닝 성공 전략, 베스핀글로벌 2020년 리서치 리포트
 
-* [The &#34;Post-GPU&#34; era envisioned by AWS, Google, and AMD](https://www.technologyreview.kr/aws%c2%b7%ea%b5%ac%ea%b8%80%c2%b7amd%ea%b0%80-%ec%84%a4%ea%b3%84%ed%95%9c-%ed%8f%ac%ec%8a%a4%ed%8a%b8-gpu-%ec%8b%9c%eb%8c%80/), MIT Technology Review Journal Korea, Feb. 2026
-* [NVIDIA&#39;s Vision: Why They&#39;re Building an &#39;AI Factory’?](https://www.technologyreview.kr/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84%eb%8a%94-%ec%99%9c-ai-%ed%8c%a9%ed%86%a0%eb%a6%ac%eb%a5%bc-%eb%a7%8c%eb%93%a4%ea%b3%a0-%ec%9e%88%eb%8a%94%ea%b0%80/), MIT Technology Review Journal Korea, Jan. 2026
-* [Review of DeepSeek&#39;s mHC Paper: A Study on Manifold Hyper-Connections](https://brunch.co.kr/@synabreu/160), BrunchStory, Jan. 2026
-* [NVIDIA Unveils Next-Generation GPU Rubin CPX](https://brunch.co.kr/@synabreu/157), BrunchStory, 2025
-* [Reinventing Amazon through AWS](https://brunch.co.kr/@synabreu/151), National Information Society Agency (NIA), Digital Service Issue Research, December. 2021
-* [Microsoft Enterprise Strategy: The Trojan Horse for the Metaverse](https://brunch.co.kr/@synabreu/150), National Information Society Agency (NIA), Digital Service Issue Research, November. 2021
-* [Exploring MSA (Micro Service Architecture) through Software Design and Architecture Trends](https://brunch.co.kr/@synabreu/149), National Information Society Agency (NIA), Digital Service Issue Research, October. 2021
-* [Hybrid Cloud Computing, Cloud PC Opening a New Era](https://brunch.co.kr/@synabreu/148), National Information Society Agency (NIA), Digital Service Issue Research, September. 2021
-* [Advancements and Prospects of Content Creation Technology through Artificial Intelligence, Trends in the One-Person Media Industry Webzine Vol. 3](https://brunch.co.kr/@synabreu/147), September Issue 2021. Korea Radio Promotion Association (RAPA). The Ministry of Science and ICT (MSIT)
-* [Graph DB for Visualizing Vast and Complex Data](https://brunch.co.kr/@synabreu/146), National Information Society Agency (NIA), Digital Service Issue Research, Aug. 2021
-* [Xcode Cloud, continuously supporting development and operations](https://brunch.co.kr/@synabreu/144), National Information Society Agency (NIA), Digital Service Issue Research, July 2021
-* [A new Google machine learning cloud powered by Vertex AI](https://brunch.co.kr/@synabreu/140), National Information Society Agency (NIA), Digital Service Issue Research, June 2021
-* [How did the U.S. big tech companies continue to grow their cloud business?](https://brunch.co.kr/@synabreu/138), National Information Society Agency (NIA), Digital Service Issue Research, May 2021
-* [NVIDIA Redesigns AI Data Centers with Grace CPU](https://brunch.co.kr/@synabreu/132), BrunchStory, Apr 2021
-* [How to Accelerate Artificial Intelligence at Scale](https://brunch.co.kr/@synabreu/108), BrunchStory, Apr 2021
-* [Leveraging Cloud Infrastructure for Enhanced Data Insights and Agility](https://brunch.co.kr/@synabreu/116), BrunchStory, Mar 2021
-* On-premises application cloud strategy, Research Report, BespinGlobal, 2020
-* Designing a Cloud Strategy for Success, Research Report, BespinGlobal, 2020
-* Preparing for the Machine Learning Revolution: Strategies for Success, Research Report, BespinGlobal, 2020
-* [Will Software Developers Become Unemployed in the Age of Artificial Intelligence? M-Tech Section](https://www.mk.co.kr/news/business/7840242), Maeil Business Newspaper, Aug. 2018.
-* [Crisis-Hit Tesla: Taking the &#34;Bigger and Faster&#34; Route to Power Through?](https://www.mk.co.kr/news/business/8060299), Maeil Business Newspaper, Aug. 2018.
+**주요 미디어 기사 및 컬럼**
+
+* [AWS·구글·AMD가 설계한 ‘포스트 GPU’ 시대](https://www.technologyreview.kr/aws%c2%b7%ea%b5%ac%ea%b8%80%c2%b7amd%ea%b0%80-%ec%84%a4%ea%b3%84%ed%95%9c-%ed%8f%ac%ec%8a%a4%ed%8a%b8-gpu-%ec%8b%9c%eb%8c%80/), MIT 테크놀리지 리뷰 저널 코리아, 2026년 2월 컬럼
+* [엔비디아는 왜 'AI팩토리'를 만들고 있는가?](https://www.technologyreview.kr/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84%eb%8a%94-%ec%99%9c-ai-%ed%8c%a9%ed%86%a0%eb%a6%ac%eb%a5%bc-%eb%a7%8c%eb%93%a4%ea%b3%a0-%ec%9e%88%eb%8a%94%ea%b0%80/), MIT 테크놀리지 리뷰 저널 코리아, 2026년 1월 컬럼
+* [NVIDIA, 차세대 GPU Rubin CPX 공개](https://brunch.co.kr/@synabreu/157), 브런치스토리, 2025년 9월 컬럼
+* [아마존의 재발명, 아마존 웹 서비스](https://brunch.co.kr/@synabreu/151), 한국지능정보사회진흥원(NIA), 2021년 12월 디지털 서비스 이슈 리포트
+* [메타버스 트로이 목마로서 Microsoft 엔터프라이즈 전략](https://brunch.co.kr/@synabreu/150), 한국지능정보사회진흥원(NIA), 2021년 11월 디지털 서비스 이슈 리포트
+* [소프트웨어 설계 및 디자인 트렌드로 알아본 MSA(Micro Service Architecture)](https://brunch.co.kr/@synabreu/149), 한국지능정보사회진흥원(NIA), 2021년 10월 디지털 서비스 이슈 리포트
+* [하이브리드 클라우드 컴퓨팅, 새 시대를 여는 클라우드PC](https://brunch.co.kr/@synabreu/148), 한국지능정보사회진흥원(NIA), 2021년 9월 디지털 서비스 이슈 리포트
+* [인공지능을 통한 콘텐츠 제작 기술의 진보와 전망, 1인 미디어 산업 동향 웹진 Vol. 3 9월호](https://brunch.co.kr/@synabreu/147), 과학기술정보통신부(MSIT), 한국전파진흥협회(RAPA). 
+* [방대하고 복잡한 데이터를 시각화하는 그래프 DB](https://brunch.co.kr/@synabreu/146), 한국지능정보사회진흥원(NIA), 2021년 8월 디지털 서비스 이슈 리포트
+* [개발과 운영을 지속적으로 도와주는 Xcode Cloud](https://brunch.co.kr/@synabreu/144), 한국지능정보사회진흥원(NIA), 2021년 7월 디지털 서비스 이슈 리포트
+* [버텍스 AI로 무장한 새로운 구글 머신러닝 클라우드](https://brunch.co.kr/@synabreu/140), 한국지능정보사회진흥원(NIA), 2021년 6월 디지털 서비스 이슈 리포트
+* [미국 빅테크는 어떻게 클라우드를 계속 성장시켰나?](https://brunch.co.kr/@synabreu/138), 한국지능정보사회진흥원(NIA), 2021년 5월 디지털 서비스 이슈 리포트
+* [엔비디아, 그레이스칩으로 AI 데이터센터 재설계하다!](https://brunch.co.kr/@synabreu/132), 브런치스토리, 2021년 4월 컬럼
+* [클라우드에서 데이터 분석을 수행하는 이유는?](https://brunch.co.kr/@synabreu/108), 브런치스토리, 2021년 4월 컬럼
+* [인공지능을 대규모로 가속화하려면?](https://brunch.co.kr/@synabreu/116), 브런치스토리, 2021년 3월 컬럼
+* [인공지능 시대, SW 개발자도 실업자 될까?](https://www.mk.co.kr/news/business/7840242), 매일경제, 2018년 8월 컬럼
+* [위기의 테슬라 `더 크고 더 빠른` 차로 정면돌파?](https://www.mk.co.kr/news/business/8060299), 매일경제, 2018년 8월 컬럼
 
 ---
