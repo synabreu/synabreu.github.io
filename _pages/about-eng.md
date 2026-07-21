@@ -88,6 +88,8 @@ impact over eight years at Microsoft.
 
 **Certifications**
 
+* AMD AI Acadmey : AI Foundations, Build AI, Deploy & Optimize AI, AMD, 2026
+* NVIDIA Certified Professional: Generative AI LLMs, NVIDIA, 2026
 * NVIDIA Base Command Manager Administration Software, NVIDIA, 2026
 * Oracle Cloud Infrastructure 2025 Generative AI Professional, Oracle, 2025
 * Oracle Cloud Infrastructure 2025 AI Foundations Associate, Oracle, 2025
