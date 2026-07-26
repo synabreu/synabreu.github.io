@@ -23,6 +23,8 @@ author_profile: true
   그외 더 저의 경력 사항이 궁금하시면, [저의 링크드인의 프로필](https://www.linkedin.com/in/jinhoseo/)을 읽어 보세요 :)
 - 📌 **자격 분야**
 
+  - [NVIDIA Certified Professional: Gen AI LLMs](https://www.credly.com/badges/056f5489-ae95-4d97-8a7a-ff118623d74d)
+  - [AMD AI Academy: AI on AMD](https://academy.amd.com/certs/31042/9E5D042C20F846BE9E881C28A12257F4166320.pdf)
   - [HPE Sales Certified - AI and As-a-Service Solutions [2025]](https://www.credly.com/badges/3079546e-e600-4da7-a34b-c0325dd85a9c/linked_in_profile)
   - [NVIDIA-Certified Associate: AI Infrastructure and Operations](https://www.credly.com/badges/129a5d89-41ed-4452-8ab6-14dff03eb815)
   - [Microsoft Most Valuable Professional(MVP) Alumni [2023]](https://www.credly.com/badges/1124f543-2494-4b23-8143-ff2c48a4189d)
