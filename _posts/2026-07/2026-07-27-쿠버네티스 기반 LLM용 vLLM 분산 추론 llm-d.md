@@ -10,21 +10,17 @@ categories: [OpenSource]
 
 기존 vLLM이 "하나의 GPU 서버에서 LLM 추론을 빠르게 수행하는 엔진"이라면, llm-d는 여러 GPU 노드와 여러 모델 인스턴스를 효율적으로 관리하는 운영 계층(Serving Infrastructure)에 가깝다.
 
-## 1. 왜 llm-d가 필요한가?
+#### 1. 왜 llm-d가 필요한가?
 
 ChatGPT 같은 서비스를 운영한다고 생각하면 문제가 커진다. 예를 들어, Llama 3.1 405B,DeepSeek V3/R1 671B, GPT-OSS 120B, Solar Open 250B MoE 등 같은 모델은 하나의 GPU에 올라가지 않는다.
 
-사용자 요청
-     |
-     v
-Inference Gateway
-     |
-     +----------------+
-     |                |
- vLLM Instance 1   vLLM Instance 2
- 8×H100            8×H100
-     |                |
- GPU Cluster      GPU Cluster
+![llmd-01]({{ '/images/2026-07/llmd-01.jpg' | relative_url }})
+
+<img src="{{ '../images/2026-07/llmd-01.jpg' | relative_url }}" alt="llm-d 이미지" style="max-width:100%; height:auto; display:block; margin:0 auto;" />
+
+
+![LLM-D Architecture]({{ "https://synabreu.github.io/images/2026-07/llmd-01.jpg" | relative_url }})
+
 
 여기서 발생하는 문제가:
 
@@ -36,7 +32,7 @@ Inference Gateway
 
 이다. 따라서, llm-d는 이런 **LLM 특화 스케줄링 문제**를 해결하기 위해 등장했다.
 
-## 2. vLLM과 llm-d 차이
+#### 2. vLLM과 llm-d 차이
 
 | 구분      | vLLM                                | llm-d                          |
 | --------- | ----------------------------------- | ------------------------------ |
@@ -49,35 +45,21 @@ Inference Gateway
 
 쉽게 이해하기 위해 비유하면, CUDA = GPU 연산 계층, PyTorch = 모델 개발 프레임워크, vLLM = 고성능 LLM 런타임, llm-d = 쿠버네티스 기반 LLM 클라우드 플랫폼이다.
 
-## 3. llm-d 주요 기술 구성
+#### 3. llm-d 주요 기술 구성
 
-#### 1) vLLM 기반 런타임
+##### 1) vLLM 기반 런타임
 
 llm-d는 vLLM을 핵심 실행 엔진으로 사용한다.
 
-Application
-     |
- OpenAI API
-     |
- llm-d Gateway
-     |
- vLLM Server
-     |
-    GPU
+![1785131296889](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131296889.jpg)
 
 vLLM의 장점인 PagedAttention, 연속 배칭(Continuous Batching), KV 캐시 관리, 텐서 병렬(Tensor Parallel), 양자화(Quantization) 등을 그대로 활용한다.
 
-#### 2) 지능적 라우팅(Intelligent Routing)
+##### 2) 지능적 라우팅(Intelligent Routing)
 
 일반 쿠버네티스 로드 밸런서(Kubernetes Load Balancer)는 단순 라인딩 로빈 방식으로 동작한다.
 
-Request
- |
- +---- GPU1
- |
- +---- GPU2
- |
- +---- GPU3
+![1785131397022](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131397022.jpg)
 
 문제는 LLM에서는 아래와 같이 요청이 발생하면,
 
@@ -95,75 +77,25 @@ GPU1 선택
 이렇게 되면, 결과는 TTFT 증가하고 GPU 메모리 부족 및 처리량(Throughput) 감소.
 그러나 llm-d는,
 
-Request
-   |
-Inference Scheduler
-   |
-KV Cache 상태 확인
-   |
-가장 적합한 GPU 선택
+![1785131479630](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131479630.jpg)
 
-## 4. Prefill / Decode 분리(Disaggregation)
+#### 4. Prefill / Decode 분리(Disaggregation)
 
 1) LLM 추론에서는 하나의 요청을 처리할 때 두 가지 단계가 있음
 
-사용자 Prompt 입력
-        |
-        v
-+----------------+
-|    Prefill     |
-| 입력 문장 처리 |
-+----------------+
-        |
-        v
-+----------------+
-|    Decode      |
-| Token 생성     |
-+----------------+
+![1785131631492](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131631492.jpg)
 
 2) 전통적인 방식은 하나의 GPU 서버가 두 작업을 모두 수행함
 
 기존 방식 (Coupled / 통합 구조)
 
-    GPU Server
+![1785131789027](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131789027.jpg)
 
-    +-------------+
-       |             |
-Prompt |  Prefill    |
-
-| ------>         |
-| --------------- |
-|                 |
-| Decode          |
-|                 |
-| +-------------+ |
-
-즉, Prefill 과 Decode 단계가 같은 GPU 자원에 결합(coupled) 되어 있다.
+  즉, Prefill 과 Decode 단계가 같은 GPU 자원에 결합(coupled) 되어 있다.
 
 3) Disaggregation을 적용하면, Prefill 전용 GPU와 Decode 전용 GPU를 분리한다.
 
-분리 구조
-
-    User Request
-                  |
-                  v
-
-    +----------------+
-        | Prefill Pool   |
-        | GPU Cluster    |
-        +----------------+
-                  |
-              KV Cache
-                  |
-                  v
-
-    +----------------+
-        | Decode Pool    |
-        | GPU Cluster    |
-        +----------------+
-
-    |
-             Generated Tokens
+![1785131889749](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131889749.jpg)
 
 ## 5. GPU 추론 분리 이유
 
@@ -197,42 +129,17 @@ token 500
 
 llm-d는 쿠버네티스 네이티브(Kubernetes Native)이다. 지원 환경은 NVIDIA GPU, AMD GPU, TPU, XPU, CPU 등 다양한 accelerator 환경을 목표로 한다.
 
-    Kubernetes Cluster
-
-    |
-                  llm-d Controller
-
-    |
-          +-------------+-------------+
-
-    vLLM Pod       vLLM Pod       vLLM Pod
-
-    |              |              |
-
-    H100           H200          MI300X
+![1785131997994](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131997994.jpg)
 
 ## 7. KServe와 관계
 
 기존:
-Kubernetes
-    |
- KServe
-    |
- vLLM
-    |
- GPU
+
+![1785132087187](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785132087187.jpg)
 
 llm-d 적용:
-Kubernetes
-       |
-     KServe
-       |
-     llm-d
-       |
-+------+------+
-|             |
-vLLM       vLLM
-GPU        GPU
+
+![1785132167053](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785132167053.jpg)
 
 정리하자면, KServe는 모델 서빙 프레임워크이며, llm-d는 LLM 특화 분산 추론 계층이며,vLLM은 모델 실행 엔진이다.
 
@@ -248,18 +155,7 @@ GPU        GPU
 
 ## 9. 기업 AI 인프라 관점
 
-    Users
-                   |
-             API Gateway
-                   |
-                llm-d
-                   |
-        +----------+----------+
-        |                     |
-   Llama 70B              DeepSeek
-   vLLM                   vLLM
-        |                     |
-   H100 Cluster        H200 Cluster
+  ![1785132245907](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785132245907.jpg)
 
 이런 구성을 하면, GPU 활용도 증가 및 비용 감소, 멀티 모달 서빙 가능, SLA 관리 가능 및 클라우드 네이티브 운영 가능함.
 
