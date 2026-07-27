@@ -16,12 +16,6 @@ ChatGPT 같은 서비스를 운영한다고 생각하면 문제가 커진다. �
 
 ![llmd-01]({{ '/images/2026-07/llmd-01.jpg' | relative_url }})
 
-<img src="{{ '../images/2026-07/llmd-01.jpg' | relative_url }}" alt="llm-d 이미지" style="max-width:100%; height:auto; display:block; margin:0 auto;" />
-
-
-![LLM-D Architecture]({{ "https://synabreu.github.io/images/2026-07/llmd-01.jpg" | relative_url }})
-
-
 여기서 발생하는 문제가:
 
 * 어떤 GPU 서버로 요청을 보낼 것인가?
@@ -51,7 +45,7 @@ ChatGPT 같은 서비스를 운영한다고 생각하면 문제가 커진다. �
 
 llm-d는 vLLM을 핵심 실행 엔진으로 사용한다.
 
-![1785131296889](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131296889.jpg)
+![llmd-02]({{ '/images/2026-07/llmd-02.jpg' | relative_url }})
 
 vLLM의 장점인 PagedAttention, 연속 배칭(Continuous Batching), KV 캐시 관리, 텐서 병렬(Tensor Parallel), 양자화(Quantization) 등을 그대로 활용한다.
 
@@ -59,7 +53,8 @@ vLLM의 장점인 PagedAttention, 연속 배칭(Continuous Batching), KV 캐시 
 
 일반 쿠버네티스 로드 밸런서(Kubernetes Load Balancer)는 단순 라인딩 로빈 방식으로 동작한다.
 
-![1785131397022](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131397022.jpg)
+
+![llmd-03]({{ '/images/2026-07/llmd-03.jpg' | relative_url }})
 
 문제는 LLM에서는 아래와 같이 요청이 발생하면,
 
