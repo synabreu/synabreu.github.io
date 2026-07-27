@@ -72,25 +72,27 @@ GPU1 선택
 이렇게 되면, 결과는 TTFT 증가하고 GPU 메모리 부족 및 처리량(Throughput) 감소.
 그러나 llm-d는,
 
-![1785131479630](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131479630.jpg)
+
+![llmd-04]({{ '/images/2026-07/llmd-04.jpg' | relative_url }})
 
 #### 4. Prefill / Decode 분리(Disaggregation)
 
 1) LLM 추론에서는 하나의 요청을 처리할 때 두 가지 단계가 있음
 
-![1785131631492](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131631492.jpg)
+![llmd-05]({{ '/images/2026-07/llmd-05.jpg' | relative_url }})
 
 2) 전통적인 방식은 하나의 GPU 서버가 두 작업을 모두 수행함
 
 기존 방식 (Coupled / 통합 구조)
 
-![1785131789027](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131789027.jpg)
+![llmd-06]({{ '/images/2026-07/llmd-06.jpg' | relative_url }})
 
-  즉, Prefill 과 Decode 단계가 같은 GPU 자원에 결합(coupled) 되어 있다.
+즉, Prefill 과 Decode 단계가 같은 GPU 자원에 결합(coupled) 되어 있다.
 
 3) Disaggregation을 적용하면, Prefill 전용 GPU와 Decode 전용 GPU를 분리한다.
 
-![1785131889749](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131889749.jpg)
+
+![llmd-07]({{ '/images/2026-07/llmd-07.jpg' | relative_url }})
 
 ## 5. GPU 추론 분리 이유
 
@@ -124,17 +126,17 @@ token 500
 
 llm-d는 쿠버네티스 네이티브(Kubernetes Native)이다. 지원 환경은 NVIDIA GPU, AMD GPU, TPU, XPU, CPU 등 다양한 accelerator 환경을 목표로 한다.
 
-![1785131997994](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785131997994.jpg)
+![llmd-08]({{ '/images/2026-07/llmd-08.jpg' | relative_url }})
 
 ## 7. KServe와 관계
 
 기존:
 
-![1785132087187](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785132087187.jpg)
+![llmd-09]({{ '/images/2026-07/llmd-09.jpg' | relative_url }})
 
 llm-d 적용:
 
-![1785132167053](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785132167053.jpg)
+![llmd-10]({{ '/images/2026-07/llmd-10.jpg' | relative_url }})
 
 정리하자면, KServe는 모델 서빙 프레임워크이며, llm-d는 LLM 특화 분산 추론 계층이며,vLLM은 모델 실행 엔진이다.
 
@@ -150,7 +152,7 @@ llm-d 적용:
 
 ## 9. 기업 AI 인프라 관점
 
-  ![1785132245907](image/2026-07-27-쿠버네티스기반LLM용vLLM분산추론llm-d/1785132245907.jpg)
+![llmd-11]({{ '/images/2026-07/llmd-11.jpg' | relative_url }})
 
 이런 구성을 하면, GPU 활용도 증가 및 비용 감소, 멀티 모달 서빙 가능, SLA 관리 가능 및 클라우드 네이티브 운영 가능함.
 
