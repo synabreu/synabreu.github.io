@@ -94,7 +94,7 @@ GPU1 선택
 
 ![llmd-07]({{ '/images/2026-07/llmd-07.jpg' | relative_url }})
 
-## 5. GPU 추론 분리 이유
+#### 5. GPU 추론 분리 이유
 
 | 구분      | Prefill            | Decode             |
 | --------- | ------------------ | ------------------ |
@@ -122,13 +122,13 @@ token 500
 
 반복적으로 KV 캐시를 읽음. 메모리 대역폭이 중요.
 
-## 6. 쿠버네티스와 관계
+#### 6. 쿠버네티스와 관계
 
 llm-d는 쿠버네티스 네이티브(Kubernetes Native)이다. 지원 환경은 NVIDIA GPU, AMD GPU, TPU, XPU, CPU 등 다양한 accelerator 환경을 목표로 한다.
 
 ![llmd-08]({{ '/images/2026-07/llmd-08.jpg' | relative_url }})
 
-## 7. KServe와 관계
+#### 7. KServe와 관계
 
 기존:
 
@@ -140,7 +140,7 @@ llm-d 적용:
 
 정리하자면, KServe는 모델 서빙 프레임워크이며, llm-d는 LLM 특화 분산 추론 계층이며,vLLM은 모델 실행 엔진이다.
 
-## 8. NVIDIA Dynamo와 비교
+#### 8. NVIDIA Dynamo와 비교
 
 |            | llm-d                       | NVIDIA Dynamo    |
 | ---------- | --------------------------- | ---------------- |
@@ -150,12 +150,12 @@ llm-d 적용:
 | Scheduler  | AI-aware routing            | NVIDIA optimized |
 | 목표       | Open ecosystem              | NVIDIA ecosystem |
 
-## 9. 기업 AI 인프라 관점
+#### 9. 기업 AI 인프라 관점
 
 ![llmd-11]({{ '/images/2026-07/llmd-11.jpg' | relative_url }})
 
 이런 구성을 하면, GPU 활용도 증가 및 비용 감소, 멀티 모달 서빙 가능, SLA 관리 가능 및 클라우드 네이티브 운영 가능함.
 
-## 10. 결론
+#### 10. 결론
 
 vLLM이 "LLM을 빠르게 실행하는 엔진"이라면, llm-d는 "수십~수백 GPU에서 vLLM 기반 LLM 서비스를 운영하기 위한 쿠버네티스-네이티브 분산 추론 플랫폼"이다. 현재 AI 데이터센터 관점에서는, NVIDIA NIM/Dynamo ↔ Red Hat llm-d ↔ KServe/vLLM 생태계가 차세대 LLM 서빙 아키텍처 경쟁 구도이다.
