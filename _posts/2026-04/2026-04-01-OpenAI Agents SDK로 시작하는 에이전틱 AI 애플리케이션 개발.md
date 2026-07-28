@@ -85,9 +85,8 @@ print(result.final_output)
 #### 5. 멀티 에이전트(Multi-Agent) 구조 설계
 
 
-```
-![llmd-11]({{ '/images/2026-04/openai-agents-01.jpg' | relative_url }})
-```
+![openai-agents-01]({{ '/images/2026-04/openai-agents-01.jpg' | relative_url }})
+
 
 실제 기업 환경에서는 하나의 에이전트가 모든 업무를 처리하지 않는다. 예를 들어, 금융 AI 시스템이라면 다음과 같이 구성할 수 있다. Router Agent는 사용자의 요청을 분석하고 적절한 전문 Agent에게 업무를 전달한다. Agents SDK에서는 Handoff 기능을 이용해 이러한 구조를 구현할 수 있다.
 
