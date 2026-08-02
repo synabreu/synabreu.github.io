@@ -11,18 +11,15 @@ categories: [Google]
 
 기존의 산업용 로봇은 대부분 미리 프로그래밍된 동작을 반복하거나, 사람이 원격으로 조종하는 방식으로 작동한다. 정해진 작업에는 강하지만 예상하지 못한 환경 변화에 적응하거나, 스스로 새로운 행동을 학습하는 능력은 제한적이다. 또한 한 로봇에서 학습한 기술을 형태와 관절 구조가 다른 로봇에 그대로 적용하기도 어렵다.
 
-제미나이 로보틱스()Gemini Robotics) 2는 이러한 문제를 해결하기 위해 로봇이 주변 환경을 인식하고, 작업 순서를 계획하고, 전신을 움직이며, 다른 로봇과 협업할 수 있도록 설계된 지능 계층이다.
+제미나이 로보틱스(Gemini Robotics) 2는 이러한 문제를 해결하기 위해 로봇이 주변 환경을 인식하고, 작업 순서를 계획하고, 전신을 움직이며, 다른 로봇과 협업할 수 있도록 설계된 지능 계층이다.
 
 
-
-<iframe 
-  width="560" 
-  height="315" 
-  src="https://www.youtu.com/embed/4lSQnrMC6nY" 
-  title="Gemini Robotics 2" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowfullscreen>
+<iframe
+width="560"
+height="315"
+src="https://www.youtube-nocookie.com/embed/4lSQnrMC6nY"
+frameborder="0"
+allowfullscreen>
 </iframe>
 
 
