@@ -82,8 +82,7 @@ Hermes는 요청을 해석한 다음 필요에 따라 터미널 명령을 실행
 | 대표 용도         | AI 비서, 조사, 운영, 복합 작업             | PR 검토, 테스트, 빌드, Pages 배포        |
 
 
-
-# 6.Codex 와 Hermes Agent 결합
+# 6. Codex 와 Hermes Agent 결합
 
 ![hermes-02]({{ '/images/2026-08/harness-02.jpg' | relative_url }})
 
@@ -111,7 +110,6 @@ Hermes는 요청을 해석한 다음 필요에 따라 터미널 명령을 실행
 * 모델 호출 비용과 서버 운영 비용이 발생한다.
 * AI의 동적 판단 때문에 실행 결과의 재현성이 상대적으로 낮다.
 * 저장소 쓰기, 배포, 서버 명령은 승인 절차가 필요하다.
-
 
 
 # 7.Codex와 GitHub Actions 결합
