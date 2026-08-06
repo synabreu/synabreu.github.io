@@ -6,6 +6,7 @@ typora-root-url: ../
 toc: true
 categories: [openai]
 ---
+
 Hermes는 Nous Research가 개발한 오픈소스 AI 에이전트 실행 플랫폼인 Hermes Agent 이다. 단순히 질문에 답하는 챗봇이 아니라, 대규모 언어 모델(LLM)에 파일 처리, 터미널 명령, 웹 검색, 브라우저, 메모리, 자동화, 메시징 채널 같은 도구를 연결해 실제 작업을 수행하게 만드는 에이전트 프로그램이다.
 
 # 1. Hermes의 기본 구조
@@ -82,7 +83,7 @@ Hermes는 요청을 해석한 다음 필요에 따라 터미널 명령을 실행
 
 
 
-# 6. Codex + Hermes Agent
+# 6. Codex 와 Hermes Agent 결합
 
 ![hermes-02]({{ '/images/2026-08/harness-02.jpg' | relative_url }})
 
@@ -113,7 +114,7 @@ Hermes는 요청을 해석한 다음 필요에 따라 터미널 명령을 실행
 
 
 
-# 7. Codex + GitHub Actions
+# 7. Codex 와 GitHub Actions 결합
 
 ![hermes-03]({{ '/images/2026-08/harness-03.jpg' | relative_url }})
 
