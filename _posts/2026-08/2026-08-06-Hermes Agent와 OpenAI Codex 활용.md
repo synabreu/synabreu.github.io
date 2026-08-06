@@ -64,14 +64,14 @@ sudo apt install -y ca-certificates curl gnupg git jq openssl ufw unattended-upg
 
 시간대를 서울로 맞춘다.
 
-```Bash
+```
 sudo timedatectl set-timezone Asia/Seoul
 timedatectl
 ```
 
 방화벽을 설정하고, 현재 SSH 접속이 끊기지 않도록 SSH를 먼저 허용한다.
 
-```Bash
+```
 sudo ufw allow OpenSSH
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
@@ -85,7 +85,7 @@ sudo ufw status verbose
 
 Ubuntu 저장소의 오래된 패키지 대신 Docker 공식 APT 저장소를 사용한다.
 
-```Bash
+```
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
@@ -101,14 +101,14 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin d
 
 현재 사용자를 docker 그룹에 추가한다.
 
-```Bash
+```
 sudo usermod -aG docker "$USER"
 newgrp docker
 ```
 
 설치를 검증한다.
 
-```Bash
+```
 docker version
 docker compose version
 docker run --rm hello-world
@@ -120,19 +120,19 @@ docker run --rm hello-world
 
 OpenAI 공식 standalone 설치 스크립트를 사용한다.
 
-```Bash
+```
 curl -fsSL https://chatgpt.com/codex/install.sh | sh
 ```
 
 새 셸을 열거나 설치 프로그램이 안내한 PATH 설정을 적용한 뒤 확인한다.
 
-```Bash
+```
 codex --version
 ```
 
 프로젝트 디렉터리에서 Codex를 처음 실행한다.
 
-```Bash
+```
 mkdir -p ~/projects/hermes-stack
 cd ~/projects/hermes-stack
 codex
@@ -140,7 +140,7 @@ codex
 
 첫 실행 화면에서 Sign in with ChatGPT 또는 사용 가능한 다른 인증 방식을 선택한다. 원격 서버에서 브라우저를 직접 열 수 없으면 Codex가 표시하는 URL과 코드를 로컬 브라우저에서 처리한다. 로그인 후 Codex 안에서 다음 명령을 확인한다.
 
-```Bash
+```
 /status
 /permissions
 /model
@@ -152,7 +152,7 @@ codex
 
 운영 파일은 /opt/hermes-stack, Hermes 영구 상태는 /opt/hermes/data에 둔다.
 
-```Bash
+```
 sudo mkdir -p /opt/hermes-stack/caddy-data /opt/hermes-stack/caddy-config
 sudo mkdir -p /opt/hermes/data
 sudo chown -R "$USER":"$USER" /opt/hermes-stack /opt/hermes
@@ -161,7 +161,7 @@ cd /opt/hermes-stack
 
 Hermes 공식 컨테이너의 대화형 설정 마법사를 한 번 실행한다.
 
-```Bash
+```
 docker run -it --rm
   -v /opt/hermes/data:/opt/data
   nousresearch/hermes-agent setup
@@ -175,7 +175,7 @@ docker run -it --rm
 
 Nous Portal을 사용할 경우 다음 방식도 가능하다.
 
-```Bash
+```
 docker run -it --rm
   -v /opt/hermes/data:/opt/data
   nousresearch/hermes-agent setup --portal
@@ -183,7 +183,7 @@ docker run -it --rm
 
 설정 파일이 생성되었는지 확인한다. 비밀값은 화면에 출력하지 않는다.
 
-```Bash
+```
 find /opt/hermes/data -maxdepth 1 -type f -printf '%f\n'
 ```
 
@@ -193,7 +193,7 @@ find /opt/hermes/data -maxdepth 1 -type f -printf '%f\n'
 
 Hermes 대시보드 인증용 비밀번호와 세션 비밀값을 생성한다.
 
-```Bash
+```
 cd /opt/hermes-stack
 umask 077
 openssl rand -base64 24
@@ -202,13 +202,13 @@ openssl rand -hex 32
 
 첫 번째 출력은 대시보드 로그인 비밀번호, 두 번째 출력은 세션 비밀값으로 사용한다. 다음 파일을 연다.
 
-```Bash
+```
 nano /opt/hermes-stack/.env
 ```
 
 아래 내용을 넣고 값을 교체한다.
 
-```Bash
+```
 HERMES_DASHBOARD_USER=admin
 HERMES_DASHBOARD_PASSWORD=REPLACE_WITH_RANDOM_PASSWORD
 HERMES_DASHBOARD_SECRET=REPLACE_WITH_64_HEX_CHARACTERS
@@ -216,7 +216,7 @@ HERMES_DASHBOARD_SECRET=REPLACE_WITH_64_HEX_CHARACTERS
 
 권한을 제한한다.
 
-```Bash
+```
 chmod 600 /opt/hermes-stack/.env
 ```
 
@@ -290,7 +290,7 @@ Caddy는 DNS가 서버를 가리키고 외부에서 80과 443에 접근할 수 �
 
 Compose 설정을 문법 검사한다.
 
-```Bash
+```
 cd /opt/hermes-stack
 docker compose config >/dev/null
 echo "Compose configuration: OK"
@@ -300,7 +300,7 @@ echo "Compose configuration: OK"
 
 도커 이미지를 내려받고 서비스를 실행한다.
 
-```Bash
+```
 cd /opt/hermes-stack
 docker compose pull
 docker compose up -d
@@ -308,7 +308,7 @@ docker compose up -d
 
 상태와 로그를 확인한다.
 
-```Bash
+```
 docker compose ps
 docker compose logs --tail=100 hermes
 docker compose logs --tail=100 caddy
@@ -316,7 +316,7 @@ docker compose logs --tail=100 caddy
 
 hermes가 healthy가 되지 않으면 실제 이미지의 상태 확인 경로가 변경되었을 수 있다. 이 경우 다음 명령으로 응답을 확인하고 healthcheck를 조정한다.
 
-```Bash
+```
 curl -i http://127.0.0.1:8642/health
 docker inspect --format '{{json .State.Health}}' hermes | jq
 ```
@@ -325,7 +325,7 @@ docker inspect --format '{{json .State.Health}}' hermes | jq
 
 ### 11.1 로컬 포트 노출 확인
 
-```Bash
+```
 sudo ss -lntp | grep -E ':(80|443|8642|9119)\b'
 ```
 
@@ -333,7 +333,7 @@ sudo ss -lntp | grep -E ':(80|443|8642|9119)\b'
 
 ### 11.2 HTTPS 확인
 
-```Bash
+```
 curl -I https://hermes.example.com
 ```
 
@@ -343,7 +343,7 @@ curl -I https://hermes.example.com
 
 실행 중인 데이터 디렉터리를 사용해 일회성 CLI 세션을 연다.
 
-```Bash
+```
 docker run -it --rm
   -v /opt/hermes/data:/opt/data
   nousresearch/hermes-agent
@@ -355,7 +355,7 @@ docker run -it --rm
 
 ### 11.4 Codex 확인
 
-```Bash
+```
 cd ~/projects/hermes-stack
 codex
 ```
@@ -372,7 +372,7 @@ Codex가 `/opt/hermes-stack`을 읽을 권한이 없다면 해당 디렉터리�
 
 설정 변경 전 백업과 Git 체크포인트를 만든다. 비밀값과 영구 데이터는 Git에서 제외한다.
 
-```Bash
+```
 cd /opt/hermes-stack
 cat > .gitignore <<'EOF'
 .env
@@ -401,7 +401,7 @@ Codex가 Docker 명령을 실행하도록 허용하기 전에는 변경 범위�
 
 공식 설치 명령을 다시 실행한다.
 
-```Bash
+```
 curl -fsSL https://chatgpt.com/codex/install.sh | sh
 codex --version
 ```
@@ -410,13 +410,13 @@ codex --version
 
 먼저 데이터를 백업한다.
 
-```Bash
+```
 sudo tar -C /opt/hermes -czf "/opt/hermes-stack/hermes-backup-$(date +%F-%H%M).tar.gz" data
 ```
 
 그다음 새 이미지를 내려받아 재생성한다.
 
-```Bash
+```
 cd /opt/hermes-stack
 docker compose pull
 docker compose up -d --force-recreate
@@ -430,13 +430,13 @@ Docker판 Hermes는 컨테이너 내부에서 hermes update를 실행하는 방�
 
 다음과 같이 백업한다.
 
-```Bash
+```
 sudo tar -C /opt/hermes -czf "$HOME/hermes-data-$(date +%F).tar.gz" data
 ```
 
 복구 시에는 먼저 서비스를 중지한 뒤 기존 데이터와 섞이지 않게 별도 디렉터리에서 백업 내용을 검사한다.
 
-```Bash
+```
 cd /opt/hermes-stack
 docker compose down
 mkdir -p "$HOME/hermes-restore-check"
@@ -450,7 +450,7 @@ find "$HOME/hermes-restore-check" -maxdepth 2 -type f | head
 
 ### 15-1. HTTPS 인증서가 발급되지 않는다
 
-```Bash
+```
 dig +short hermes.example.com
 sudo ufw status
 docker compose logs --tail=200 caddy
@@ -462,7 +462,7 @@ docker compose logs --tail=200 caddy
 
 ### 15-2. Hermes 대시보드가 시작되지 않는다
 
-```Bash
+```
 docker compose logs --tail=200 hermes
 docker compose exec hermes env | grep '^HERMES_DASHBOARD_' | sed 's/=.*$/=<set></set>/'
 ```
@@ -471,7 +471,7 @@ docker compose exec hermes env | grep '^HERMES_DASHBOARD_' | sed 's/=.*$/=<set><
 
 ### 15-3. Hermes 모델이 응답하지 않는다
 
-```Bash
+```
 docker run -it --rm
   -v /opt/hermes/data:/opt/data
   nousresearch/hermes-agent model
@@ -481,7 +481,7 @@ docker run -it --rm
 
 ### 15-4. 컨테이너가 반복 재시작한다
 
-```Bash
+```
 docker compose ps
 docker inspect hermes --format '{{.State.ExitCode}} {{.State.Error}}'
 docker compose logs --tail=300 hermes
@@ -489,7 +489,7 @@ docker compose logs --tail=300 hermes
 
 설정 파일 권한과 `/opt/hermes/data`의 소유권을 확인한다.
 
-```Bash
+```
 ls -ld /opt/hermes /opt/hermes/data
 find /opt/hermes/data -maxdepth 1 -printf '%M %u:%g %f\n'
 ```
@@ -518,7 +518,7 @@ tool_loop_guardrails:
 
 변경 후 재시작한다.
 
-```Bash
+```
 cd /opt/hermes-stack
 docker compose restart hermes
 ```
