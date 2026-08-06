@@ -56,7 +56,7 @@ hermes.example.com 대신 실제 도메인을 사용한다. DNS 전파는 다음
 
 운영체제를 업데이트하고 기본 도구를 설치한다.
 
-```Bash
+```Shell
 sudo apt update
 sudo apt upgrade -y
 sudo apt install -y ca-certificates curl gnupg git jq openssl ufw unattended-upgrades
