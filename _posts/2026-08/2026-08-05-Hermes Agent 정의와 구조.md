@@ -83,7 +83,7 @@ Hermes는 요청을 해석한 다음 필요에 따라 터미널 명령을 실행
 
 
 
-#6. Codex 와 Hermes Agent 결합
+# 6.Codex 와 Hermes Agent 결합
 
 ![hermes-02]({{ '/images/2026-08/harness-02.jpg' | relative_url }})
 
@@ -114,7 +114,7 @@ Hermes는 요청을 해석한 다음 필요에 따라 터미널 명령을 실행
 
 
 
-#7. Codex 와 GitHub Actions 결합
+# 7.Codex와 GitHub Actions 결합
 
 ![hermes-03]({{ '/images/2026-08/harness-03.jpg' | relative_url }})
 
