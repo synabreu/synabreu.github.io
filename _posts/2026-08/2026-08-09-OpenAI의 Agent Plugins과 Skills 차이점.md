@@ -8,7 +8,7 @@ categories: [openai]
 ---
 OpenAI 생태계에서 **Skill(스킬)** 과 **Plugin(플러그인)** 은 모두 AI의 기능 확장을 위한 개념이지만, 목적과 동작 위치가 어떻게 다른지 궁금해서 정리해보겠다.
 
-# 1. 개념 비교
+## 1. 개념 비교
 
 **Plugin = 외부 서비스를 연결하는 "확장 인터페이스",  Skill = AI Agent가 특정 업무를 수행하는 "능력 모듈"**
 
@@ -22,7 +22,7 @@ OpenAI 생태계에서 **Skill(스킬)** 과 **Plugin(플러그인)** 은 모두
 | 구조        | Prompt + Tools + Logic                  | API Schema + Authentication |
 | 방향        | AI → 작업 수행                         | AI ↔ 외부 서비스           |
 
-# 2. Agent Plugin이란?
+## 2. Agent Plugin이란?
 
 Plugin은 ChatGPT가 외부 시스템과 통신하도록 만드는 연결 계층입니다.
 
@@ -40,7 +40,7 @@ Issue 반환
    ↓
 ChatGPT 답변 생성</span></code></pre></div></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></pre>
 
-# 3. Agent Plugin 특징
+## 3. Agent Plugin 특징
 
 ### 1) 외부 데이터 접근
 
@@ -65,7 +65,7 @@ GET /users/{id}
 
 POST /deploy</span></code></pre></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></div></div></pre>
 
-# 4. Skill이란?
+## 4. Skill이란?
 
 Skill은 Agent가 특정 업무를 수행하기 위한 "업무 능력 패키지"이다.
 
@@ -94,7 +94,7 @@ Skill은 Agent가 특정 업무를 수행하기 위한 "업무 능력 패키지"
 
 즉 스킬은  "무엇을 할 수 있는가?"에 집중한다.
 
-# 5. 구조 차이
+## 5. 구조 차이
 
 Plugin 구조: 외부 세계와 연결
 
@@ -104,7 +104,7 @@ Skill 구조: Agent의 지능과 행동 확장
 
  ![plugins-04]({{ '/images/2026-08/plugins-04.jpg' | relative_url }})
 
-# 6. Skill 과 MCP와의 관계
+## 6. Skill 과 MCP와의 관계
 
 관계:
 
@@ -142,14 +142,14 @@ Kubernetes MCP
 - 장애 분석
 ```
 
-# 7. Agent 시대의 새로운 구조
+## 7. Agent 시대의 새로운 구조
 
 앞으로의 구조는 다음과 같다. 
 
 ![plugins-06]({{ '/images/2026-08/plugins-06.jpg' | relative_url }})
 
 
-# 8. 개발자 관점에서 선택 기준
+## 8. 개발자 관점에서 선택 기준
 
 | 만들고 싶은 것               | 선택                |
 | ---------------------- | ----------------- |
@@ -162,7 +162,7 @@ Kubernetes MCP
 | 기업용 AI Agent           | Skill + MCP + RAG |
 
 
-# 9. OpenAI Agent 개발 관점
+## 9. OpenAI Agent 개발 관점
 
 예를 들어, "AI DevOps Engineer Agent" 를 만든다면:
 
@@ -192,7 +192,7 @@ Prompt:
 "You are senior DevOps engineer..."
 ```
 
-# 10. 핵심 정리
+## 10. 핵심 정리
 
 * Plugin = AI가 외부 서비스를 사용하기 위한 연결 통로
 * Skill = AI Agent가 특정 전문가처럼 행동하게 만드는 능력
@@ -212,3 +212,4 @@ Agent
 ```
 
 이다.특히, Codex + OpenAI Agent + MCP 환경에서는 과거의 Plugin보다 Skill + MCP 조합이 차세대 Agent 확장 방식으로 보는 것이 맞다.
+
