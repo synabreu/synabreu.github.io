@@ -56,13 +56,6 @@ npm test
 - legacy/
 - generated/
 - *.generated.ts
-
-
-## Do not modify
-
-- legacy/
-- generated/
-- *.generated.ts
 ```
 
 Codex 입장에서는 이것이 일종의 회사 또는 프로젝트의 규율같은 역할을 한다. 예를 들어, 다음 질문에 답한다.
@@ -90,20 +83,21 @@ Skill은 한 단계 더 나간다. Skill은 Codex에게:
 
 라고 알려주는 재사용 가능한 업무 매뉴얼과 같다. OpenAI는 Codex use case에서도 반복되는 workflow를 Skill로 저장해 다시 사용할 수 있는 방식을 소개하고 있다. 예를 들어, 회사에서 매주 AI 뉴스를 분석한다고 하자!
 
+```
 skills/
    ai-news-report/
        SKILL.md
        scripts/
        references/
-
-SKILL.md:
-
 ```
----
 
+`SKILL.md:`
+
+```Markdown
+---
 name: ai-news-report
 description: AI 산업 뉴스를 조사하고 분석 보고서를 작성한다.
-------------------------------------------------------------
+---
 
 # Workflow
 
@@ -126,6 +120,7 @@ description: AI 산업 뉴스를 조사하고 분석 보고서를 작성한다.
 
 즉:
 
+```
 AGENTS.md
    ↓
 회사의 기본 운영 규칙
@@ -135,7 +130,7 @@ SKILL.md
 특정 업무의 SOP
 
 라고 이해하면 된다.
-
+```
 
 # 4. MCP는 완전히 다른 역할이다
 
