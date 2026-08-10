@@ -1,5 +1,5 @@
 ---
-title: "OpenAI Agent Plugins란 무엇인가"
+title: "OpenAI Agent Plugins란 무엇인가?"
 date: 2026-08-08
 tags: [openai, gpt5, 오픈AI, AgentPlugins, Apple, AppleIntelligence, ios, ChatGPT, Google]
 typora-root-url: ../
@@ -10,7 +10,7 @@ categories: [openai]
 
 ## 1. 전체 구조
 
-[그림] OpenAI Agent Plugin 전체 구조
+![plugins-01]({{ '/images/2026-08/plugins-01.jpg' | relative_url }})
 
 여기서 Agent Plugin은 새로운 종류의 에이전트가 아니다. 오히려 기존에 따로 관리하던 Skill과 MCP 서버 같은 에이전트 확장 요소를 하나의 이동 가능한 package로 만들기 위한 컨테이너 규격에 가깝다. 현재 Agent Plugins 공식 규격은 이를 특정 벤더에 종속되지 않는 호환 가능한 포터블 포맷(portable format)으로 정의하고 있다.
 
@@ -390,22 +390,21 @@ Operations Plugin:
 | MCP           | 무엇을 사용할 수 있는가?    | Tools / Data / API       |
 | Agent Plugin  | 이것들을 어떻게 배포하는가? | Packaging / Distribution |
 
-
 지금까지 에이전트 생태계의 문제는 확장 기능의 이식성이었다. 예를 들어, Codex Skill, VS Code Agent, MCP config, Claude용 Skill, Cursor 설정 등이 각각 따로 존재하면 관리가 매우 어려워진다.
 
-Agent Plugins가 노리는 방향은 다음과 같다. 
+Agent Plugins가 노리는 방향은 다음과 같다.
 
-             Agent Plugin
+    Agent Plugin
 
-                 ↓
+    ↓
 
-       ┌─────────┼──────────┐
+    ┌─────────┼──────────┐
        ↓         ↓          ↓
 
-     Codex     Cursor    VS Code
+    Codex     Cursor    VS Code
        ↓         ↓          ↓
 
-       동일 Skill + MCP
+    동일 Skill + MCP
 
 Agent Plugins 공식 규격 역시 자신을 AI agents를 확장하는 reusable components를 distributable plugin으로 패키징하는 portable 규격으로 정의한다. VS Code도 이미 Agent Plugin 지원을 Preview로 문서화하고 있으며, VS Code 쪽 플러그인 모델에서는 Skills, MCP servers 외에도 slash commands, custom agents, hooks 같은 확장을 다룬다. 다만 이것은 Agent Plugins 1.0.0의 portable core와 VS Code 자체 client extension layer를 구분해서 봐야 한다.
 
@@ -462,6 +461,7 @@ commands
 OpenAI 개발자 사이트의 현재 메시지도 꽤 명확하다. OpenAI는 Plugins를 ChatGPT와 Codex를 Skills, MCP servers, optional UI로 확장하는 수단으로 소개하고 있다.
 
 결국 OpenAI가 만들려는 구조는 단순한 챗봇 ecosystem이 아니다. 제가 보기에는 기술적으로 다음 방향이다.
+
 ```
 2023
 
