@@ -93,11 +93,10 @@ skills/
 
 `SKILL.md:`
 
-```Markdown
----
+```
+
 name: ai-news-report
 description: AI 산업 뉴스를 조사하고 분석 보고서를 작성한다.
----
 
 # Workflow
 
@@ -118,8 +117,6 @@ description: AI 산업 뉴스를 조사하고 분석 보고서를 작성한다.
 
 그러면 Codex는 이 Skill을 사용할 때마다 같은 workflow를 재현할 수 있다.
 
-즉:
-
 ```
 AGENTS.md
    ↓
@@ -128,19 +125,11 @@ AGENTS.md
 SKILL.md
    ↓
 특정 업무의 SOP
-
-라고 이해하면 된다.
 ```
 
 # 4. MCP는 완전히 다른 역할이다
 
-MCP(Model Context Protocol)는 Skill과 성격이 다르다. 
-
-Skill이 **“어떻게 일할 것인가”**라면 MCP는:
-
-“어떤 시스템을 사용할 수 있는가?”
-
-를 정의한다. 예를 들어, Codex에게 이런 일을 시키고 싶다고 해보겠다.
+MCP(Model Context Protocol)는 Skill과 성격이 다르다. Skill이 “어떻게 일할 것인가”라면 MCP는 “어떤 시스템을 사용할 수 있는가?”를 정의한다. 예를 들어, Codex에게 이런 일을 시키고 싶다고 해보겠다.
 
 ```
 "GitHub에서 issue를 확인하고
@@ -169,7 +158,7 @@ Slack MCP
 Custom MCP
 ```
 
-구조적으로 보면:
+구조적으로 보면 다음과 같다. 
 
 ```
 Codex
@@ -185,7 +174,6 @@ Codex
               ├── create PR
               └── update issue
 ```
-이다.
 
 Skill은 workflow이고 MCP는 capability이다. 
 
@@ -207,8 +195,7 @@ github-mcp
 sonarqube-mcp
 ```
 
-를 설정해야 했다. 여기에 환경 설정도 따로 필요하다. Agent Plugins는 이것을 한 package 안에 넣는다. 
-Agent Plugins 1.0.0의 표준적인 구조는 다음과 같다.
+를 설정해야 했다. 여기에 환경 설정도 따로 필요하다. Agent Plugins는 이것을 한 package 안에 넣는다. Agent Plugins 1.0.0의 표준적인 구조는 다음과 같다.
 
 ```
 my-plugin/
@@ -338,6 +325,7 @@ company-research/
 Agent Plugins 1.0.0은 MCP transport로 stdio, streamable-http, 그리고 선택적인 sse를 정의하고 있다. 또한 ${PLUGIN_ROOT}와 ${PLUGIN_DATA}라는 portable placeholder도 규정한다. 
 
 이게 꽤 중요한 설계이다. 왜냐하면 같은 Plugin package를:
+
 ```
 Developer A laptop
 Developer B laptop
