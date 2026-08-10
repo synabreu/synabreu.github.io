@@ -537,12 +537,12 @@ docker compose restart hermes
 
 # 18. 공식 참고 문서
 
-* OpenAI Codex CLI: https://learn.chatgpt.com/docs/codex/cli
-* Hermes Agent Quickstart: https://hermes-agent.nousresearch.com/docs/getting-started/quickstart
-* Hermes Agent Docker: https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/docker.md
-* Hermes Agent Configuration: https://hermes-agent.nousresearch.com/docs/user-guide/configuration
-* Docker Engine Ubuntu 설치: https://docs.docker.com/engine/install/ubuntu/
-* Caddy 자동 HTTPS: https://caddyserver.com/docs/automatic-https
+* OpenAI Codex CLI: [https://learn.chatgpt.com/docs/codex/cli](https://learn.chatgpt.com/docs/codex/cli)
+* Hermes Agent Quickstart: [https://hermes-agent.nousresearch.com/docs/getting-started/quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart)
+* Hermes Agent Docker: [https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/docker.md](https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/docker.md)
+* Hermes Agent Configuration: [https://hermes-agent.nousresearch.com/docs/user-guide/configuration](https://hermes-agent.nousresearch.com/docs/user-guide/configuration)
+* Docker Engine Ubuntu 설치: [https://docs.docker.com/engine/install/ubuntu/]([https://docs.docker.com/engine/install/ubuntu/)
+* Caddy 자동 HTTPS: [https://caddyserver.com/docs/automatic-https](https://caddyserver.com/docs/automatic-https)
 
 # 20. 참고
 
