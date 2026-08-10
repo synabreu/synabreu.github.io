@@ -77,9 +77,7 @@ Codex 입장에서는 이것이 일종의 회사 또는 프로젝트의 규율�
 
 ## 3. Skill은 무엇인가?
 
-Skill은 한 단계 더 나간다.
-
-Skill은 Codex에게 다음과 같이 알려주는 재사용 가능한 업무 매뉴얼과 같다.
+Skill은 한 단계 더 나간다. Skill은 Codex에게 다음과 같이 알려주는 재사용 가능한 업무 매뉴얼과 같다.
 
 > 이 업무를 할 때는 이렇게 처리해.
 
@@ -132,11 +130,7 @@ SKILL.md
 
 ## 4. MCP는 완전히 다른 역할이다
 
-MCP(Model Context Protocol)는 Skill과 성격이 다르다.
-
-Skill이 **“어떻게 일할 것인가?”**라면 MCP는 **“어떤 시스템을 사용할 수 있는가?”**를 정의한다.
-
-예를 들어 Codex에게 다음과 같은 일을 시키고 싶다고 해보겠다.
+MCP(Model Context Protocol)는 Skill과 성격이 다르다. Skill이 “어떻게 일할 것인가?”**라면 MCP는 “어떤 시스템을 사용할 수 있는가?”를 정의한다. 예를 들어 Codex에게 다음과 같은 일을 시키고 싶다고 해보겠다.
 
 ```text
 "GitHub에서 issue를 확인하고
