@@ -22,6 +22,7 @@ OpenAI 생태계에서 **Skill(스킬)** 과 **Plugin(플러그인)** 은 모두
 | 구조        | Prompt + Tools + Logic                  | API Schema + Authentication |
 | 방향        | AI → 작업 수행                         | AI ↔ 외부 서비스           |
 
+
 # 2. Agent Plugin이란?
 
 Plugin은 ChatGPT가 외부 시스템과 통신하도록 만드는 연결 계층입니다.
@@ -71,7 +72,7 @@ Skill은 Agent가 특정 업무를 수행하기 위한 "업무 능력 패키지"
 
 예:
 
-### Coding Agent Skill
+### 1) Coding Agent Skill
 
 <pre class="overflow-visible! px-0!" data-start="1276" data-end="1362"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute end-1.5 top-1 z-2 md:end-2 md:top-1"></div><div class="relative"><div class="pe-11 pt-3"><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ͼd ͼr"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span>Coding Skill
 
@@ -82,7 +83,7 @@ Skill은 Agent가 특정 업무를 수행하기 위한 "업무 능력 패키지"
 ├── Bug Fix
 └── Review</span></code></pre></div></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></pre>
 
-### Research Agent Skill
+### 2) Research Agent Skill
 
 <pre class="overflow-visible! px-0!" data-start="1394" data-end="1462"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute end-1.5 top-1 z-2 md:end-2 md:top-1"></div><div class="relative"><div class="pe-11 pt-3"><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ͼd ͼr"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span>Research Skill
 
