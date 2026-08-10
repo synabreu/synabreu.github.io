@@ -422,15 +422,11 @@ Agent Skills 과 MCP Servers 이다. 그래서 지금 단계에서:
 ```JSON
 {
   "$schema": "...",
-
   "name": "my-plugin",
-
   "extensions": {
-
     "com.example.codex": {
       "something": {}
     }
-
   }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 title: "OpenAI의 Agent Plugins과 Skills 차이점"
-date: 2026-08-10
+date: 2026-08-09
 tags: [openai, gpt5, 오픈AI, AgentPlugins, Apple, AppleIntelligence, ios, ChatGPT, Google]
 typora-root-url: ../
 toc: true
@@ -26,18 +26,7 @@ OpenAI 생태계에서 **Skill(스킬)** 과 **Plugin(플러그인)** 은 모두
 
 Plugin은 ChatGPT가 외부 시스템과 통신하도록 만드는 연결 계층입니다.
 
-ChatGPT
-   |
-   |
- Plugin
-   |
-   +---- GitHub API
-   |
-   +---- Salesforce API
-   |
-   +---- AWS API
-   |
-   +---- Database
+![plugins-02]({{ '/images/2026-08/plugins-02.jpg' | relative_url }})
 
 사용자가 "내 GitHub Issue 확인해줘" 라고 하면:
 
@@ -109,48 +98,23 @@ Skill은 Agent가 특정 업무를 수행하기 위한 "업무 능력 패키지"
 
 Plugin 구조: 외부 세계와 연결
 
-    ChatGPT
-
-    |
-                |
-
-    Plugin
-
-|                       |
-| --------------------- |
-|                       |
-| API          Database |
+![plugins-03]({{ '/images/2026-08/plugins-03.jpg' | relative_url }})
 
 Skill 구조: Agent의 지능과 행동 확장
 
-    Agent
-
-    |
-          Skill Manager
-
-|                               |
-| ----------------------------- |
-|                               |
-| Planning   Coding    Analysis |
+ ![plugins-04]({{ '/images/2026-08/plugins-04.jpg' | relative_url }})
 
 # 6. Skill 과 MCP와의 관계
 
 관계:
 
-    Agent
-
-|                            |
-| -------------------------- |
-|                            |
-| Skill           MCP        |
-|                            |
-| 업무 능력        Tool 연결 |
-|                            |
-| External System            |
+ ![plugins-05]({{ '/images/2026-08/plugins-05.jpg' | relative_url }})
 
 예:
 
 MCP
+
+```
 AWS MCP Server
 
 Tools:
@@ -158,8 +122,11 @@ Tools:
 - list_instances()
 - get_cost()
 - create_snapshot()
+```
 
 Skill
+
+```
 AWS Cloud Architect Skill
 
 사용 가능한 MCP:
@@ -173,79 +140,67 @@ Kubernetes MCP
 - 비용 최적화
 - 아키텍처 설계
 - 장애 분석
+```
 
-7. Agent 시대의 새로운 구조
+# 7. Agent 시대의 새로운 구조
 
-앞으로의 구조는:
+앞으로의 구조는 다음과 같다. 
 
-    AI Agent
+![plugins-06]({{ '/images/2026-08/plugins-06.jpg' | relative_url }})
 
-    |
-              Skill Layer
 
-|                                   |
-| --------------------------------- |
-|                                   |
-| Coding      Finance      Security |
+# 8. 개발자 관점에서 선택 기준
 
-    |
-              MCP Layer
+| 만들고 싶은 것               | 선택                |
+| ---------------------- | ----------------- |
+| ChatGPT에서 내 서비스 API 사용 | Plugin/MCP        |
+| Agent에게 특정 역할 부여       | Skill             |
+| 반복 업무 자동화              | Skill             |
+| SaaS 연결                | MCP/Plugin        |
+| DevOps Agent           | Skill + MCP       |
+| Coding Agent           | Skill + Tools     |
+| 기업용 AI Agent           | Skill + MCP + RAG |
 
-    -------------------------
-        |           |           |
-       AWS       GitHub       DB
 
-    |
-              Real World
+# 9. OpenAI Agent 개발 관점
 
-입니다.
+예를 들어, "AI DevOps Engineer Agent" 를 만든다면:
 
-8. 개발자 관점에서 선택 기준
-   만들고 싶은 것	선택
-   ChatGPT에서 내 서비스 API 사용	Plugin/MCP
-   Agent에게 특정 역할 부여	Skill
-   반복 업무 자동화	Skill
-   SaaS 연결	MCP/Plugin
-   DevOps Agent	Skill + MCP
-   Coding Agent	Skill + Tools
-   기업용 AI Agent	Skill + MCP + RAG
-9. OpenAI Agent 개발 관점
-
-예를 들어:
-
-"AI DevOps Engineer Agent"
-
-를 만든다면:
-
-Skill
+### Skill
+```
 DevOps Engineer Skill
 
 - Kubernetes 운영
 - 장애 분석
 - 로그 분석
 - 배포 전략
-  MCP
+```
+
+### MCP
+```
   Kubernetes MCP
   AWS MCP
   GitHub MCP
   Datadog MCP
-  Agent
-  AI DevOps Engineer
+```
+
+### Agent
+```  
+AI DevOps Engineer
 
 Prompt:
 "You are senior DevOps engineer..."
-핵심 정리
-Plugin
-= AI가 외부 서비스를 사용하기 위한 연결 통로
+```
 
-Skill
-= AI Agent가 특정 전문가처럼 행동하게 만드는 능력
+# 10. 핵심 정리
 
-MCP
-= Skill이 사용할 수 있는 표준 Tool 연결 방식
+* Plugin = AI가 외부 서비스를 사용하기 위한 연결 통로
+* Skill = AI Agent가 특정 전문가처럼 행동하게 만드는 능력
+* MCP = Skill이 사용할 수 있는 표준 Tool 연결 방식
 
 현재 Agentic AI 시대의 가장 일반적인 패턴은:
 
+```
 Agent
  ├── Skill (전문 역할)
  |
@@ -254,7 +209,6 @@ Agent
  ├── Memory (Context)
  |
  └── Evaluation (품질 검증)
+```
 
-입니다.
-
-특히 Codex + OpenAI Agent + MCP 환경에서는 과거의 Plugin보다 Skill + MCP 조합이 차세대 Agent 확장 방식으로 보는 것이 맞습니다.
+이다.특히, Codex + OpenAI Agent + MCP 환경에서는 과거의 Plugin보다 Skill + MCP 조합이 차세대 Agent 확장 방식으로 보는 것이 맞다.
