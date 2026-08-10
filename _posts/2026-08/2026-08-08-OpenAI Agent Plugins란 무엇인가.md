@@ -381,7 +381,7 @@ Operations Plugin:
         MCP          MCP         MCP
 ```
 
-# 9. 플러그인 구성
+## 9. 플러그인 구성
 
 | 기술          | 핵심 질문                   | 역할                     |
 | ------------- | --------------------------- | ------------------------ |
@@ -408,7 +408,7 @@ Agent Plugins가 노리는 방향은 다음과 같다.
 
 Agent Plugins 공식 규격 역시 자신을 AI agents를 확장하는 reusable components를 distributable plugin으로 패키징하는 portable 규격으로 정의한다. VS Code도 이미 Agent Plugin 지원을 Preview로 문서화하고 있으며, VS Code 쪽 플러그인 모델에서는 Skills, MCP servers 외에도 slash commands, custom agents, hooks 같은 확장을 다룬다. 다만 이것은 Agent Plugins 1.0.0의 portable core와 VS Code 자체 client extension layer를 구분해서 봐야 한다.
 
-# 11. Agent Plugins v1은 정확히 무엇을 표준화했는가?
+## 10. Agent Plugins v1은 정확히 무엇을 표준화했는가?
 
 현재 Agent Plugins Specification 1.0.0에서 portable core로 정의한 component type은 정확히 두 가지이다.
 Agent Skills 과 MCP Servers 이다. 그래서 지금 단계에서:
@@ -456,7 +456,7 @@ commands
 
 형태로 발전할 가능성이 크다.
 
-# 12. OpenAI가 왜 지금 이걸 만드는가?
+## 11. OpenAI가 왜 지금 이걸 만드는가?
 
 OpenAI 개발자 사이트의 현재 메시지도 꽤 명확하다. OpenAI는 Plugins를 ChatGPT와 Codex를 Skills, MCP servers, optional UI로 확장하는 수단으로 소개하고 있다.
 
@@ -503,7 +503,7 @@ Agent
 
 로 넘어가는 흐름이다. 즉, AI 모델을 사용하는 시대에서 AI에게 “직무”를 설치하는 시대로 이동하고 있는 것이다.
 
-# 13. AI Researcher Plugin 예제
+## 12. AI Researcher Plugin 예제
 
 ```
 ai-researcher-plugin/
