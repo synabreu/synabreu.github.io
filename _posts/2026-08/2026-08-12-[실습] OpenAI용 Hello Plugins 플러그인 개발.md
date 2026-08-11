@@ -10,7 +10,7 @@ categories: [openai]
 
 # 1. 전체 아키텍처
 
-![hello-plugins-01]({{ '/images/2026-08/hello-plugins-01.jpg' | relative_url }})
+![hello-plugins-01]({{ '/images/2026-08/hello-plugins-01.png' | relative_url }})
 
 * 사용자가 “플러그인 인사말을 출력해줘”라고 요청한다.
 * ChatGPT/Codex가 Plugin의 도구 목록과 설명을 확인한다.
