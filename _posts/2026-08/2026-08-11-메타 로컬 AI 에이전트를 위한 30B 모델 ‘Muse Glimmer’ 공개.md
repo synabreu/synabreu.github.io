@@ -1,10 +1,10 @@
 ---
-title: "메타 로컬 AI 에이전트를 위한 30B 모델 ‘Muse Glimmer’ 공개."
+title: "메타 로컬 AI 에이전트를 위한 30B 모델 ‘Muse Glimmer’ 공개"
 date: 2026-08-11
 tags: [meta, 메타, Muse Glimmer, 라마, llama, AgenticAI, ]
 typora-root-url: ../
 toc: true
-categories: [openai]
+categories: [meta]
 ---
 메타는 작년 봄 쯤에 Llama 4 Scout와 Maverick을 발표한 이후 새롭게 조직과 모델을 재구성해서 메타 수퍼인텔리전스 랩스(Meta Superintelligence Labs)ㅇ서 새로운 Muse family의 첫 모델인 `Muse Spark`를 올 초에 발표했다. 현재 Muse Glimmer 30B는 Meta가 가중치를 공개해 로컬에서 다운로드·실행할 수 있게 한 오픈 웨이트 모델이다. 간단하게 기술적으로 어떤 특징이 있는가 중심으로 한번 요약해 보겠다.
 
