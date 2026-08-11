@@ -80,7 +80,7 @@ MCP 서버 생성에 대한 각 설정의 의미는 다음과 같다.
 
 ## 3.2 MCP 도구 등록
 
-```Python
+```
 @mcp.tool(
     name="hello_plugins",
     description="Return the exact greeting 'Hello, Plugins!'. This tool is read-only.",
