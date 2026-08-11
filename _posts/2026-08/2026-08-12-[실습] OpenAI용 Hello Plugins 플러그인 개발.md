@@ -1,5 +1,5 @@
 ---
-title: "2026-08-12-[실습] OpenAI용 Hello Plugins 플러그인 개발"
+title: "[실습] OpenAI용 Hello Plugins 플러그인 개발"
 date: 2026-08-13
 tags: [오픈AI, OpenAI, ChatGPT, MCP, Agent, Plugin,  ]
 typora-root-url: ../
@@ -79,3 +79,59 @@ MCP 서버 생성에 대한 각 설정의 의미는 다음과 같다.
 
 
 ## 3.2 MCP 도구 등록
+
+```Python
+@mcp.tool(
+    name="hello_plugins",
+    description="Return the exact greeting 'Hello, Plugins!'. This tool is read-only.",
+    annotations={
+        "title": "Say hello to plugins",
+        "readOnlyHint": True,
+        "destructiveHint": False,
+        "openWorldHint": False,
+    },
+)
+```
+
+@mcp.tool 데코레이터는 아래의 Python 함수를 MCP 도구로 등록한다. 도구 메타데이터는 단순 설명이 아니라 ChatGPT/Codex의 도구 선택과 안전 판단에 사용된다. 이 도구는 외부 API, 데이터베이스 또는 파일을 사용하지 않으므로 설정이 정확하다.
+
+| 항목                      | 의미                         |
+| ----------------------- | -------------------------- |
+| `name`                  | 실제 MCP 도구 이름               |
+| `description`           | 도구 사용 목적                   |
+| `title`                 | 사람이 읽기 쉬운 도구 제목            |
+| `readOnlyHint=True`     | 데이터를 변경하지 않는 읽기 전용 도구      |
+| `destructiveHint=False` | 삭제·덮어쓰기 같은 위험 동작 없음        |
+| `openWorldHint=False`   | 외부 시스템이나 공개 데이터에 영향을 주지 않음 |
+
+
+## 3.3 비즈니스 로직
+
+```Python
+def hello_plugins() -> str:
+    """Return the plugin's fixed greeting."""
+    return "Hello, Plugins!"
+```
+
+입력 매개변수가 없고 항상 동일한 문자열을 반환한다. MCP SDK는 Python 반환값을 MCP 텍스트 콘텐츠로 변환한다. 실제 MCP 호출 결과에서는 대략 다음과 같은 형태로 처리된다.
+
+```JSON
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Hello, Plugins!"
+    }
+  ]
+}
+```
+
+## 3.5 서버 실행
+
+```Python
+if __name__ == "__main__":
+    mcp.run(transport="streamable-http")
+```
+
+python server.py로 직접 실행했을 때만 서버가 시작된다. streamable-http는 ChatGPT/Codex Plugin 연결에 필요한 HTTP 기반 MCP 전송 방식이다. MCP 엔드포인트는 기본적으로 /mcp에 생성된다.
+
