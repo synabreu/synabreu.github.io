@@ -12,6 +12,12 @@ categories: [openai]
 
 ![hello-plugins-01]({{ '/images/2026-08/hello-plugins-01.png' | relative_url }})
 
+<img
+  src="{{ '/images/2026-08/hello-plugins-01.png' | relative_url }}"
+  alt="hello-plugins-01"
+  style="width: 50%; height: auto;"
+>
+
 * 사용자가 “플러그인 인사말을 출력해줘”라고 요청한다.
 * ChatGPT/Codex가 Plugin의 도구 목록과 설명을 확인한다.
 * hello_plugins가 적합하다고 판단되면 /mcp로 도구 호출을 보낸다.
