@@ -46,7 +46,7 @@ hello-plugins-python/
 
 ## 3.1 모듈과 의존성, 그리고 MCP 서버 생성
 
-```python
+```
 import os # HOST, PORT 환경변수를 읽음
 
 # FastMCP: Python 함수를 MCP 도구로 노출하고 HTTP 서버를 실행함
