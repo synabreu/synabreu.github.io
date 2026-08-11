@@ -167,7 +167,7 @@ Kubernetes MCP
 
 예를 들어, "AI DevOps Engineer Agent" 를 만든다면:
 
-### Skill
+Skill
 ```
 DevOps Engineer Skill
 
@@ -177,7 +177,7 @@ DevOps Engineer Skill
 - 배포 전략
 ```
 
-### MCP
+MCP
 ```
   Kubernetes MCP
   AWS MCP
@@ -185,7 +185,7 @@ DevOps Engineer Skill
   Datadog MCP
 ```
 
-### Agent
+Agent
 ```  
 AI DevOps Engineer
 
