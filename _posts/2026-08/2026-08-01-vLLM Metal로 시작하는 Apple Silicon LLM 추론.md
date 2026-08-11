@@ -89,5 +89,4 @@ vLLM Metal은 이러한 변화 속에서 Apple Silicon 사용자가 vLLM이라�
 
 vLLM Metal은 Mac 환경에서 이러한 추론 엔지니어링 역량을 시작할 수 있는 좋은 실습 플랫폼이다.
 
-* 참고: []vLLM Metal](https://github.com/synabreu/vllm-metal)
-
+* 참고: [vLLM Metal](https://github.com/synabreu/vllm-metal)

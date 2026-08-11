@@ -6,10 +6,9 @@ typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-메타는 작년 봄 쯤에 Llama 4 Scout와 Maverick을 발표한 이후 새롭게 조직과 모델을 재구성해서 메타 수퍼인텔리전스 랩스(Meta Superintelligence Labs)ㅇ서 새로운 **Muse family**의 첫 모델인 `Muse Spark`를 올 초에 발표했다. 현재 Muse Glimmer 30B는 Meta가 가중치를 공개해 로컬에서 다운로드·실행할 수 있게 한 오픈 웨이트 모델이다. 간단하게 기술적으로 어떤 특징이 있는가 중심으로 한번 요약해 보겠다.
+메타는 작년 봄 쯤에 Llama 4 Scout와 Maverick을 발표한 이후 새롭게 조직과 모델을 재구성해서 메타 수퍼인텔리전스 랩스(Meta Superintelligence Labs)ㅇ서 새로운 Muse family의 첫 모델인 `Muse Spark`를 올 초에 발표했다. 현재 Muse Glimmer 30B는 Meta가 가중치를 공개해 로컬에서 다운로드·실행할 수 있게 한 오픈 웨이트 모델이다. 간단하게 기술적으로 어떤 특징이 있는가 중심으로 한번 요약해 보겠다.
 
-
-# 1. 주요 사항 
+# 1. 주요 사항
 
 Muse Glimmer는 일반적인 대화형 AI 모델보다 에이전트(Agentic)와 코딩 작업에 초점을 맞춘 모델이다. Meta는 Muse Glimmer가 경쟁력 있는 에이전트 및 코딩 성능을 제공하도록 학습됐으며, 멀티모달 인식(Multimodal Perception) 기능도 모델에 포함했다고 설명한다.
 
@@ -17,13 +16,38 @@ Muse Glimmer는 약 300억 개의 파라미터를 가진 모델이다. Meta가 �
 
 Muse Glimmer는 이와 달리 개인용 컴퓨터와 같은 로컬 환경에서 AI 에이전트를 실행하는 것을 주요 목적으로 한다. Meta는 이를 `상시 실행되는 로컬 에이전트(always-on local agents)`를 위한 모델로 설명한다.
 
-
 # 2. Agentic AI와 Coding에 초점
 
 Muse Glimmer의 중요한 특징 가운데 하나는 Agentic AI 작업을 주요 목표로 학습했다는 점이다. Agentic AI에서는 단순히 사용자의 질문에 답하는 것만으로 충분하지 않다. 모델이 주어진 작업을 이해하고 필요한 행동을 선택하며 여러 단계를 거쳐 실제 작업을 완료할 수 있어야 한다. 특히 개발 환경에서는 코드를 이해하고 생성하거나 수정하는 능력이 중요하다.
 
 Meta는 Muse Glimmer를 이러한 Agentic Performance와 Coding Performance를 제공하도록 학습했다고 설명한다.따라서 Muse Glimmer는 일반적인 Chat LLM뿐 아니라 Coding Agent와 Tool-Using Agent 같은 시스템을 구축하기 위한 모델로 활용할 수 있다.
 
+| Benchmark        | Muse Glimmer 30B | Gemma4 31B | Qwen3.6 27B    | 1위            |
+| ---------------- | ---------------- | ---------- | -------------- | -------------- |
+| MCP Atlas        | **75.5**   | 54.2       | 62.5           | **Muse** |
+| DeepSearch QA    | **74.6**   | 61.7       | 71.1           | **Muse** |
+| τ³-Banking     | **23.5**   | 15.1       | 16.7           | **Muse** |
+| WildClawBench    | **47.6**   | 37.6       | 43.2           | **Muse** |
+| GDPval-AA        | 953              | 811        | **1141** | Qwen           |
+| GAIA2            | **43.3**   | 36.4       | 40.0           | **Muse** |
+| SkillsBench      | 44.3             | 32.4       | **46.6** | Qwen           |
+| OSWorld-Verified | 65.9             | 58.5       | **75.6** | Qwen           |
+
+위의 표는 Muse Glimmer-30B High Reasoning을 비슷한 크기의 Gemma4-31B Thinking Mode, Qwen3.6-27B Thinking Mode와 직접 비교한 것이다. 핵심은 Muse Glimmer가 특히 General Agentic, 즉 도구를 사용하고 검색하고 여러 단계를 수행하는 에이전트 작업에서 강하다는 것이다.
+
+특히 MCP Atlas 75.5가 눈에 띕니다. MCP 기반 도구 사용 능력을 평가하는 성격의 벤치마크에서 Gemma의 54.2, Qwen의 62.5보다 높은 점수를 보인다. DeepSearch QA도 74.6으로 가장 높다. 왜냐하면, 검색하고 정보를 찾고 여러 단계를 거쳐 답을 만들어내는 작업에 강하다는 뜻이다. 코딩도 꽤 강하다.
+
+```
+SWE-Bench Pro
+
+Muse Glimmer   51.2  ← 1위
+Qwen           50.2
+Gemma          36.9
+```
+
+다만 모든 코딩 벤치마크에서 1위인 것은 아니다. SWE-Bench Verified에서는 Qwen이 77.2로 Muse의 76.0보다 높고, TerminalBench에서도 Qwen이 60.7, Muse가 51.7이다. 따라서 Muse Glimmer 30B는 30B 전후의 작은 로컬 모델임에도 Agentic AI와 일부 Coding 작업에서 상당히 경쟁력이 있다.
+
+일반 추론에서도 Muse가 상당히 좋습니다. 이미지에서 AIME 2026은 94.7, IFBench는 77.0, AA-LCR은 80.0, Beam 128K는 65.1로 세 모델 중 가장 높다. 반면 GPQA Diamond와 Humanity's Last Exam에서는 Gemma가 각각 85.7, 23.6으로 가장 높다.
 
 # 3. 멀티모달 인식
 
@@ -37,12 +61,17 @@ Muse Glimmer에서 가장 주목할 부분은 Meta가 이 모델을 **로컬 에
 
 이러한 Agent는 사용자의 요청을 이해하고 필요한 작업을 판단한 뒤 여러 단계의 행동을 수행한다. Muse Glimmer는 이러한 에이전트 작업을 로컬 컴퓨팅 환경에서 수행하는 것을 목표로 한다. 따라서 Muse Glimmer의 핵심을 한 문장으로 정리하면 다음과 같다. “개인 컴퓨팅 환경에서 지속적으로 실행되는 Agentic AI를 위한 30B급 모델” 이라고 볼 수 있다.
 
-
 # 5. 모델 크기보다 실제 Agent 실행에 초점
 
 Muse Glimmer는 현재 AI 모델 경쟁에서 나타나고 있는 또 하나의 변화를 보여준다. AI 모델의 성능 경쟁이 단순한 모델 크기뿐 아니라 실제 에이전트 환경에서 얼마나 효과적으로 작업을 수행할 수 있는가로 확대되고 있기 때문이다. 특히 로컬 환경에서 실행되는 Agent는 클라우드 기반 AI 서비스와는 다른 활용 가능성을 제공한다.
 
 Muse Glimmer는 이러한 로컬 Agent 환경에서 활용할 수 있도록 설계되었으며 Agentic 작업과 Coding 작업, 그리고 Multimodal Perception을 하나의 모델에서 제공하는 것을 목표로 한다.
+
+![meta-01]({{ '/images/2026-08/meta-01.jpg' | relative_url }})
+
+위의 그림에서, **Artificial Analysis Intelligence Index v4.1.1**이라는 종합 지표로 Muse Glimmer를 Claude, GPT, Gemini, Grok, Kimi 같은 훨씬 큰 Frontier Model들과 함께 비교한다. 여기서 Muse Glimmer는 **Intelligence Index = 35** 이다. 상위권을 보면 이미지상 Claude Opus 5가  **63** , Claude Fable 5가  **62** , GPT-5.6 Pro가  **61** , Kimi K3가 **60 이**다. 따라서 단순 종합 지능 점수만 보면 Muse Glimmer 30B는 Frontier Model 수준은 아니다.
+
+흥미로운 점은,  Muse는 **35점밖에 안 된다**기보다는, **30B급 로컬 모델이 35점까지 올라왔다**고 보는 편이 이 자료의 의미를 더 잘 보여준다. 특히, 이미지에서는 Muse Glimmer가  **Gemma 4 31B의 30점보다 높고** , 훨씬 큰 `gpt-oss-120B`의 24점보다도 높은 것으로 표시된다.  그리고 이미지 오른쪽의 보라색 화살표가 특히 강조하는 비교가 있다. 바로 `Llama 4 Maverick: 14 → Muse Glimmer: 35` 이다.
 
 # 6. 마무리
 
