@@ -1,16 +1,13 @@
 ---
 title: "[실습] vllm을 이용해 llama8b 서빙 배포"
 date: 2026-06-03
-tags: [트랜스포머, Transformer, Inference, LLM, Optimization, Serving, vllm, gpu, k8s, kubernetes]
+tags: [트랜스포머, Transformer, Inference, LLM, Optimization, Serving, vllm, gpu, k8s, kubernetes, triton, tgi, ollama, tensorRT-LLM]
 typora-root-url: ../
 toc: true
 categories: [vllm]
 ---
 
-## 0.배경
-
-`transformers`로 모델을 불러와 `model.generate()`를 호출하는 방식은 실험
-단계에서는 사용할 수 있지만, 프로덕션 환경에는 적합하지 않다.
+프로덕션 환경에서 LLM 배포 및 서빙에 대해 실습을 해 보자. `transformers`로 모델을 불러와 `model.generate()`를 호출하는 방식은 실험 단계에서는 사용할 수 있지만, 프로덕션 환경에는 적합하지 않다.
 
 -   **순차 처리** --- 한 번에 하나의 요청만 처리하므로 나머지 요청은
     모두 대기한다.
@@ -423,6 +420,8 @@ ax.grid(axis='y', alpha=0.3)
 plt.tight_layout()
 plt.show()
 ```
+![hol-nvidia-1-1]({{ '/images/2026-06/hol-nvidia-1-1.png' | relative_url }})
+
 
 ## 단계 3: 부하 환경에서 벤치마크 수행
 
@@ -430,7 +429,7 @@ plt.show()
 Request) 처리 성능**이다. 이 지점에서 vLLM의 연속 배칭 효과가
 두드러진다.
 
-### 연속 배칭(Continous Batching)이란 무엇인가?
+### 3-1. 연속 배칭(Continous Batching)이란 무엇인가?
 
 전통적인 배칭은 배치가 채워질 때까지 기다린 뒤 한 번에 처리하고 다시
 다음 배치를 기다린다. 반면 연속 배칭은 **토큰 생성
@@ -526,7 +525,7 @@ Throughput:          354 tokens/sec
 vLLM handled all 10 in 3.9s — continuous batching in action.
 ```
 
-### 시각화: 부하 환경에서의 요청별 지연시간
+### 3.2 시각화: 부하 환경에서의 요청별 지연시간
 
 지연시간이 계단식으로 증가하지 않고 비교적 촘촘하게 모여 있는지
 확인한다. 이는 요청이 순차적으로 직렬 처리되는 것이 아니라 연속 배칭을
@@ -576,32 +575,13 @@ print(f"Without it, wall time would be ~{sum(latencies):.0f}s (serial sum of lat
 All 10 requests completed in roughly the same window — that's continuous batching.
 Without it, wall time would be ~36s (serial sum of latencies).
 ```
+![hol-nvidia-1-2]({{ '/images/2026-06/hol-nvidia-1-2.png' | relative_url }})
 
 ## 단계 4: vLLM 설정 튜닝
 
 vLLM에는 성능에 직접적인 영향을 주는 설정이 있다.
 
-  ----------------------------------------------------------------------------------
-  설정                         제어 대상                         트레이드오프
-  ---------------------------- --------------------------------- -------------------
-  `--max-model-len`            최대 시퀀스 길이(입력과 출력을    낮을수록 더 많은
-                               합친 길이)                        동시 요청을 VRAM에
-                                                                 수용할 수 있다.
-
-  `--gpu-memory-utilization`   KV 캐시에 할당할 VRAM 비율        높을수록 더 많은
-                                                                 요청을 처리할 수
-                                                                 있지만 여유
-                                                                 메모리는 줄어든다.
-
-  `--dtype`                    모델 정밀도                       최신 GPU에서는
-                                                                 `float16`이 가장
-                                                                 빠른 경우가 많다.
-
-  `--quantization`             AWQ/GPTQ/SqueezeLLM 양자화 방식   모델 크기가
-                                                                 작아지면 KV 캐시에
-                                                                 사용할 수 있는
-                                                                 공간이 늘어난다.
-  ----------------------------------------------------------------------------------
+![hol-nvidia-1-3]({{ '/images/2026-06/hol-nvidia-1-3.png' | relative_url }})
 
 ### 실험
 
@@ -741,6 +721,8 @@ print(f"\nThroughput change: {(throughputs[1]/throughputs[0] - 1)*100:+.0f}% wit
 
 Throughput change: -20% with max_model_len=512
 ```
+![hol-nvidia-1-4]({{ '/images/2026-06/hol-nvidia-1-4.png' | relative_url }})
+
 
 ## 단계 5: 프로덕션 패턴
 
@@ -846,9 +828,9 @@ print(f"\nAverage token rate: {tok_per_sec:.0f} tokens/sec after first token")
 print(f"Without streaming, user would wait {stream_total:.1f}s seeing nothing.")
 print(f"With streaming, first response visible after only {ttft*1000:.0f}ms.")
 ```
+![hol-nvidia-1-5]({{ '/images/2026-06/hol-nvidia-1-5.png' | relative_url }})
 
 ``` text
-
 Average token rate: 58 tokens/sec after first token
 Without streaming, user would wait 5.2s seeing nothing.
 With streaming, first response visible after only 166ms.
@@ -856,23 +838,7 @@ With streaming, first response visible after only 166ms.
 
 ### 어떤 엔진을 언제 사용할 것인가?
 
-  -------------------------------------------------------------------------
-  엔진               적합한 용도           적합하지 않은 용도
-  ------------------ --------------------- --------------------------------
-  **vLLM**           LLM 서빙, 높은 처리량 비전·오디오 같은 비LLM 모델
-
-  **Triton**         다중 모델 서빙,       단순한 단일 LLM 배포
-                     앙상블 파이프라인     
-
-  **TGI**            Hugging Face 모델의   대규모 환경에서의 최대 처리량
-                     빠른 배포             
-
-  **Ollama**         로컬 개발, 간단한     프로덕션 배포
-                     설정                  
-
-  **TensorRT-LLM**   단일 요청 기준 최대   유연성, 비NVIDIA 하드웨어
-                     속도                  
-  -------------------------------------------------------------------------
+![hol-nvidia-1-6]({{ '/images/2026-06/hol-nvidia-1-6.png' | relative_url }})
 
 **실무에서는:** 대부분의 프로덕션 LLM API는 로드 밸런서 뒤에서 vLLM을
 사용한다. Triton은 LLM, 임베딩 모델, 리랭커처럼 여러 유형의 모델을
