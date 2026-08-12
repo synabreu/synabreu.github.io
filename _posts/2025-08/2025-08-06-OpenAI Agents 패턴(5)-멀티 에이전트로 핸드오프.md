@@ -1,15 +1,12 @@
 ---
 title: "OpenAI Agents 패턴(5)-멀티 에이전트로 핸드오프"
-date: 2025-06-27
+date: 2025-08-06
 tags: [오픈AI, OpenAI, Open Agents SDK, Swarm, Visual Studio Code, Multi-Agents, 멀티 에이전트]
 typora-root-url: ../
 toc: true
 categories: [OpenAI]
 ---
-
-멀티 에이진트로 핸드오프 방식은 세 가지 대상층, 즉 성인, 청소년, 어린이를 위한 텍스트를 생성하는 것이다. Research Agent는 정보를 수집한 다음 세 개의 에이전트 중 하나에게 이를 넘긴다. 각 에이전트는 LLM과 통신하지만, 이는 에이전트의 내부 기능으로 간주할 수 있다. 
-
-
+멀티 에이진트로 핸드오프 방식은 세 가지 대상층, 즉 성인, 청소년, 어린이를 위한 텍스트를 생성하는 것이다. Research Agent는 정보를 수집한 다음 세 개의 에이전트 중 하나에게 이를 넘긴다. 각 에이전트는 LLM과 통신하지만, 이는 에이전트의 내부 기능으로 간주할 수 있다.
 
 ## 1. 멀티 에이전트로 핸드오프 구현
 
