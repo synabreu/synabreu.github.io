@@ -10,7 +10,7 @@ categories: [NVIDIA]
 
 LLM 애플리케이션 개발자, AI 인프라 엔지니어, MLOps 엔지니어에게 이제 필요한 역량은 모델 사용법이 아니라 LLM 운영 환경 전체를 이해하는 능력이다. 따라서, 이를 위해 생성형AI 실습을 공개했다. 생성형 AI와 GPU 기반 딥러닝 시스템을 실습 중심으로 학습할 수 있도록 구성했고, 실습 예제들은 한국어로 된 Jupyter Notebook 으로 제공한다.
 
-이 실습 과정은 NVIDIA Generative AI Professional Certified 인증 시험을 준비하는 과정에 맞춰 LLM 배포와 추론 서빙부터 시작해, vLLM 운영 환경, 양자화, 재현 가능한 학습, GPU 프로파일링, 성능 최적화, 모델 평가까지 실제 AI 서비스 운영 과정에서 필요한 핵심 기술을 단계적으로 다룬다.
+이 실습 과정은 [NVIDIA Certified Professional Generative AI LLMs(NCP-GENL) 인증 시험을](https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-professional/) 준비하는 과정에tj, NVIDIA 전반적인 생성형 AI의 학습과 추론 과정을 워크샵 실습용으로 만들었다. LLM 배포와 추론 서빙부터 시작해, vLLM 운영 환경, 양자화, 재현 가능한 학습, GPU 프로파일링, 성능 최적화, 모델 평가까지 실제 AI 서비스 운영 과정에서 필요한 핵심 기술을 단계적으로 다룬다.
 
 # 1. NVIDIA 생성형 AI 실습(Hands-on Workshop)
 
