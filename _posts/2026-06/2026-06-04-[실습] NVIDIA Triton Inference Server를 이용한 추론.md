@@ -4,24 +4,15 @@ date: 2026-06-04
 tags: [트랜스포머, Transformer, Inference, LLM, Optimization, Serving, vllm, gpu, k8s, kubernetes, triton, tgi, ollama, tensorRT-LLM]
 typora-root-url: ../
 toc: true
-categories: [vllm]
+categories: [NVIDIA]
 ---
-두번째 실습에서는 추론 서빙 패턴으로 동적 배칭, 처리량과 Triton 추론 모델에 대해 알아보도록 하자!
 
-모델이 하나 있다고 가정했을 때, 사용자 1,000명이 동시에 이 모델에 질의를
-보내려고 한다. 가장 먼저 떠올리는 방식은 Flask나 FastAPI로 모델을 래퍼로
-생성하고 요청을 하나씩 처리하는 것이다. 하지만 이 방식은 GPU의 90%를
-낭비한다. NVIDIA Triton Inference Server 같은 현대적인 추론 서버는
-단순한 모델을 운영 환경 수준의 엔드포인트로 바꾼다. 동적 배칭, 다중 모델
+두번째 실습에서는 추론 서빙 패턴으로 동적 배칭, 처리량과 Triton 추론 모델에 대해 알아보도록 하자! 모델이 하나 있다고 가정했을 때, 사용자 1,000명이 동시에 이 모델에 질의를 보내려고 한다. 가장 먼저 떠올리는 방식은 Flask나 FastAPI로 모델을 래퍼로 생성하고 요청을 하나씩 처리하는 것이다. 
+
+하지만 이 방식은 GPU의 90%를 낭비한다. NVIDIA Triton Inference Server 같은 현대적인 추론 서버는 단순한 모델을 운영 환경 수준의 엔드포인트로 바꾼다. 동적 배칭, 다중 모델
 공유, 모델 버전 관리, 내장된 Prometheus 메트릭 같은 기능을 제공한다.
 
-이 실습은 Python으로 Mini Triton을 직접 만들면서 추론 서빙의 멘탈
-모델(mental model, 동작 원리를 머릿속에서 그릴 수 있는 개념적 이해
-구조)을 익히는 것이 목표다. 그냥 Triton을 실행하지 않고 직접 만드는
-이유는 명확하다. 동적 배칭을 30줄 정도로 직접 구현해보면 Triton의
-`config.pbtxt`에 왜 그런 설정값들이 있는지 이해하게 될 것이다. 그리고
-운영 환경의 Triton 배포가 예상대로 동작하지 않을 때 직접 디버깅할 수
-있다.
+이 실습은 Python으로 Mini Triton을 직접 만들면서 추론 서빙의 멘탈 모델(mental model, 동작 원리를 머릿속에서 그릴 수 있는 개념적 이해 구조)을 익히는 것이 목표다. 그냥 Triton을 실행하지 않고 직접 만드는 이유는 명확하다. 동적 배칭을 30줄 정도로 직접 구현해보면 Triton의`config.pbtxt`에 왜 그런 설정값들이 있는지 이해하게 될 것이다. 그리고 운영 환경의 Triton 배포가 예상대로 동작하지 않을 때 직접 디버깅할 수 있다.
 
 ### 핵심: GPU는 배치 모드 가속기이다
 
@@ -435,13 +426,12 @@ group)은 Triton에서 선언형 `config.pbtxt`로 노출된다. 이 파일은
 정의하는 독립적인 블록)는 우리가 작성한 `DynamicBatcher` 클래스와 직접
 대응된다.
 
-
-| pbtxt 필드                             | DynamicBatcher 대응 항목 | 
-| -------------------------------------- | ---------------------------- | 
-| max_batch_size: 32                     | max_batch_size=32 | 
-| dynamic_batching.preferred_batch_size  | `_loop`의 배칭 윈도우 로직     | 
-| dynamic_batching.max_queue_delay_microseconds | max_queue_delay_ms  |
-| instance_group[0].count: 1             | 단일 worker 스레드 |
+| pbtxt 필드                                    | DynamicBatcher 대응 항목     |
+| --------------------------------------------- | ---------------------------- |
+| max_batch_size: 32                            | max_batch_size=32            |
+| dynamic_batching.preferred_batch_size         | `_loop`의 배칭 윈도우 로직 |
+| dynamic_batching.max_queue_delay_microseconds | max_queue_delay_ms           |
+| instance_group[0].count: 1                    | 단일 worker 스레드           |
 
 ```python
 from pathlib import Path
@@ -478,14 +468,14 @@ for ours, triton in mapping:
 ```
 
 ```text
-Our mini-server                          Triton config.pbtxt                             
+Our mini-server                          Triton config.pbtxt                           
 ------------------------------------------------------------------------------------------
-DynamicBatcher.max_batch_size            max_batch_size: 32                              
+DynamicBatcher.max_batch_size            max_batch_size: 32                            
 DynamicBatcher.max_queue_delay_ms        dynamic_batching { max_queue_delay_microseconds: 10000 }
-Our single-model setup                   instance_group { count: 1, kind: KIND_GPU }     
+Our single-model setup                   instance_group { count: 1, kind: KIND_GPU }   
 Input tensor shape (1,3,224,224)         input { dims: [ 3, 224, 224 ] } + max_batch_size  
 model(x) forward pass                    platform: pytorch_libtorch (runs TorchScript)   
-Future.done.set()                        Triton responds over HTTP/gRPC                  
+Future.done.set()                        Triton responds over HTTP/gRPC                
 No equivalent in our mini-server         version_policy — hot-swap model versions, A/B test
 No equivalent in our mini-server         preferred_batch_size list — warm caches for common sizes
 ```

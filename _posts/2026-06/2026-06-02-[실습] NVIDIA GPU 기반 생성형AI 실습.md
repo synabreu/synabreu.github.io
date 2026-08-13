@@ -1,7 +1,7 @@
 ---
-title: "생성형AI 실습으로 배우는 LLM 운영 엔지니어링"
+title: "NVIDIA GPU 기반 생성형AI 실습"
 date: 2026-06-02
-tags: [NVIDIA, 생성형AI, GererativeAI, ]
+tags: [NVIDIA, 생성형AI, GererativeAI, LLM, GPU, MLOps, Hugging Face, Transformer]
 typora-root-url: ../
 toc: true
 categories: [NVIDIA]
@@ -52,4 +52,3 @@ Continuous Batching
        GPU</span></code></pre></div></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></pre>
 
 이 실습에서는 요청별 지연 시간, 토큰 생성 속도, GPU 메모리 사용량, 처리량 변화 등을 직접 측정한다. 이를 통해 왜 실제 서비스 환경에서는 단순 모델 실행이 아니라 전용 추론 엔진이 필요한지 이해할 수 있다.
-
