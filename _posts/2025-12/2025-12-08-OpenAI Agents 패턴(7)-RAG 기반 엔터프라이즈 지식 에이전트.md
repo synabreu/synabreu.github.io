@@ -6,7 +6,6 @@ typora-root-url: ../
 toc: true
 categories: [OpenAI]
 ---
-# 1. 예제 목표
 
 이 예제는 OpenAI Agents SDK를 사용하여 회사 문서를 검색하고 답변하는 지식 기반 AI Agent(RAG Agent)를 만드는 기본 예제를 만들어 보았다. RAG(Retrieval Augmented Generation)는 LLM이 외부 지식을 검색하여 답변 생성에 활용하는 방식이다. RAG Knowledge Agent는 LLM과 기업 내부 지식을 연결하여 신뢰 가능한 답변을 제공하는 가장 기본적인 Enterprise Agent 패턴이다.
 
@@ -24,7 +23,7 @@ categories: [OpenAI]
 
 ---
 
-# 2. 개발 환경
+# 1. 개발 환경
 
 필요 환경:
 
@@ -45,7 +44,7 @@ categories: [OpenAI]
 
 ---
 
-# 3. 패키지 설치
+# 2. 패키지 설치
 
 requirements.txt 파일
 
@@ -62,7 +61,7 @@ pip install -r requirements.txt
 
 ---
 
-# 4. 문서 데이터 준비
+# 3. 문서 데이터 준비
 
 knowledge/company_policy.txt
 
@@ -74,7 +73,7 @@ GPU 서버 사용 신청은 AI Infra 팀 승인이 필요하다.
 
 ---
 
-## 5. Agent 구현
+## 4. Agent 구현
 
 app.py 파일 내용
 
@@ -123,7 +122,7 @@ print(result.final_output)
 
 ---
 
-# 6. 예제 실행
+# 5. 예제 실행
 
 Visual Studio Code 터미널:
 
@@ -137,7 +136,7 @@ python app.py
 
 ---
 
-# 7. 구성 요소 설명
+# 6. 구성 요소 설명
 
 * Agent : 사용자의 요청을 이해하고 Tool 사용 여부를 결정한다.
 * Tool : 외부 데이터를 가져오는 함수이다.
@@ -145,7 +144,7 @@ python app.py
 
 ---
 
-# 8. 기존 Agent 패턴과 차이
+# 7. 기존 Agent 패턴과 차이
 
 ```
 기본 Tool Agent:
@@ -181,7 +180,7 @@ RAG Knowledge Agent:
 
 ---
 
-# 9. Enterprise 활용 사례
+# 8. Enterprise 활용 사례
 
 * 고객지원 에이전트 : 제품 매뉴얼 검색 후 고객 답변 생성
 * IT 운영 에이전트 : Runbook 검색 후 장애 대응 방법 안내
@@ -189,7 +188,7 @@ RAG Knowledge Agent:
 
 ---
 
-# 10. 다음 확장 단계
+# 8. 다음 확장 단계
 
 - Vector Database 연결
 - Embedding 검색
