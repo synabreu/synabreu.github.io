@@ -1,16 +1,14 @@
 ---
 title: "OpenAI Agents 패턴(7)-RAG 기반 엔터프라이즈 지식 에이전트"
-date: 2025-12-07
+date: 2025-12-08
 tags: [오픈AI, OpenAI, Open Agents SDK, Swarm, Visual Studio Code, Multi-Agents, 멀티 에이전트]
 typora-root-url: ../
 toc: true
 categories: [OpenAI]
 ---
-
 # 1. 예제 목표
 
 이 예제는 OpenAI Agents SDK를 사용하여 회사 문서를 검색하고 답변하는 지식 기반 AI Agent(RAG Agent)를 만드는 기본 예제를 만들어 보았다. RAG(Retrieval Augmented Generation)는 LLM이 외부 지식을 검색하여 답변 생성에 활용하는 방식이다. RAG Knowledge Agent는 LLM과 기업 내부 지식을 연결하여 신뢰 가능한 답변을 제공하는 가장 기본적인 Enterprise Agent 패턴이다.
-
 
 구조:
 
@@ -24,16 +22,16 @@ categories: [OpenAI]
         ↓
     답변 생성
 
-------------------------------------------------------------------------
+---
 
 # 2. 개발 환경
 
 필요 환경:
 
--   Windows 11
--   Visual Studio Code
--   Python 3.11 이상
--   OpenAI API Key
+- Windows 11
+- Visual Studio Code
+- Python 3.11 이상
+- OpenAI API Key
 
 프로젝트 구조:
 
@@ -45,42 +43,42 @@ categories: [OpenAI]
     ├── requirements.txt
     └── .env
 
-------------------------------------------------------------------------
+---
 
 # 3. 패키지 설치
 
 requirements.txt 파일
 
-``` txt
+```txt
 openai-agents
 python-dotenv
 ```
 
 설치 방법:
 
-``` bash
+```bash
 pip install -r requirements.txt
 ```
 
-------------------------------------------------------------------------
+---
 
 # 4. 문서 데이터 준비
 
 knowledge/company_policy.txt
 
-``` text
+```text
 회사 휴가는 연간 20일이다.
 GPU 서버 사용 신청은 AI Infra 팀 승인이 필요하다.
 긴급 장애 발생 시 IT 운영팀에 연락한다.
 ```
 
-------------------------------------------------------------------------
+---
 
 ## 5. Agent 구현
 
 app.py 파일 내용
 
-``` python
+```python
 from agents import Agent, Runner, function_tool
 
 
@@ -123,13 +121,13 @@ result = Runner.run_sync(
 print(result.final_output)
 ```
 
-------------------------------------------------------------------------
+---
 
 # 6. 예제 실행
 
 Visual Studio Code 터미널:
 
-``` bash
+```bash
 python app.py
 ```
 
@@ -137,15 +135,15 @@ python app.py
 
     GPU 서버 사용 신청은 AI Infra 팀 승인이 필요합니다.
 
-------------------------------------------------------------------------
+---
 
 # 7. 구성 요소 설명
 
-*  Agent : 사용자의 요청을 이해하고 Tool 사용 여부를 결정한다.
-*  Tool : 외부 데이터를 가져오는 함수이다.
-*  Runner : Agent 실행 흐름을 관리한다.
+* Agent : 사용자의 요청을 이해하고 Tool 사용 여부를 결정한다.
+* Tool : 외부 데이터를 가져오는 함수이다.
+* Runner : Agent 실행 흐름을 관리한다.
 
-------------------------------------------------------------------------
+---
 
 # 8. 기존 Agent 패턴과 차이
 
@@ -181,7 +179,7 @@ RAG Knowledge Agent:
     Answer
 ```
 
-------------------------------------------------------------------------
+---
 
 # 9. Enterprise 활용 사례
 
@@ -189,14 +187,12 @@ RAG Knowledge Agent:
 * IT 운영 에이전트 : Runbook 검색 후 장애 대응 방법 안내
 * AI Infrastructure Agent : GPU 운영 정책과 사용 절차 검색
 
-------------------------------------------------------------------------
+---
 
 # 10. 다음 확장 단계
 
--   Vector Database 연결
--   Embedding 검색
--   OpenAI File Search 활용
--   Multi-Agent Router 추가
--   MCP Tool 연결
-
-
+- Vector Database 연결
+- Embedding 검색
+- OpenAI File Search 활용
+- Multi-Agent Router 추가
+- MCP Tool 연결
