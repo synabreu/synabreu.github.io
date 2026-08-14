@@ -1,6 +1,6 @@
 ---
 title: "OpenAI Agents 패턴(2)-Tool Use Agent"
-date: 2025-08-03
+date: 2025-12-03
 tags: [오픈AI, OpenAI, Open Agents SDK, Swarm, Visual Studio Code, Multi-Agents, 멀티 에이전트]
 typora-root-url: ../
 toc: true

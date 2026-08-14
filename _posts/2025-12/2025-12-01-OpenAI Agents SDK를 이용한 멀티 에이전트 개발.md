@@ -1,6 +1,6 @@
 ---
 title: "OpenAI Agents SDK를 이용한 멀티 에이전트 개발"
-date: 2025-08-01
+date: 2025-12-01
 tags: [오픈AI, OpenAI, Open Agents SDK, Swarm, Visual Studio Code, Multi-Agents, 멀티 에이전트]
 typora-root-url: ../
 toc: true

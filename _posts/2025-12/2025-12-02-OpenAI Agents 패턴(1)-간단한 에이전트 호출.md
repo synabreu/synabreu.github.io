@@ -1,6 +1,6 @@
 ---
 title: "OpenAI Agents 패턴(1)-간단한 에이전트 호출"
-date: 2025-08-02
+date: 2025-12-02
 tags: [오픈AI, OpenAI, Open Agents SDK, Swarm, Visual Studio Code, Multi-Agents, 멀티 에이전트]
 typora-root-url: ../
 toc: true
@@ -10,7 +10,7 @@ OpenAI의 에이전트는 다른 프레임워크과는 확연히 다른 방식�
 
 ## 1. 간단한 에이전트 호출 구조
 
-![그림 1 - 간단한 에이전트 호출](/../images/2025-06/OpenAI-Agent-01.png)
+![openai-agent-01]({{ '/images/2026-06/OpenAI-Agent-01.png' | relative_url }})
 
 * 에이전트를 하나의 프로세스로 나타낸 데이터 흐름도(Data Flow Diagram)
 * 사용자 프롬프트가 시작 신호로 작용하며, 에이전트는 하나 이상의 LLM 호출을 수행하고 응답을 받는다.

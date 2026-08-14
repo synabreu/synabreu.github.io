@@ -1,6 +1,6 @@
 ---
 title: "OpenAI Agents 패턴(6)-도구들로서의 멀티 에이전트"
-date: 2025-08-07
+date: 2025-12-07
 tags: [오픈AI, OpenAI, Open Agents SDK, Swarm, Visual Studio Code, Multi-Agents, 멀티 에이전트]
 typora-root-url: ../
 toc: true
