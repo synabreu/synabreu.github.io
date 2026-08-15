@@ -1,5 +1,5 @@
 ---
-title: "[실습] OpenAI용 Tech Blog Writer 플러그인 개발"
+title: "[실습] OpenAI용 Tech Blog Writer 플러그인(1)-개발"
 date: 2026-08-13
 tags: [오픈AI, OpenAI, ChatGPT, MCP, Agent, Plugin,  ]
 typora-root-url: ../
