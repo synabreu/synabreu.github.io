@@ -1,12 +1,12 @@
 ---
 title: "[실습] OpenAI용 Hello Plugins 플러그인 개발"
-date: 2026-08-13
+date: 2026-08-12
 tags: [오픈AI, OpenAI, ChatGPT, MCP, Agent, Plugin,  ]
 typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-오픈AI용 플러그인 첫 프로젝트인 Hello Plugins 플러그인 아키텍처를 분석하고 파이썬으로 개발하고 오픈AI Sites 에 배포해서 실행하도록 하는 실습을 해보도록 하겠다. 따라서 “ChatGPT/Codex가 호출할 수 있는 Python MCP 도구”를 구현한 최소 OpenAI Plugin 으로 ChatGPT/Codex의 에이전트가 Plugin의 `hello_plugins` 도구를 발견하고 호출하는 구조이다. 
+오픈AI용 플러그인 첫 프로젝트인 Hello Plugins 플러그인 아키텍처를 분석하고 파이썬으로 개발하고 오픈AI Sites 에 배포해서 실행하도록 하는 실습을 해보도록 하겠다. 따라서 “ChatGPT/Codex가 호출할 수 있는 Python MCP 도구”를 구현한 최소 OpenAI Plugin 으로 ChatGPT/Codex의 에이전트가 Plugin의 `hello_plugins` 도구를 발견하고 호출하는 구조이다.
 
 # 1. 전체 아키텍처
 
@@ -35,12 +35,12 @@ hello-plugins-python/
 
 프로젝트는 크게 네 영역으로 구분된다.
 
-| 영역     | 파일                                         | 역할                |
-| ------ | ------------------------------------------ | ----------------- |
-| 애플리케이션 | `server.py`                                | MCP 서버 및 도구 정의    |
-| 테스트    | `test_server.py`, `verify_mcp.py`          | 함수 및 HTTP 통합 검증   |
-| 패키징    | `requirements.txt`, `pyproject.toml`       | Python 버전과 패키지 정의 |
-| 배포·문서  | `Dockerfile`, `.dockerignore`, `README.md` | 컨테이너 실행과 사용자 안내   |
+| 영역         | 파일                                             | 역할                        |
+| ------------ | ------------------------------------------------ | --------------------------- |
+| 애플리케이션 | `server.py`                                    | MCP 서버 및 도구 정의       |
+| 테스트       | `test_server.py`, `verify_mcp.py`            | 함수 및 HTTP 통합 검증      |
+| 패키징       | `requirements.txt`, `pyproject.toml`         | Python 버전과 패키지 정의   |
+| 배포·문서   | `Dockerfile`, `.dockerignore`, `README.md` | 컨테이너 실행과 사용자 안내 |
 
 # 3. server.py 분석
 
@@ -65,18 +65,17 @@ mcp = FastMCP(
 
 MCP 서버 생성에 대한 각 설정의 의미는 다음과 같다.
 
-| 설정                    | 의미                                 |
-| --------------------- | ---------------------------------- |
-| `"Hello Plugins"`     | MCP 서버 이름                          |
+| 설정                    | 의미                                               |
+| ----------------------- | -------------------------------------------------- |
+| `"Hello Plugins"`     | MCP 서버 이름                                      |
 | `instructions`        | ChatGPT/Codex가 도구를 언제 호출할지 판단하는 지침 |
-| `host`                | 서버가 수신할 네트워크 인터페이스                 |
-| `port`                | 서버 포트                              |
-| `stateless_http=True` | 요청 사이에 서버 세션 상태를 유지하지 않음           |
-| `json_response=True`  | MCP 응답을 JSON 형식으로 반환               |
+| `host`                | 서버가 수신할 네트워크 인터페이스                  |
+| `port`                | 서버 포트                                          |
+| `stateless_http=True` | 요청 사이에 서버 세션 상태를 유지하지 않음         |
+| `json_response=True`  | MCP 응답을 JSON 형식으로 반환                      |
 
 * 환경변수가 없다면 `http://0.0.0.0:8000/mcp` 로 실행 - `0.0.0.0`은 서버가 모든 네트워크 인터페이스에서 요청을 받도록 하는 바인딩 주소이며, 브라우저에 직접 입력하는 목적지는 아니다.
-* 사용자는 일반적으로 `http://localhost:8000/mcp` 주소로 접근  
-
+* 사용자는 일반적으로 `http://localhost:8000/mcp` 주소로 접근
 
 ## 3.2 MCP 도구 등록
 
@@ -95,15 +94,14 @@ MCP 서버 생성에 대한 각 설정의 의미는 다음과 같다.
 
 @mcp.tool 데코레이터는 아래의 Python 함수를 MCP 도구로 등록한다. 도구 메타데이터는 단순 설명이 아니라 ChatGPT/Codex의 도구 선택과 안전 판단에 사용된다. 이 도구는 외부 API, 데이터베이스 또는 파일을 사용하지 않으므로 설정이 정확하다.
 
-| 항목                      | 의미                         |
-| ----------------------- | -------------------------- |
-| `name`                  | 실제 MCP 도구 이름               |
-| `description`           | 도구 사용 목적                   |
-| `title`                 | 사람이 읽기 쉬운 도구 제목            |
-| `readOnlyHint=True`     | 데이터를 변경하지 않는 읽기 전용 도구      |
-| `destructiveHint=False` | 삭제·덮어쓰기 같은 위험 동작 없음        |
+| 항목                      | 의미                                           |
+| ------------------------- | ---------------------------------------------- |
+| `name`                  | 실제 MCP 도구 이름                             |
+| `description`           | 도구 사용 목적                                 |
+| `title`                 | 사람이 읽기 쉬운 도구 제목                     |
+| `readOnlyHint=True`     | 데이터를 변경하지 않는 읽기 전용 도구          |
+| `destructiveHint=False` | 삭제·덮어쓰기 같은 위험 동작 없음             |
 | `openWorldHint=False`   | 외부 시스템이나 공개 데이터에 영향을 주지 않음 |
-
 
 ## 3.3 비즈니스 로직
 
@@ -147,8 +145,7 @@ def test_hello_plugins_returns_exact_greeting() -> None:
 ```
 
 * 검증하는 항목은 함수가 정상적으로 import되는가? 실행 중 예외가 발생하지 않는가? 반환 문자열이 정확한가? 쉼표, 공백, 느낌표까지 동일한가 등이다.
-
-* 실행은 다음과 같다. 
+* 실행은 다음과 같다.
 
 ```
 python -m pytest -q
@@ -161,11 +158,11 @@ python -m pytest -q
 * 도구가 MCP 목록에 등록되는가
 * MCP 요청을 통해 도구가 호출되는가
 
-이 부분은 `verify_mcp.py`가 담당한다. 
+이 부분은 `verify_mcp.py`가 담당한다.
 
 # 5. verify_mcp.py 분석
 
-verify_mcp.py는 실제 서버와 MCP 클라이언트를 함께 실행하는 종단 간 테스트이다. 
+verify_mcp.py는 실제 서버와 MCP 클라이언트를 함께 실행하는 종단 간 테스트이다.
 
 ## 5.1 MCP 클라이언트 연결
 
@@ -184,7 +181,7 @@ async with ClientSession(read, write) as session:
     await session.initialize()
 ```
 
-이 과정에서 클라이언트와 서버는 MCP 프로토콜 버전, 서버 이름과 기능, 지원하는 도구 및 기능, 서버 지침 등 정보를 교환한다. 
+이 과정에서 클라이언트와 서버는 MCP 프로토콜 버전, 서버 이름과 기능, 지원하는 도구 및 기능, 서버 지침 등 정보를 교환한다.
 
 ## 5.3 도구 검색 검증
 
@@ -202,7 +199,7 @@ result = await session.call_tool("hello_plugins", {})
 assert result.content[0].text == "Hello, Plugins!"
 ```
 
-빈 입력 객체 {}로 도구를 호출한 후 첫 번째 텍스트 콘텐츠를 검사한다. 이 테스트는 다음 전체 경로를 검증한다. 
+빈 입력 객체 {}로 도구를 호출한 후 첫 번째 텍스트 콘텐츠를 검사한다. 이 테스트는 다음 전체 경로를 검증한다.
 
 ```
 서버 시작
@@ -288,6 +285,7 @@ requirements-dev.txt
 ```
 
 예:
+
 ```
 # requirements.txt
 mcp==1.26.0
@@ -355,13 +353,13 @@ ENV PORT=8000
 EXPOSE 8000
 ```
 
-컨테이너 외부에서 접근할 수 있도록 모든 인터페이스의 8000번 포트에서 수신한다. 
+컨테이너 외부에서 접근할 수 있도록 모든 인터페이스의 8000번 포트에서 수신한다.
 
 ```
 CMD ["python", "server.py"]
 ```
 
-컨테이너가 시작되면 MCP 서버가 실행된다. 
+컨테이너가 시작되면 MCP 서버가 실행된다.
 실행:
 
 ```
@@ -396,16 +394,16 @@ verify_mcp.py
 
 # 9. Plugin과 Agent의 정확한 관계
 
-| 개념                | 이 프로젝트의 적용 여부 |
-| ----------------- | ------------- |
-| OpenAI Plugin     | 적용            |
-| MCP 서버            | 적용            |
-| MCP 도구            | 적용            |
-| OpenAI Agents SDK | 사용하지 않음       |
-| 자체 LLM 호출         | 없음            |
-| Skill             | 없음            |
-| 사용자 인증            | 없음            |
-| 사용자 정의 UI         | 없음            |
+| 개념              | 이 프로젝트의 적용 여부 |
+| ----------------- | ----------------------- |
+| OpenAI Plugin     | 적용                    |
+| MCP 서버          | 적용                    |
+| MCP 도구          | 적용                    |
+| OpenAI Agents SDK | 사용하지 않음           |
+| 자체 LLM 호출     | 없음                    |
+| Skill             | 없음                    |
+| 사용자 인증       | 없음                    |
+| 사용자 정의 UI    | 없음                    |
 
 “Agent Plugin”이라는 표현은 에이전트가 사용할 수 있는 Plugin이라는 의미로는 맞다. 그러나 독립적인 Agent를 Python으로 실행하는 프로젝트는 아니다. 독립적인 Python Agent를 만들려면 별도로 다음 구조를 필요로 한다.
 
@@ -461,4 +459,3 @@ OpenAI Agents SDK Agent
 * 헬스 체크 추가
 * 공개 HTTPS 환경 배포
 * 필요하면 Skill 또는 Agents SDK Agent 추가
-
