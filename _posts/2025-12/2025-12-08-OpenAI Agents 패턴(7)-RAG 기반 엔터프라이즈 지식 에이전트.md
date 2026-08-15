@@ -160,21 +160,13 @@ python app.py
 RAG Knowledge Agent:
 
     User
-
      ↓
-
     Knowledge Agent
-
      ↓
-
     Search Tool
-
      ↓
-
     Company Document
-
      ↓
-
     Answer
 ```
 
@@ -188,7 +180,7 @@ RAG Knowledge Agent:
 
 ---
 
-# 8. 다음 확장 단계
+# 9. 다음 확장 단계
 
 - Vector Database 연결
 - Embedding 검색
