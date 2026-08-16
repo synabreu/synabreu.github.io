@@ -10,7 +10,7 @@ categories: [openai]
 
 # 1. Tech Blog Writer 플러그인 메뉴 선택
 
-![TechWriterBlog-01]({{ '/images/2026-08/TechWriterBlog-01.png' | relative_url }}){: width="30%"}
+![TechWriterBlog-01]({{ '/images/2026-08/TechWriterBlog-01.png' | relative_url }}){: width="70%"}
 
 ChatGPT 서비스에서 PC, 맥, 웹 서비스 운영체제에 관계없이 왼쪽 메뉴의 서브 메뉴에 있는 `플러그인(Plugins)' 메뉴를 선택하라. 참고로 위의 그림에서 파란색 영역으로 표시했다.
 
