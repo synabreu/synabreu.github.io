@@ -1,13 +1,12 @@
 ---
-title: "[실습] OpenAI 에이전트 도커 워크삽 (2)"
+title: "[실습] OpenAI 에이전트 도커 워크삽 (2)-agents 분석"
 date: 2026-08-16
 tags: [오픈AI, OpenAI, GPT-5.6, agenticai, aiagent, openrouter, docker, powershell, fastapi, swagger-ui, visual studio code, Linux, Windows11, Kubernetes, On-Premises ]
 typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-이 블로그는 윈도우11 운영체제 환경에서 Powershell을 포함한 Visual Studio Code를 이용해 
-
+이 블로그는 윈도우11 운영체제 환경에서 Powershell을 포함한 Visual Studio Code를 이용해
 
 # 1. 실습 2 - OpenAI Key 설정
 
@@ -28,7 +27,7 @@ if ($env:OPENAI_API_KEY) { "OPENAI_API_KEY is set" }
 
 보안을 위해 `.env`, Dockerfile, Git repository에 실제 API Key를 넣지 않는다.
 
-# 2. 실습 3 - Simple Agent 분석 
+# 2. 실습 3 - Simple Agent 분석
 
 `app/agents_app.py`의 첫 번째 에어전트는 다음 구조다.
 
@@ -48,10 +47,9 @@ result = await Runner.run(AGENTS[agent_name], message)
 
 `Runner.run()`은 비동기 환경에서 에이전트(Agent loop)를 수행하고 최종 결과를 반환한다.
 
-
 # 3. 실습 4 - Function Tool 작성
 
-파이썬 함수를 에어전트가 호출할 수 있는 도구(Tool)로 만든다. 
+파이썬 함수를 에어전트가 호출할 수 있는 도구(Tool)로 만든다.
 
 ```python
 @function_tool
@@ -110,18 +108,18 @@ triage_agent = Agent(
 Handoff는 단순 함수 호출과 다르다. 전문 Agent가 현재 turn의 active agent가 되어 응답을 이어갈 수 있다. 다시 말해, `handoff`는 현재 에이전트가 사용자의 요청을 더 적합한 전문 에이전트에게 넘기고, 그 에이전트가 이후 실행의 주체가 되도록 하는 기능입니다. 위의 설정은 다음과 같이 동작합니다.
 
 * `Runner`가 먼저 `triage_agent`를 실행함.
-*  `cloud_agent`와 `onprem_agent`로 전환할 수 있는 handoff 도구를 모델에 제공함.
+* `cloud_agent`와 `onprem_agent`로 전환할 수 있는 handoff 도구를 모델에 제공함.
 * `triage_agent`는 사용자 요청과 `instructions`를 바탕으로 적절한 에이전트를 선택함
 * 선택된 에이전트로 실행 제어권과 대화 문맥이 전달됨
 * `Runner`는 새 에이전트를 계속 실행하고 그 결과를 최종 출력으로 반환함
 
 예를 들면:
 
-| 사용자 요청 | 예상 동작 |
-|---|---|
-| “AWS에 Docker 이미지를 배포하고 싶어요.” | `cloud_agent`로 handoff |
-| “사내 서버에 컨테이너를 설치하고 싶어요.” | `onprem_agent`로 handoff |
-| 요청이 불분명함 | `triage_agent`가 추가 질문을 하거나 직접 응답 |
+| 사용자 요청                                 | 예상 동작                                       |
+| ------------------------------------------- | ----------------------------------------------- |
+| “AWS에 Docker 이미지를 배포하고 싶어요.”  | `cloud_agent`로 handoff                       |
+| “사내 서버에 컨테이너를 설치하고 싶어요.” | `onprem_agent`로 handoff                      |
+| 요청이 불분명함                             | `triage_agent`가 추가 질문을 하거나 직접 응답 |
 
 흐름으로 표현하면 다음과 같다.
 
@@ -139,20 +137,19 @@ Deployment Triage Agent
 
 중요한 점은 `handoffs=[...]`에 등록했다고 해서 두 에이전트가 모두 실행되는 것은 아니라는 것이다. 모델이 요청에 맞는 에이전트를 선택했을 때만 handoff가 발생하며, 발생하지 않으면 `triage_agent`가 직접 응답할 수도 있다.
 
-또한 handoff는 단순히 하위 작업을 부탁하고 결과를 돌려받는 것이 아니라, 대화의 주도권 자체를 대상 에이전트로 넘기는 방식이다. OpenAI 공식 예제에서도 triage 에이전트가 요청 언어를 판별해 적절한 언어 전문 에이전트로 전환한다. 
-
+또한 handoff는 단순히 하위 작업을 부탁하고 결과를 돌려받는 것이 아니라, 대화의 주도권 자체를 대상 에이전트로 넘기는 방식이다. OpenAI 공식 예제에서도 triage 에이전트가 요청 언어를 판별해 적절한 언어 전문 에이전트로 전환한다.
 
 # 5. 전체 소스
 
-| 사용자 요청 | 예상 동작 |
-|------------|---|
+| 사용자 요청       | 예상 동작                                                                                                              |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | __init__.py | 아무런 내용이 없는 데, 이는 오류나 미완성 파일이 아니라 “이 폴더는 Python 패키지이며 별도의 초기화 동작은 없다”는 뜻 |
-| agents_app.py | agent 클래스 관련 파일 |
-| main.py       | 파이썬 main 함수 실행 |
+| agents_app.py     | agent 클래스 관련 파일                                                                                                 |
+| main.py           | 파이썬 main 함수 실행                                                                                                  |
 
 ## 5.1 agents_app.py 파일 전체 분석
 
-``` python
+```python
 import os # 운영체제의 환경변수를 읽기 위한 Python 표준 라이브러리
 
 # Agent:
@@ -192,7 +189,7 @@ def calculate_total(price: float, quantity: int) -> str:
     return f"total={total:.2f}"
 
 
-# 일반적인 질문에 답변하는 기본 Agent 객체입니다.
+# 일반적인 질문에 답변하는 기본 에이전트 객체
 simple_agent = Agent(
     # Agent를 식별하는 이름
     name="simple_assistant",
@@ -208,25 +205,24 @@ simple_agent = Agent(
 )
 
 
-# 상품 가격 계산을 지원하는 Agent 객체입니다.
+# 상품 가격 계산을 지원하는 에이전트 객체
 tool_agent = Agent(
     name="shopping_assistant",
     model=MODEL,
 
-    # 가격과 수량의 곱셈이 필요한 경우
-    # calculate_total 도구를 사용하도록 지시합니다.
+    # 가격과 수량의 곱셈이 필요한 경우 calculate_total 도구를 사용하도록 지시함
     instructions=(
         "You help users with simple shopping calculations. "
         "Use the calculate_total tool whenever multiplication "
         "of price and quantity is needed."
     ),
 
-    # 이 Agent가 사용할 수 있는 Function Tool 목록입니다.
+    # 이 Agent가 사용할 수 있는 Function Tool 목록
     tools=[calculate_total],
 )
 
 
-# AWS, Azure, GCP 등 퍼블릭 클라우드 배포를 담당하는 전문 Agent입니다.
+# AWS, Azure, GCP 등 퍼블릭 클라우드 배포를 담당하는 전문 에이전트
 cloud_agent = Agent(
     name="cloud_specialist",
     model=MODEL,
@@ -238,7 +234,7 @@ cloud_agent = Agent(
 )
 
 
-# 사내 서버와 데이터센터 배포를 담당하는 전문 Agent입니다.
+# 사내 서버와 데이터센터 배포를 담당하는 전문 에이전트
 onprem_agent = Agent(
     name="on_prem_specialist",
     model=MODEL,
@@ -250,12 +246,12 @@ onprem_agent = Agent(
 )
 
 
-# 사용자의 배포 질문을 분류하는 Triage Agent입니다.
+# 사용자의 배포 질문을 분류하는 Triage 에이전트
 triage_agent = Agent(
     name="deployment_triage_agent",
     model=MODEL,
 
-    # 사용자 요청을 분석하여 적절한 전문 Agent를 선택하도록 지시합니다.
+    # 사용자 요청을 분석하여 적절한 전문 Agent를 선택하도록 지시함
     instructions=(
         "Classify the user's deployment question. "
         "If it is mainly about a public cloud, "
@@ -265,15 +261,15 @@ triage_agent = Agent(
         "If neither is needed, answer directly."
     ),
 
-    # Triage Agent가 실행 제어권을 넘길 수 있는 Agent 목록입니다.
+    # Triage Agent가 실행 제어권을 넘길 수 있는 Agent 목록
     #
     # 클라우드 질문이면 cloud_agent,
-    # 사내 환경 질문이면 onprem_agent로 handoff할 수 있습니다.
+    # 사내 환경 질문이면 onprem_agent로 handoff할 수 있음
     handoffs=[cloud_agent, onprem_agent],
 )
 
 
-# 외부에서 전달받은 문자열 이름을 실제 Agent 객체와 연결하는 딕셔너리입니다.
+# 외부에서 전달받은 문자열 이름을 실제 Agent 객체와 연결하는 딕셔너리
 #
 # 예:
 # "simple" → simple_agent
@@ -286,7 +282,7 @@ AGENTS = {
 }
 
 
-# 선택된 Agent를 비동기로 실행하는 애플리케이션 함수입니다.
+# 선택된 Agent를 비동기로 실행하는 애플리케이션 함수
 async def run_agent(agent_name: str, message: str) -> dict:
     """
     Agent 이름과 사용자 메시지를 받아 해당 Agent를 실행합니다.
@@ -304,9 +300,9 @@ async def run_agent(agent_name: str, message: str) -> dict:
     if agent_name not in AGENTS:
         raise ValueError(f"Unknown agent: {agent_name}")
 
-    # 선택된 Agent와 사용자 메시지를 Runner에 전달합니다.
+    # 선택된 Agent와 사용자 메시지를 Runner에 전달함
     #
-    # Runner는 다음 과정을 관리합니다.
+    # Runner는 다음 과정을 관리함
     # 1. 모델 호출
     # 2. Function Tool 실행
     # 3. Agent handoff
@@ -316,12 +312,12 @@ async def run_agent(agent_name: str, message: str) -> dict:
         message,
     )
 
-    # API에서 사용하기 편한 딕셔너리 형식으로 결과를 반환합니다.
+    # API에서 사용하기 편한 딕셔너리 형식으로 결과를 반환함
     return {
-        # 사용자가 처음 선택한 Agent
+        # 사용자가 처음 선택한 에이전트
         "agent": agent_name,
 
-        # handoff를 포함한 전체 실행에서 마지막으로 동작한 Agent
+        # handoff를 포함한 전체 실행에서 마지막으로 동작한 에이전트
         "last_agent": (
             result.last_agent.name
             if result.last_agent
@@ -333,33 +329,6 @@ async def run_agent(agent_name: str, message: str) -> dict:
     }
 ```
 
-
-
-
-
-
-
-# 6. Setup.ps1 파워셀 소스 분석
-
-```python
-$ErrorActionPreference = "Stop"
-
-if (-not $env:OPENAI_API_KEY) {
-    throw "OPENAI_API_KEY is not set. Example: `$env:OPENAI_API_KEY='sk-...'"
-}
-
-if (-not $env:OPENAI_DEFAULT_MODEL) {
-    $env:OPENAI_DEFAULT_MODEL = "gpt-5.6-luna"
-}
-
-& .\.venv\Scripts\Activate.ps1
-uvicorn app.main:app --host 127.0.0.1 --port 8010 --reload
-```
-
-위의 소스는 윈도우 11 환경으로 FastAPI 기반 OpenAI Agents SDK 애플리케이션을 실행하는 역할을 한다. OpenAI API Key 존재 여부 확인과 `gpt-5.6-luna`를 기본 모델 지정한다. 여기서 OpenAI API Key 를 보안 관계상 직접 입력하지 말고 파워쉘의 environment 변수를 통해 입력한다.
-
-
-
-* 참고 자료 
+# 6. 참고 자료
 
 [OpenAI Developer Quickstart](https://platform.openai.com/docs/quickstart/make-your-first-api-request)
