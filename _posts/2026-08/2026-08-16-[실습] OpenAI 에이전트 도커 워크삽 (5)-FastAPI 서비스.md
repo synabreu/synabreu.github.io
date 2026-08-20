@@ -1,12 +1,12 @@
 ---
-title: "[실습] OpenAI 에이전트 도커 워크삽 (4)-FastAPI 서비스"
+title: "[실습] OpenAI 에이전트 도커 워크삽 (5)-FastAPI 서비스"
 date: 2026-08-16
 tags: [오픈AI, OpenAI, GPT-5.6, agenticai, aiagent, openrouter, docker, powershell, fastapi, swagger-ui, visual studio code, Linux, Windows11, Kubernetes, On-Premises ]
 typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-이 블로그는 윈도우11 운영체제 환경에서 Powershell을 포함한 Visual Studio Code를 이용해
+이제 FastAPI로 서비스화는 방법에 대해 설명하고 윈도우 환경에서 실행하는 run-native 파워셀 파일과 API를 테스트하는 test-api 파워셀 파일을 각각 내부에 어떻게 구성되어 있는지 알아보고 실행해 보자!
 
 # 1. 실습 6 - FastAPI로 서비스화
 
@@ -61,17 +61,17 @@ uvicorn app.main:app --host 127.0.0.1 --port 8010 --reload
 
 위의 소스는 윈도우 11 환경으로 FastAPI 기반 OpenAI Agents SDK 애플리케이션을 실행하는 역할을 한다. OpenAI API Key 존재 여부 확인과 `gpt-5.6-luna`를 기본 모델 지정한다. 여기서 OpenAI API Key 를 보안 관계상 직접 입력하지 말고 파워쉘의 environment 변수를 통해 입력한다.
 
-| 구성요소 | 종류 | 설명 |
-|---|---|---|
-| `uvicorn` | 실행 명령 | FastAPI 같은 ASGI 애플리케이션을 실행하는 웹 서버이다. |
-| `app.main:app` | 애플리케이션 인자 | 실행할 FastAPI 애플리케이션의 위치를 지정한다. |
-| `app.main` | Python 모듈 | `app` 디렉터리의 `main.py` 파일을 의미한다. |
-| `:app` | 객체 이름 | `main.py` 안에 선언된 `app = FastAPI(...)` 객체를 의미한다. |
-| `--host` | 옵션 | 서버가 요청을 받을 네트워크 주소를 지정한다. |
-| `127.0.0.1` | `--host`의 인자 | 현재 컴퓨터에서 들어오는 요청만 허용한다. |
-| `--port` | 옵션 | 서버가 사용할 포트를 지정한다. |
-| `8010` | `--port`의 인자 | 서버가 8010번 포트에서 요청을 받도록 한다. |
-| `--reload` | 옵션 | Python 파일이 변경되면 서버를 자동으로 재시작한다. 개발 환경에서 사용한다. |
+| 구성요소         | 종류              | 설명                                                                       |
+| ---------------- | ----------------- | -------------------------------------------------------------------------- |
+| `uvicorn`      | 실행 명령         | FastAPI 같은 ASGI 애플리케이션을 실행하는 웹 서버이다.                     |
+| `app.main:app` | 애플리케이션 인자 | 실행할 FastAPI 애플리케이션의 위치를 지정한다.                             |
+| `app.main`     | Python 모듈       | `app` 디렉터리의 `main.py` 파일을 의미한다.                            |
+| `:app`         | 객체 이름         | `main.py` 안에 선언된 `app = FastAPI(...)` 객체를 의미한다.            |
+| `--host`       | 옵션              | 서버가 요청을 받을 네트워크 주소를 지정한다.                               |
+| `127.0.0.1`    | `--host`의 인자 | 현재 컴퓨터에서 들어오는 요청만 허용한다.                                  |
+| `--port`       | 옵션              | 서버가 사용할 포트를 지정한다.                                             |
+| `8010`         | `--port`의 인자 | 서버가 8010번 포트에서 요청을 받도록 한다.                                 |
+| `--reload`     | 옵션              | Python 파일이 변경되면 서버를 자동으로 재시작한다. 개발 환경에서 사용한다. |
 
 실행 흐름은 다음과 같다.
 

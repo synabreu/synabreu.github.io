@@ -1,16 +1,16 @@
 ---
-title: "[실습] OpenAI 에이전트 도커 워크삽 (3)-main 소스분석"
+title: "[실습] OpenAI 에이전트 도커 워크삽 (4)-main 소스분석"
 date: 2026-08-16
 tags: [오픈AI, OpenAI, GPT-5.6, agenticai, aiagent, openrouter, docker, powershell, fastapi, swagger-ui, visual studio code, Linux, Windows11, Kubernetes, On-Premises ]
 typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-이 블로그는 윈도우11 운영체제 환경에서 Powershell을 포함한 Visual Studio Code를 이용해
+이 블로그는 main.py 파일 소스를 분석하고 내부의 get 과 post 데코레이터 함수를 어떻게 사용하는 지 분석한다. 
 
 # 1. main.py 파일 소스 분석
 
-``` python
+```python
 # FastAPI는 웹 API 애플리케이션을 생성하는 클래스
 # HTTPException은 클라이언트에 HTTP 오류 응답을 반환하는 예외 클래스
 from fastapi import FastAPI, HTTPException
@@ -156,4 +156,3 @@ async def chat_post(agent_name: str, request: ChatRequest):
 ```
 
 또한 요청 본문을 전달하는 API는 일반적으로 GET보다 POST 방식을 사용한다. 따라서 실제 서비스에서는 POST 경로만 제공하는 구성이 더 자연스럽다.
-

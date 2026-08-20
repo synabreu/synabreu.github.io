@@ -1,12 +1,12 @@
 ---
-title: "[실습] OpenAI 에이전트 도커 워크삽 (2)-agents 분석"
+title: "[실습] OpenAI 에이전트 도커 워크삽 (3)-agents 분석"
 date: 2026-08-16
 tags: [오픈AI, OpenAI, GPT-5.6, agenticai, aiagent, openrouter, docker, powershell, fastapi, swagger-ui, visual studio code, Linux, Windows11, Kubernetes, On-Premises ]
 typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-이 블로그는 윈도우11 운영체제 환경에서 Powershell을 포함한 Visual Studio Code를 이용해
+두번째 실습에서는 OpenAI Key 설정하고 간단한 Simple Agent 를 분석하고 만든 다음, Function Tool 작성을 해 보자!
 
 # 1. 실습 2 - OpenAI Key 설정
 

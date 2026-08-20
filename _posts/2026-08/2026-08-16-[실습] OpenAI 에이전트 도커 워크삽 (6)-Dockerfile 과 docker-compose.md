@@ -1,5 +1,5 @@
 ---
-title: "[실습] OpenAI 에이전트 도커 워크삽 (5)-Dockerfile 과 docker-compose.yml 작성"
+title: "[실습] OpenAI 에이전트 도커 워크삽 (6)-Dockerfile 과 docker-compose.yml 작성"
 date: 2026-08-16
 tags: [오픈AI, OpenAI, GPT-5.6, agenticai, aiagent, openrouter, docker, powershell, fastapi, swagger-ui, visual studio code, Linux, Windows11, Kubernetes, On-Premises ]
 typora-root-url: ../
@@ -10,7 +10,7 @@ categories: [openai]
 
 # 1. 실습 7 - Dockerfile 작성하기
 
-## 1-1. Dockerfile 작성하기 
+## 1-1. Dockerfile 작성하기
 
 계속해서 이어 도커파일을 작성하기 위해 Dockerfile의 Base Image는 다음과 같이 선언할 수 있다. 이 파일은 루트 디렉토리에 Dockerfile 이다.
 
@@ -20,7 +20,7 @@ FROM python:3.12-slim
 
 이 한 줄이 매우 중요하다. Windows PC에서 `docker build`를 실행하더라도 이 프로젝트의 최종 application image는 리눅스 기반이 된다.
 
-전체 흐름은, 
+전체 흐름은,
 
 ```text
 Windows Source Code
@@ -34,9 +34,9 @@ Linux filesystem + Python + app
 Linux container image
 ```
 
-API Key는 Dockerfile에 들어 있지 않다.  참고로 전체 내용을 주석처리해서 보여주면 다음과 같다. 
+API Key는 Dockerfile에 들어 있지 않다.  참고로 전체 내용을 주석처리해서 보여주면 다음과 같다.
 
-``` dockerfile
+```dockerfile
 # Python 3.12가 설치된 경량 Debian 기반 이미지를 애플리케이션의 기본 이미지로 사용한다.
 FROM python:3.12-slim
 
@@ -109,7 +109,7 @@ CMD [
 
 ## 1-2. Dockerfile 빌드
 
-전체 빌드 및 실행 흐름은 다음과 같다. 
+전체 빌드 및 실행 흐름은 다음과 같다.
 
 ```
 Python 3.12 경량 이미지 준비
@@ -140,9 +140,10 @@ docker build -t openai-agents-workshop:1.0 .
 ```powershell
 docker run --rm -p 8010:8000 openai-agents-workshop:1.0
 ```
+
 이미지가 로컬에 없으면 docker run은 Docker Hub 같은 레지스트리에서 이미지를 내려받으려고 시도하지만, 현재 디렉터리의 Dockerfile을 자동으로 빌드하지는 않는다. 이미지를 이미 빌드했다면 다시 빌드하지 않고 실행만 하면 된다.
 
-웹 브라우저에서는 다음 주소로 접속해서 LLM의 Agent 가 수행하는 프롬프트를 최종적으로 확인할 수 있다. 
+웹 브라우저에서는 다음 주소로 접속해서 LLM의 Agent 가 수행하는 프롬프트를 최종적으로 확인할 수 있다.
 
 ```
 http://localhost:8010/docs
@@ -152,12 +153,12 @@ http://localhost:8010/docs
 
 docker-compose.yml은 하나 이상의 컨테이너에 필요한 이미지 빌드, 포트 연결, 환경변수, 볼륨, 네트워크 등의 실행 설정을 YAML 형식으로 정의하는 파일이다.
 
-| 파일 | 역할 |
-|---|---|
-| `Dockerfile` | 애플리케이션 이미지를 어떻게 만들 것인지 정의한다. |
+| 파일                   | 역할                                                                        |
+| ---------------------- | --------------------------------------------------------------------------- |
+| `Dockerfile`         | 애플리케이션 이미지를 어떻게 만들 것인지 정의한다.                          |
 | `docker-compose.yml` | 만들어진 이미지를 어떤 설정으로 실행하고 다른 컨테이너와 연결할지 정의한다. |
 
-```yaml 
+```yaml
 # Docker Compose에서 실행할 컨테이너 서비스 정의
 services:
 
@@ -190,7 +191,7 @@ services:
       OPENAI_DEFAULT_MODEL: ${OPENAI_DEFAULT_MODEL:-gpt-5.6-luna}
 ```
 
-그래서 실행 흐름은 다음과 같다. 
+그래서 실행 흐름은 다음과 같다.
 
 ```
 docker compose up --build
@@ -223,10 +224,10 @@ docker compose up --build
 
 > Dockerfile만 작성한 뒤 docker build와 docker run을 실행해도 된다. docker-compose.yml은 필수가 아니다. Docker Compose는 복잡하고 긴 docker run 명령을 파일로 저장하여 누구나 동일한 환경을 간단하게 실행하도록 하기 위해 사용한다.
 
-| 상황 | 적합한 방법 |
-|---|---|
-| 컨테이너 하나를 간단히 실행 | Dockerfile + `docker build`, `docker run` |
-| 긴 실행 옵션을 반복해서 사용 | Docker Compose |
-| 여러 컨테이너를 함께 실행 | Docker Compose |
-| 팀원에게 동일한 실행 설정 제공 | Docker Compose |
-| 포트·환경변수·볼륨을 파일로 관리 | Docker Compose |
+| 상황                               | 적합한 방법                                  |
+| ---------------------------------- | -------------------------------------------- |
+| 컨테이너 하나를 간단히 실행        | Dockerfile +`docker build`, `docker run` |
+| 긴 실행 옵션을 반복해서 사용       | Docker Compose                               |
+| 여러 컨테이너를 함께 실행          | Docker Compose                               |
+| 팀원에게 동일한 실행 설정 제공     | Docker Compose                               |
+| 포트·환경변수·볼륨을 파일로 관리 | Docker Compose                               |
