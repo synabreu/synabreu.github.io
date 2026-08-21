@@ -1,6 +1,6 @@
 ---
 title: "청소년을 위한 ChatGPT for Teens 출시"
-date: 2026-08-20
+date: 2026-08-18
 tags: [오픈AI, OpenAI, GPT-5.6, agenticai, aiagent, ChatGPT for Teens]
 typora-root-url: ../
 toc: true
@@ -8,9 +8,7 @@ categories: [openai]
 ---
 ChatGPT for Teens가 주민등록번호나 사회보장번호가 필요없이 18세 미만 계정이 자동적으로 대상 적용되는 것이 서비스 흥미롭네요!
 
-
 OpenAI가 오늘부터 ChatGPT for Teens를 전 세계의 대상 청소년 계정에 순차적으로 도입하기 시작했다. 핵심은 별도의 “청소년용 저성능 ChatGPT”를 만드는 것이 아니라, 기존 ChatGPT 능력을 유지하면서 18세 미만 사용자에게 학습 기능과 안전장치를 추가하는 것이다.
-
 
 주요 내용을 정리하면 다음과 같다.
 
