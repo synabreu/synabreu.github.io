@@ -1,13 +1,12 @@
 ---
 title: "[실습] OpenAI 에이전트 도커 워크삽 (10)-Docker Hub"
-date: 2026-08-16
+date: 2026-08-17
 tags: [오픈AI, OpenAI, GPT-5.6, agenticai, aiagent, openrouter, docker, powershell, fastapi, swagger-ui, visual studio code, Linux, Windows11, Kubernetes, On-Premises ]
 typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-이 실습은 도커 허브(Docker Hub) 또는 사설 레지스트리(Private Registery) 로 이동하는 방법이다. 참고로 도커 허브란 도커 이미지를 저장하고 공유하는 클라우드 저장소이다. 또한, 사설 레지스트리는 기업 조직 내부에서만 사용하는 비공개 도커 이미지 저장소를 말한다. 
-
+이 실습은 도커 허브(Docker Hub) 또는 사설 레지스트리(Private Registery) 로 이동하는 방법이다. 참고로 도커 허브란 도커 이미지를 저장하고 공유하는 클라우드 저장소이다. 또한, 사설 레지스트리는 기업 조직 내부에서만 사용하는 비공개 도커 이미지 저장소를 말한다.
 
 # 1. 실습 11 - 도커 허브 또는 사설 레지스트리로 이동
 
@@ -68,7 +67,7 @@ docker run -d \
 
 애플리케이션 이미 자체는 동일하게 유지할 수 있다.
 
-# 실습 13 - ARM64까지 지원하는 멀티 플랫폼 이미지 
+# 실습 13 - ARM64까지 지원하는 멀티 플랫폼 이미지
 
 AMD64 서버와 ARM64 서버를 동시에 지원하려면 Buildx를 사용할 수 있다.
 
