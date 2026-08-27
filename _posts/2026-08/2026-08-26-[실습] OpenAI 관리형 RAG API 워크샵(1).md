@@ -75,8 +75,8 @@ vector_stores.search()         + file_search
 
 # 4. 워크삽 프로젝트 목차
 
-* 
-
+* [[실습] OpenAI 관리형 RAG API 워크샵(2)-RAG](https://synabreu.github.io/openai/%EC%8B%A4%EC%8A%B5-OpenAI-%EA%B4%80%EB%A6%AC%ED%98%95-RAG-API-%EC%9B%8C%ED%81%AC%EC%83%B5(2)-RAG/)
+* [[실습] OpenAI 관리형 RAG API 워크샵(3)-VectorStore](https://synabreu.github.io/openai/%EC%8B%A4%EC%8A%B5-OpenAI-%EA%B4%80%EB%A6%AC%ED%98%95-RAG-API-%EC%9B%8C%ED%81%AC%EC%83%B5(3)-VectorStore/)
 
 
 
