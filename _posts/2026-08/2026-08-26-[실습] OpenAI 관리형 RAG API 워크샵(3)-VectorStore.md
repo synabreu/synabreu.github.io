@@ -49,7 +49,7 @@ code .
 
 Visual Studio Code 메뉴에서 `Terminal` 을 선택해서 `New Terminal` 을 선택하면 된다. 만약 Terminal 창이 Powershell이 아니면 아래와 같이 변경해준다.   
 
-![nvidia-hugging]({{ '/images/2026-08/nvidia-hugging-face-logos.jpg' | relative_url }})
+![openai-rag]({{ '/images/2026-08/openai-rag-01.png' | relative_url }})
 
 터미널 창의 툴바에서 `아래 화살표`를 누르면 팝업 메뉴가 뜨는 데 그때 `powershell` 리스트 박스를 선택하면 된다. 
 
