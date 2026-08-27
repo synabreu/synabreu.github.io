@@ -37,19 +37,22 @@ Document
 
 ## 2-2. 파워셀창에서 폴더 생성 및 Visual Studio Code 실행
 
+파워쉘(Powershell)을 실행한다음 워크삽 프로젝트 폴더를 만들고, Visual Studio Code를 실행하기 위해 하기 위해서는 다음과 같이 실행한다. 
 
+``` Powershell
+mkdir openai-rag-workshop
+cd openai-rag-workshop
+code . 
+```
 
 ## 2-3. Terminal 창 실행
 
 Visual Studio Code 메뉴에서 `Terminal` 을 선택해서 `New Terminal` 을 선택하면 된다. 만약 Terminal 창이 Powershell이 아니면 아래와 같이 변경해준다.   
 
+![nvidia-hugging]({{ '/images/2026-08/nvidia-hugging-face-logos.jpg' | relative_url }})
 
+터미널 창의 툴바에서 `아래 화살표`를 누르면 팝업 메뉴가 뜨는 데 그때 `powershell` 리스트 박스를 선택하면 된다. 
 
-그리고 
-
-```powershell
-cd openai-rag-workshop
-```
 
 ## 2-4. Python 가상환경 생성
 
@@ -90,4 +93,4 @@ Copy-Item .env.example .env
 
 주의: `.env` 파일은 Git에 commit하지 않는다.
 
----
+
