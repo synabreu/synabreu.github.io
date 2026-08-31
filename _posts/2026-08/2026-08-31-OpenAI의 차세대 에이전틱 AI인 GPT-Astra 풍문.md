@@ -24,7 +24,12 @@ categories: [openai]
 
 ## 2-1. SF 우주정거장/우주선 3D 익스플로러
 
-![그림 1 - SF 우주정거장/우주선 3D 익스플로러]({{ '/images/2026-08/gpt-astra-01-spaceship.mp4' | relative_url }})
+<figure>
+  <video controls playsinline preload="metadata" width="100%">
+    <source src="{{ '/images/2026-08/gpt-astra-01-spaceship.mp4' | relative_url }}" type="video/mp4">
+  </video>
+  <figcaption>그림 1 - SF 우주정거장/우주선 3D 익스플로러</figcaption>
+</figure>
 
 Astra는 코드를 몇 줄 만드는 것이 아니라 복잡한 3D 소프트웨어의 구조를 이해하고 하나의 작동하는 제품으로 조립할 수 있는 것을 보여준다. 기술적으로 가장 복잡해 보이는 데, 화면에는 거대한 우주 정거장 또는 우주선 구조물이 3D로 표현되고, Main Bridge, Observation Gallery, Medical Bay, Science Lab, Life Support, Hangar Bay, Reactor Core, Engine Heart 등의 공간이 실제 설계도처럼 표시된다. 
 
