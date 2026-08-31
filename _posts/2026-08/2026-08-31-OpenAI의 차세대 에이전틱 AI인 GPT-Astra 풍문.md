@@ -1,6 +1,6 @@
 ---
 title: "OpenAI의 차세대 에이전틱 AI인 GPT-Astra 풍문"
-date: 2026-08-28
+date: 2026-08-31
 tags: [오픈AI, OpenAI, agenticai, aiagent, ChatGPT, GPT-Astra, PhysicalAI, DigitalTwin]
 typora-root-url: ../
 toc: true
