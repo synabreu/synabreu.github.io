@@ -1,12 +1,11 @@
 ---
-title: "AWS 트레니엄 워크삽(2)-AWS AI Chip"
+title: "[워크삽] AWS 트레니엄 워크삽(2)-AWS AI Chip"
 date: 2026-09-04
 tags: [aws, 트레니엄, Trainium, vLLM, NeuronX Distributed, NxD, Amazon, EKS]
 typora-root-url: ../
 toc: true
 categories: [aws]
 ---
-
 이번 AWS 트레니엄 워크삽 글에서는 AWS AI Chip에 대해 알아보자!
 
 # 1. NeuronCore: AWS AI 칩의 기반
@@ -39,11 +38,11 @@ NeuronCore-v2는 다음 특성을 중심으로 설계됐다.
 
 NeuronCore-v2 두 개가 제공하는 합산 성능은 다음과 같다.
 
-| 데이터 형식 | 합산 성능 | 주요 용도 |
-| --- | ---: | --- |
-| INT8 | 380 TOPS | 양자화 추론 워크로드 |
-| FP16, BF16, cFP8, TF32 | 190 TFLOPS | 학습과 추론을 위한 균형 잡힌 정밀도 |
-| FP32 | 47.5 TFLOPS | 높은 정밀도가 필요한 계산 |
+| 데이터 형식            |   합산 성능 | 주요 용도                           |
+| ---------------------- | ----------: | ----------------------------------- |
+| INT8                   |    380 TOPS | 양자화 추론 워크로드                |
+| FP16, BF16, cFP8, TF32 |  190 TFLOPS | 학습과 추론을 위한 균형 잡힌 정밀도 |
+| FP32                   | 47.5 TFLOPS | 높은 정밀도가 필요한 계산           |
 
 > 위 수치는 Trainium 및 Inferentia2 칩에 탑재된 NeuronCore-v2 두 개의 합산 성능을 나타낸다.
 
@@ -80,11 +79,11 @@ v3 아키텍처는 v2와 비교해 다음과 같이 개선됐다.
 
 NeuronCore-v3 코어 한 개가 제공하는 대략적인 성능은 다음과 같다.
 
-| 데이터 형식 | 코어당 성능 | 주요 용도 |
-| --- | ---: | --- |
-| FP8 | 약 162 TFLOPS | 처리량이 중요한 추론 워크로드 |
-| BF16, FP16, TF32 | 약 83 TFLOPS | 학습 및 추론 |
-| FP32 | 약 22.6 TFLOPS | 높은 정밀도가 필요한 계산 |
+| 데이터 형식      |    코어당 성능 | 주요 용도                     |
+| ---------------- | -------------: | ----------------------------- |
+| FP8              |  약 162 TFLOPS | 처리량이 중요한 추론 워크로드 |
+| BF16, FP16, TF32 |   약 83 TFLOPS | 학습 및 추론                  |
+| FP32             | 약 22.6 TFLOPS | 높은 정밀도가 필요한 계산     |
 
 Trainium2 칩 하나에는 NeuronCore-v3 코어가 여덟 개 탑재된다. 이 코어들의 합산 성능을 바탕으로 Trainium2는 모든 정밀도 형식에서 1세대 Trainium보다 높은 성능을 제공한다. 특히 대규모 학습 워크로드에 유리하도록 최적화돼 있다.
 
@@ -132,18 +131,17 @@ AWS Trainium2는 AWS 2세대 AI 학습 칩으로 크게 발전한 제품이다. 
 
 Trainium의 NeuronCore-v2에서 Trainium2의 NeuronCore-v3로 이어지는 변화는 AWS AI 칩 아키텍처가 어떻게 발전했는지를 보여준다.
 
-| 구분 | NeuronCore-v2 및 Trainium | NeuronCore-v3 및 Trainium2 |
-| --- | --- | --- |
-| 코어 구성 | 칩당 2코어 | 칩당 8코어 |
-| HBM 용량 | 32GiB | 96GiB |
-| 메모리 대역폭 | 820GiB/s | 2.9TB/s |
-| 칩 간 연결 | NeuronLink-v2 | NeuronLink-v3 |
-| 설계 방향 | 균형 잡힌 성능을 제공하는 기반 확립 | 연산 밀도, 메모리, 인터커넥트 및 확장성 강화 |
+| 구분          | NeuronCore-v2 및 Trainium           | NeuronCore-v3 및 Trainium2                   |
+| ------------- | ----------------------------------- | -------------------------------------------- |
+| 코어 구성     | 칩당 2코어                          | 칩당 8코어                                   |
+| HBM 용량      | 32GiB                               | 96GiB                                        |
+| 메모리 대역폭 | 820GiB/s                            | 2.9TB/s                                      |
+| 칩 간 연결    | NeuronLink-v2                       | NeuronLink-v3                                |
+| 설계 방향     | 균형 잡힌 성능을 제공하는 기반 확립 | 연산 밀도, 메모리, 인터커넥트 및 확장성 강화 |
 
 NeuronCore-v2는 듀얼 코어 설계와 균형 잡힌 성능을 바탕으로 AWS AI 칩의 기반을 마련했다. NeuronCore-v3는 이를 옥타 코어 구성으로 확장하면서 메모리와 인터커넥트 기능을 강화했다.
 
 이러한 아키텍처 발전을 통해 AWS는 NeuronCore-v2에서 확립한 기본 설계 원칙을 유지하면서 더욱 강력한 AI 학습 및 추론 기능을 제공할 수 있게 됐다.
-
 
 # 7. 참고자료
 
