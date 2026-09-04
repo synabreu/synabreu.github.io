@@ -23,7 +23,7 @@ NeuronCore-v2는 다단계 메모리 계층 구조와 머신러닝 연산에 최
 - **NeuronLink 인터페이스:** 코어와 칩 사이에서 데이터를 효율적으로 주고받을 수 있게 한다.
 
 ![NeuronCore-v2 아키텍처]({{ '/images/2026-09/neuron-core-v2.png' | relative_url }})
-*그림 2. NeuronCore-v2 아키텍처*
+*그림 1. NeuronCore-v2 아키텍처*
 
 # 3. NeuronCore-v2의 주요 설계 특징
 
