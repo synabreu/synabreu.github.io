@@ -1,5 +1,5 @@
 ---
-title: "[워크삽] 실습2 - vLLM 배포"
+title: "[워크삽] AWS 트레니엄 워크삽(9)-vLLM 배포"
 date: 2026-09-12
 tags: [aws, 트레니엄, Trainium, vLLM, NeuronX Distributed, NxD, Amazon, EKS, NxD]
 typora-root-url: ../
