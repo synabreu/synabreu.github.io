@@ -189,7 +189,7 @@ python main.py --check
 키 값은 출력하지 않는다. 또한, 이 명령은 설정 여부만 확인하며 키의 실제 유효성, 크레딧 또는 모델 권한은 확인하지 않는다. 아래와 같은 그림에 메시지가 나온다면 정상이다.
 
 ![그림 1. main check]({{ '/images/2026-04/openai-log-01.png' | relative_url }}){: style="width: 80%; height: auto;"}
-!*[그림 1. Python main --check]*
+<br>*[그림 1. Python main --check]*
 
 # 8. 실제 OpenAI API 호출하기
 
@@ -202,7 +202,7 @@ python main.py
 그러면 다음과 같은 결과 화면이 그림에 나온다. 
 
 ![그림 2. main 실행]({{ '/images/2026-04/openai-log-02.png' | relative_url }}){: style="width: 80%; height: auto;"}
-!*[그림 2. Python main 실행]*
+<br>*[그림 2. Python main 실행]*
 
 다른 질문을 보내려면:
 
