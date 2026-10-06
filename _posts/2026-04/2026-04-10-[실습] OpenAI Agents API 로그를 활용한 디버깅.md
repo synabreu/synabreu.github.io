@@ -189,7 +189,7 @@ python main.py --check
 키 값은 출력하지 않는다. 또한, 이 명령은 설정 여부만 확인하며 키의 실제 유효성, 크레딧 또는 모델 권한은 확인하지 않는다. 아래와 같은 그림에 메시지가 나온다면 정상이다.
 
 ![그림 1. main check]({{ '/images/2026-04/openai-log-01.png' | relative_url }}){: style="width: 80%; height: auto;"}
-*[그림 1. Python main --check]*
+!*[그림 1. Python main --check]*
 
 # 8. 실제 OpenAI API 호출하기
 
@@ -202,7 +202,7 @@ python main.py
 그러면 다음과 같은 결과 화면이 그림에 나온다. 
 
 ![그림 2. main 실행]({{ '/images/2026-04/openai-log-02.png' | relative_url }}){: style="width: 80%; height: auto;"}
-*[그림 2. Python main 실행]*
+!*[그림 2. Python main 실행]*
 
 다른 질문을 보내려면:
 
@@ -211,7 +211,7 @@ python main.py --prompt "OpenAI API가 로깅 방법을 알려줘"
 ```
 
 ![그림 3. main argument 실행]({{ '/images/2026-04/openai-log-05.png' | relative_url }}){: style="width: 80%; height: auto;"}
-*[그림 3. main argument 실행]*
+!*[그림 3. main argument 실행]*
 
 
 답변에 `resp_...` 형태의 응답 ID, 응답 상태, Logs 주소가 표시된다. 재실행할 때마다 새로운 API 요청을 보내고 이 예제는 자동 재시도를 꺼두었으며 요청 제한 시간은 60초이다. 
