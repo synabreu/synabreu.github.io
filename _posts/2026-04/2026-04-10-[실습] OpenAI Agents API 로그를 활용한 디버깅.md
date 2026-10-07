@@ -211,7 +211,7 @@ python main.py --prompt "OpenAI API가 로깅 방법을 알려줘"
 ```
 
 ![그림 3. main argument 실행]({{ '/images/2026-04/openai-log-05.png' | relative_url }}){: style="width: 80%; height: auto;"}
-!*[그림 3. main argument 실행]*
+<br>*[그림 3. main argument 실행]*
 
 
 답변에 `resp_...` 형태의 응답 ID, 응답 상태, Logs 주소가 표시된다. 재실행할 때마다 새로운 API 요청을 보내고 이 예제는 자동 재시도를 꺼두었으며 요청 제한 시간은 60초이다. 
@@ -224,10 +224,10 @@ python main.py --prompt "OpenAI API가 로깅 방법을 알려줘"
 4. 방금 보낸 요청을 열어 입력과 출력을 확인한다. 
 
 ![그림 4. OpenAI 로그 화면]({{ '/images/2026-04/openai-log-03.png' | relative_url }}){: style="width: 80%; height: auto;"}
-*[그림 4. OpenAI 로그 화면]*
+<br>*[그림 4. OpenAI 로그 화면]*
 
 ![그림 5. OpenAI 로그 상세 화면]({{ '/images/2026-04/openai-log-04.png' | relative_url }}){: style="width: 80%; height: auto;"}
-*[그림 5. Python 로그 상세 화면]*
+<br>*[그림 5. Python 로그 상세 화면]*
 
 
 파이썬 소스에서 `client.responses.create(..., store=True)`가 응답을 저장하도록 요청한다. `print()`는 터미널 표시용이다. 공식 문서는 Response 객체의 기본 저장 기간을 30일로 안내한다. 조직이나 프로젝트에 Zero Data Retention이 적용되어 있으면 `store=True`도 `false`로 처리된다. 
