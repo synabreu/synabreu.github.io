@@ -187,7 +187,7 @@ if __name__ == "__main__":
 
 [agents sdk trace demo](https://github.com/synabreu/agents-sdk-trace-demo)에 공개적으로 올려 놓은 예제 소스를 다음과 같이 복사한다.
 
-```powersehll
+```powershell
 git clone https://github.com/synabreu/agents-sdk-trace-demo.git
 ```
 
