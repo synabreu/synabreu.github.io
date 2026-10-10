@@ -6,7 +6,7 @@ typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-지난 [오픈AI DevDay 키노트를 보고] 후기 글을 본 사람은 알것이다. Decisions API가 소개만 되었고 관련된 API를 직접 사용해 볼 수 없었다. 그러나 어제 Decisions API를 베타 버전으로 오픈AI가 전격적으로 공개했다. 그래서 첫편에서는 Decisions API를 먼저 활용하기 전에 OpenAI가 제공하는 베타 API에 대해 알아보았다.
+지난 [오픈AI DevDay 키노트를 보고](https://synabreu.github.io/openai/%ED%9B%84%EA%B8%B0-%EC%98%A4%ED%94%88AI-DevDay-%ED%82%A4%EB%85%B8%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EA%B3%A0/#43-decisions-api) 후기 글을 본 사람은 알것이다. Decisions API가 소개만 되었고 관련된 API를 직접 사용해 볼 수 없었다. 그러나 어제 Decisions API를 베타 버전으로 오픈AI가 전격적으로 공개했다. 그래서 첫편에서는 Decisions API를 먼저 활용하기 전에 OpenAI가 제공하는 베타 API에 대해 알아보았다.
 
 ---
 
@@ -49,6 +49,8 @@ curl https://api.openai.com/v1/decisions \
 
 일부 질문에서는 정상적인 답변 대신 요청 거부(Refusal) 결과가 반환될 수 있다. 이 경우 결과의 `type`은 `refusal`로 표시되며, 질문에 지정된 이름이 함께 포함된다. 질문에 이름을 지정하지 않았다면 해당 값은 `null`로 반환된다.
 
+---
+
 # 3. Body Parameters - Decisions API 요청 파라미터
 
 ```json
@@ -79,6 +81,8 @@ curl https://api.openai.com/v1/decisions \
 
 - `string`: 문자열
 - `array of DecisionInputMessage`: DecisionInputMessage 객체의 배열
+
+---
 
 ## 3-2. DecisionInputMessage
 
@@ -144,6 +148,8 @@ type: "message" (선택 사항)
 | `minLength` | 0       |
 | `maxLength` | 1048576 |
 
+---
+
 ## 3-4. questions: 객체 배열
 
 입력 데이터에 대해 수행할 질문을 지정한다.
@@ -198,6 +204,8 @@ type: "message" (선택 사항)
 
 예를 들어 고객 만족도를 매우 낮음, 낮음, 보통, 높음, 매우 높음으로 평가하거나 문서의 품질을 1\~5단계로 평가할 때 사용한다.
 
+---
+
 ## 3-5. safety_identifier: string 또는 null (선택 사항)
 
 API 호출자가 제공하는 최종 사용자 식별자를 지정한다.
@@ -213,6 +221,8 @@ Responses API와 동일한 길이 제한이 적용되며, 인증된 사용자의
 | `minLength` | 0                |
 | `maxLength` | 128              |
 
+---
+
 # 4. Predicate, Choice, Score 비교
 
 | 구분      | Predicate             | Choice                        | Score                   |
@@ -224,10 +234,31 @@ Responses API와 동일한 길이 제한이 적용되며, 인증된 사용자의
 
 핵심적으로 `Predicate`는 가능성을 판단하고, `Choice`는 주어진 후보 중 하나를 선택하며, `Score`는 정의된 단계에 따라 입력 데이터를 평가하는 역할을 수행한다.
 
-# 4. Decisions API 동영상 - 어떤 것을 만들 수 있는가?
+---
+
+# 5. Decisions API 동영상 - 어떤 것을 만들 수 있는가?
 
 [지난 후기에서 Decisions API는](https://synabreu.github.io/openai/%ED%9B%84%EA%B8%B0-%EC%98%A4%ED%94%88AI-DevDay-%ED%82%A4%EB%85%B8%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EA%B3%A0/#43-decisions-api) 최근에 각광 받은 [Jev와](https://typesafe.ai/) 유사한 부분과 차이점을 각각 말한 적이 있다.
 
-# 5. 참고 자료
+그렇다면 이 Decisions API를 가지고 도대체 무엇을 만들 수 있는가에 대해 아이디어를 얻는 차원에서 아래의 유투브 동영상을 보자!
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/FB6oCmrIj-Y"
+  title="Introducing the Decisions API"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+
+* **영업 문의 자동 분류:** 사용자가 자유롭게 입력한 내용을 영업 리드로 분류하는 데, 입력의 의미를 파악해 적절한 분류를 빠르게 선택한다. 해당 데모의 서버 응답이 100ms 미만이다. 
+
+* **자동차 게임의 장애물 회피:** 도로와 장애물이 있는 게임 화면을 보고 자동차가 이동할 차선을 결정한다. Decisions API의 역할은 화면 이미지를 입력받아 자동차가 어느 차선으로 가야 하는지 판단한다.
+
+* **대화에 반응하는 캐릭터 표정:** 사용자가 말하는 내용에 맞춰 애니메이션 캐릭터의 표정이 바뀐다. GPT-Live-1이 음성 대화를 담당하고, Decisions API가 표정 선택을 담당한다.
+
+---
+
+# 6. 참고 자료
 
 ---
