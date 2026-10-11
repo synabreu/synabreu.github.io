@@ -6,9 +6,7 @@ typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-두번째 블로그에서는 공식 [Decisions 가이드의 Check an image for visible damage](https://developers.openai.com/api/docs/guides/decisions#check-an-image-for-visible-damage) 내용을 그대로 로컬 PC 또는 Mac 환경에서 실행하는 프로젝트이다.
-
-이 프로젝트는 이미지에서 눈에 보이는 손상 여부를 확인하는 Predicate API 프로젝트로 여러분이 모두 실행하고 나면 다음과 같은 화면을 보게 될 것이다.
+두번째 블로그에서는 공식 [Decisions 가이드의 Check an image for visible damage](https://developers.openai.com/api/docs/guides/decisions#check-an-image-for-visible-damage) 내용을 그대로 로컬 PC 또는 Mac 환경에서 실행하는 프로젝트이다. 이 프로젝트는 이미지에서 눈에 보이는 손상 여부를 확인하는 Predicate API 프로젝트로 여러분이 모두 실행하고 나면 다음과 같은 화면을 보게 될 것이다.
 
 ![그림 1. DevDays 2026 keynote]({{ '/images/2026-10/decisions-01.png' | relative_url }}){: style="width: 70%; height: auto;"}
 
