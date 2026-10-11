@@ -1,5 +1,5 @@
 ---
-title: "[실습] Decisions API 사용기-보험 심사(1)"
+title: "[실습] Decisions API 사용기(1)-입문 및 활용 사례"
 date: 2026-10-08
 tags: [openai, devday, samaltman, chatgpt, codex, linux, codexmobile, meta, muse, spacexai, grotbot, dots, ChatGPT Spaces]
 typora-root-url: ../
@@ -266,7 +266,7 @@ Responses API와 동일한 길이 제한이 적용되며, 인증된 사용자의
   브라우저에서 동영상 재생을 지원하지 않는다.
 </video>
 
-이 에제는 외부 개발자가 만든 영상인데, 달걀 하나씩 이미지를 잘라 OpenAI에 보내면 약 270밀리초 만에 깨끗함, 더러움, 금이 감에 대한 확률을 반환할 때 Decisions API를 사용한다. 이미지 한 장을 잘라 보내는 데 입력 토큰 약 280개가 사용되며, 이미지 1,000장당 비용은 약 0.03달러로 달걀 탐지에는 @roboflow의 RF-DETR을 사용했다.  
+이 예제는 외부 개발자가 만든 영상인데, 달걀 하나씩 이미지를 잘라 OpenAI에 보내면 약 270밀리초 만에 깨끗함, 더러움, 금이 감에 대한 확률을 반환할 때 Decisions API를 사용한다. 이미지 한 장을 잘라 보내는 데 입력 토큰 약 280개가 사용되며, 이미지 1,000장당 비용은 약 0.03달러로 달걀 탐지에는 @roboflow의 RF-DETR을 사용했다.  
 
 ---
 
