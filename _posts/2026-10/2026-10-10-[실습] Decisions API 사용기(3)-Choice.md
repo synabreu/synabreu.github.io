@@ -1,12 +1,11 @@
 ---
 title: "[실습] Decisions API 사용기(3)-Choice"
-date: 2026-10-08
+date: 2026-10-10
 tags: [openai, devday, samaltman, chatgpt, codex, linux, codexmobile, meta, muse, spacexai, grotbot, dots, ChatGPT Spaces]
 typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-
 이번에는 정해진 선택지 중에서 선택하는 Choice 타입을 설명하겠다. 이 예제는 `gpt-6-luna` 모델에서 Descisions API의 choice 타입을 사용해서 정해진 선택지 중에서 선택하는 데모이다. [공식 Decisions 가이드의 Select from fixed options](https://developers.openai.com/api/docs/guides/decisions?utm_source=chatgpt.com#select-from-fixed-options)를 내 로컬 PC 또는 Mac 환경에서 실행하는 프로젝트이다.
 
 ![그림 1. 선택지 선택]({{ '/images/2026-10/decisions-02.png' | relative_url }}){: style="width: 70%; height: auto;"}
@@ -42,7 +41,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe server.py --port 5055
 ```
 
-http://127.0.0.1:5055/ 에 접속한다. Windows에서는 `run-local.cmd`를 실행해도 된다. 
+http://127.0.0.1:5055/ 에 접속한다. Windows에서는 `run-local.cmd`를 실행해도 된다.
 
 ## 2-2. macOS / Linux 운영체제 (bash·zsh)
 
@@ -168,7 +167,7 @@ def evaluate(mode, index):
         # API 응답이 올바른지 검증하고 선택 결과와 확률을 반환한다.
         if not decision.answers or decision.answers[0].type != 'choice':
             raise ValueError('API가 판단을 거부했습니다. 확률을 표시할 수 없습니다.')
-        
+    
         answer = decision.answers[0] # API 응답의 선택지와 확률이 정의된 범위 내에 있는지 확인
         values = [value for value, _ in CHOICES[mode]] # 선택지와 확률이 정의된 범위 내에 있는지 확인
 
@@ -211,7 +210,7 @@ def main():
     # 실행 인자를 읽고 프로젝트의 주요 작업을 시작한다.
     parser = argparse.ArgumentParser()
     parser.add_argument('--port', type=int, default=5054)
-    
+  
     args = parser.parse_args()
     if not 1 <= args.port <= 65535:
         parser.error('Port must be between 1 and 65535')
@@ -227,4 +226,3 @@ if __name__ == '__main__':
 
 * [OpenAI Developers 문서](https://developers.openai.com/api/docs/guides/decisions?utm_source=chatgpt.com#select-from-fixed-options)
 * [decisions-fixed-options 프로젝트 예제 소스](https://github.com/synabreu/openai-decisions-workshop/tree/main/decisions-fixed-options)
-

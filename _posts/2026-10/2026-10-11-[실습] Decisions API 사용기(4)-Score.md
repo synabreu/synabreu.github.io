@@ -1,13 +1,12 @@
 ---
 title: "[실습] Decisions API 사용기(4)-Score"
-date: 2026-10-08
+date: 2026-10-11
 tags: [openai, devday, samaltman, chatgpt, codex, linux, codexmobile, meta, muse, spacexai, grotbot, dots, ChatGPT Spaces]
 typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-
-세번째 블로그 내용은 Decisions API의 Score 타입을 이용해 평가 기준에 따라 점수 매기는 예제를 여러분들께 설명하겠다. 이 예제는 gpt-6-luna 모델에서 Descisions 의 Score API를 사용해서 정해진 선택지 중에서 선택하는 데모이다. 공식 [Decisions 가이드의 Score against a rubic](https://developers.openai.com/api/docs/guides/decisions?utm_source=chatgpt.com#score-against-a-rubric)는 내 로컬 PC 또는 Mac 환경에서 직접 실행할 수 있다. 
+세번째 블로그 내용은 Decisions API의 Score 타입을 이용해 평가 기준에 따라 점수 매기는 예제를 여러분들께 설명하겠다. 이 예제는 gpt-6-luna 모델에서 Descisions 의 Score API를 사용해서 정해진 선택지 중에서 선택하는 데모이다. 공식 [Decisions 가이드의 Score against a rubic](https://developers.openai.com/api/docs/guides/decisions?utm_source=chatgpt.com#score-against-a-rubric)는 내 로컬 PC 또는 Mac 환경에서 직접 실행할 수 있다.
 
 ![그림 1. 평가 기준 점수]({{ '/images/2026-10/decisions-03.png' | relative_url }}){: style="width: 70%; height: auto;"}
 
@@ -153,7 +152,7 @@ flowchart TD
 
 # 6. 메인 소스 분석
 
-## 6-1. server.py 
+## 6-1. server.py
 
 ```python
 import base64
