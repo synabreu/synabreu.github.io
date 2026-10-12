@@ -1,5 +1,5 @@
 ---
-title: "[실습] Decisions API 사용기(2)-Predicate API"
+title: "[실습] Decisions API 사용기(2)-Predicate"
 date: 2026-10-08
 tags: [openai, devday, samaltman, chatgpt, codex, linux, codexmobile, meta, muse, spacexai, grotbot, dots, ChatGPT Spaces]
 typora-root-url: ../
@@ -8,7 +8,7 @@ categories: [openai]
 ---
 두번째 블로그에서는 공식 [Decisions 가이드의 Check an image for visible damage](https://developers.openai.com/api/docs/guides/decisions#check-an-image-for-visible-damage) 내용을 그대로 로컬 PC 또는 Mac 환경에서 실행하는 프로젝트이다. 이 프로젝트는 이미지에서 눈에 보이는 손상 여부를 확인하는 Predicate API 프로젝트로 여러분이 모두 실행하고 나면 다음과 같은 화면을 보게 될 것이다.
 
-![그림 1. DevDays 2026 keynote]({{ '/images/2026-10/decisions-01.png' | relative_url }}){: style="width: 70%; height: auto;"}
+![그림 1. Visible Damage]({{ '/images/2026-10/decisions-01.png' | relative_url }}){: style="width: 70%; height: auto;"}
 
 - Dent / Cancellation / Answer relevance 탭
 - 공식 제품 이미지와 텍스트 샘플 애니메이션
@@ -213,7 +213,7 @@ def evaluate_sample(mode, index):
             # 선택한 입력과 질문을 실제 Decisions API로 전달한다.
             result = client.decisions.create(model='gpt-6-luna', input=evidence,
                 questions=[{'type': 'predicate', 'name': mode, 'instructions': instructions}])
-            
+        
         # 반환된 첫 판단의 형식과 확률을 확인할 준비를 한다.
         answer = result.answers[0]
         if answer.type != 'predicate':

@@ -253,26 +253,25 @@ Responses API와 동일한 길이 제한이 적용되며, 인증된 사용자의
   allowfullscreen>
 </iframe>
 
-* **영업 문의 자동 분류:** 사용자가 자유롭게 입력한 내용을 영업 리드로 분류하는 데, 입력의 의미를 파악해 적절한 분류를 빠르게 선택한다. 해당 데모의 서버 응답이 100ms 미만이다. 
-
+* **영업 문의 자동 분류:** 사용자가 자유롭게 입력한 내용을 영업 리드로 분류하는 데, 입력의 의미를 파악해 적절한 분류를 빠르게 선택한다. 해당 데모의 서버 응답이 100ms 미만이다.
 * **자동차 게임의 장애물 회피:** 도로와 장애물이 있는 게임 화면을 보고 자동차가 이동할 차선을 결정한다. Decisions API의 역할은 화면 이미지를 입력받아 자동차가 어느 차선으로 가야 하는지 판단한다.
-
 * **대화에 반응하는 캐릭터 표정:** 사용자가 말하는 내용에 맞춰 애니메이션 캐릭터의 표정이 바뀐다. GPT-Live-1이 음성 대화를 담당하고, Decisions API가 표정 선택을 담당한다.
 
-## 5.2 달걀 크기 감별 
+## 5.2 달걀 크기 감별
 
 <video width="720" controls>
   <source src="/images/2026-10/egg-classification-descisions-api.MP4" type="video/mp4">
   브라우저에서 동영상 재생을 지원하지 않는다.
 </video>
 
-이 예제는 외부 개발자가 만든 영상인데, 달걀 하나씩 이미지를 잘라 OpenAI에 보내면 약 270밀리초 만에 깨끗함, 더러움, 금이 감에 대한 확률을 반환할 때 Decisions API를 사용한다. 이미지 한 장을 잘라 보내는 데 입력 토큰 약 280개가 사용되며, 이미지 1,000장당 비용은 약 0.03달러로 달걀 탐지에는 @roboflow의 RF-DETR을 사용했다.  
+이 예제는 외부 개발자가 만든 영상인데, 달걀 하나씩 이미지를 잘라 OpenAI에 보내면 약 270밀리초 만에 깨끗함, 더러움, 금이 감에 대한 확률을 반환할 때 Decisions API를 사용한다. 이미지 한 장을 잘라 보내는 데 입력 토큰 약 280개가 사용되며, 이미지 1,000장당 비용은 약 0.03달러로 달걀 탐지에는 @roboflow의 RF-DETR을 사용했다.
 
 ---
 
 # 6. 참고 자료
 
 * [Introducing the Decisions API](https://youtu.be/FB6oCmrIj-Y?si=RPcMkOvXh3zqtb0g)
-* [OpenAI Decisions API documentation](https://developers.openai.com/api/docs/guides/decisions) 
+* [OpenAI Decisions API documentation](https://developers.openai.com/api/docs/guides/decisions)
 * [Create a decision API Reference](https://developers.openai.com/api/reference/resources/decisions/methods/create)
+
 ---
