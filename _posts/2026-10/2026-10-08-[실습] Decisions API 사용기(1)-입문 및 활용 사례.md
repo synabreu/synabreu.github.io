@@ -6,7 +6,7 @@ typora-root-url: ../
 toc: true
 categories: [openai]
 ---
-지난 [오픈AI DevDay 키노트를 보고](https://synabreu.github.io/openai/%ED%9B%84%EA%B8%B0-%EC%98%A4%ED%94%88AI-DevDay-%ED%82%A4%EB%85%B8%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EA%B3%A0/#43-decisions-api) 후기 글을 본 사람은 알것이다. Decisions API가 소개만 되었고 관련된 API를 직접 사용해 볼 수 없었다. 그러나 어제 Decisions API를 베타 버전으로 오픈AI가 전격적으로 공개했다. 그래서 첫편에서는 Decisions API를 먼저 활용하기 전에 OpenAI가 제공하는 베타 API에 대해 알아보았다.
+지난 [오픈AI DevDay 키노트를 보고](https://synabreu.github.io/openai/%ED%9B%84%EA%B8%B0-%EC%98%A4%ED%94%88AI-DevDay-%ED%82%A4%EB%85%B8%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EA%B3%A0/#43-decisions-api) 후기 글을 본 사람은 알것이다. Decisions API가 소개만 되었고 관련된 API를 직접 사용해 볼 수 없었다. 그러나 어제 Decisions API를 베타 버전으로 오픈AI가 전격적으로 공개했다. 그래서 첫편에서는 Decisions API를 먼저 활용하기 전에 OpenAI가 제공하는 베타 API에 대해 정리해보았다. 
 
 ---
 
@@ -19,6 +19,14 @@ Decisions API는 일반적인 “자유 형식 답변 생성”보다 정해진 
 | **predicate** | 하나의 조건이 참일 가능성을 판단할 때        | “이 사고에 부상 관련 검토가 필요한가?”                             | 참일 확률인`probability`                           |
 | **choice**    | 정해진 후보 중 하나를 선택할 때              | “일반 심사·의료 심사·긴급 대응 중 어디로 보낼 것인가?”           | 선택값`choice`, 신뢰도 `confidence`, 후보별 확률 |
 | **score**     | 순서가 있는 등급을 기준으로 수준을 평가할 때 | “이 사고의 긴급도는 낮음·보통·높음·매우 높음 중 어느 수준인가?” | 점수`score`, 신뢰도 `confidence`, 등급별 확률    |
+
+`POST /v1/decisions`가 `gpt-6-luna` 전용 베타 API로 출시됐다. 이는 Agents SDK API가 아니며 에이전트 실행 루프를 대체하지 않는다. 대신 Agents SDK 앞단에서 다음 용도로 사용할 수 있다.
+
+- predicate: 요청 조건 판정
+- choice: 실행할 전문 Agent 선택
+- score: 긴급도나 위험도를 평가해 우선순위 결정
+
+공식 문서에서 보면 Responses API보다 약 10배 빠른 typed decision 반환한다고 설명했다. Python OpenAI SDK 3.26.0, JavaScript 7.30.0 이상이 필요하며, 이는 openai-agents나 @openai/agents 버전 요구사항과는 별개다.
 
 ---
 
@@ -267,6 +275,15 @@ Responses API와 동일한 길이 제한이 적용되며, 인증된 사용자의
 이 예제는 외부 개발자가 만든 영상인데, 달걀 하나씩 이미지를 잘라 OpenAI에 보내면 약 270밀리초 만에 깨끗함, 더러움, 금이 감에 대한 확률을 반환할 때 Decisions API를 사용한다. 이미지 한 장을 잘라 보내는 데 입력 토큰 약 280개가 사용되며, 이미지 1,000장당 비용은 약 0.03달러로 달걀 탐지에는 @roboflow의 RF-DETR을 사용했다.
 
 ---
+
+# 6. Decisions 실습 예제  
+
+공식 문서에 올라 와 있는 예제들을 실제로 Decisions API를 사용해서 만들어서 실행시킨 후 분석한 것을 다음과 같이 공유했다. 
+
+* [[실습] Decisions API 사용기(2)-Predicate](https://synabreu.github.io/openai/%EC%8B%A4%EC%8A%B5-Decisions-API-%EC%82%AC%EC%9A%A9%EA%B8%B0(2)-Predicate/)
+* [[실습] Decisions API 사용기(3)-Choice](https://synabreu.github.io/openai/%EC%8B%A4%EC%8A%B5-Decisions-API-%EC%82%AC%EC%9A%A9%EA%B8%B0(3)-Choice/)
+* [[실습] Decisions API 사용기(4)-Score](https://synabreu.github.io/openai/%EC%8B%A4%EC%8A%B5-Decisions-API-%EC%82%AC%EC%9A%A9%EA%B8%B0(4)-Score/)
+
 
 # 6. 참고 자료
 
