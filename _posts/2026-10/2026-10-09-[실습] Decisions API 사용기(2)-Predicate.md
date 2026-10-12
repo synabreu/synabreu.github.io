@@ -1,6 +1,6 @@
 ---
 title: "[실습] Decisions API 사용기(2)-Predicate"
-date: 2026-10-08
+date: 2026-10-09
 tags: [openai, devday, samaltman, chatgpt, codex, linux, codexmobile, meta, muse, spacexai, grotbot, dots, ChatGPT Spaces]
 typora-root-url: ../
 toc: true
@@ -213,7 +213,7 @@ def evaluate_sample(mode, index):
             # 선택한 입력과 질문을 실제 Decisions API로 전달한다.
             result = client.decisions.create(model='gpt-6-luna', input=evidence,
                 questions=[{'type': 'predicate', 'name': mode, 'instructions': instructions}])
-        
+      
         # 반환된 첫 판단의 형식과 확률을 확인할 준비를 한다.
         answer = result.answers[0]
         if answer.type != 'predicate':
@@ -276,4 +276,4 @@ if __name__ == "__main__":
 # 6. 참고 자료
 
 * [OpenAI Developers 문서](https://developers.openai.com/api/docs/guides/decisions?utm_source=chatgpt.com#check-an-image-for-visible-damage)
-* [프로젝트 예제 소스](https://github.com/synabreu/openai-decisions-workshop/tree/main/decisions-visible-damage)
+* [decisions-visible-damage 프로젝트 예제 소스](https://github.com/synabreu/openai-decisions-workshop/tree/main/decisions-visible-damage)

@@ -248,9 +248,7 @@ Responses API와 동일한 길이 제한이 적용되며, 인증된 사용자의
 
 ## 5.1 OpenAI의 Decisions API 동영상
 
-[지난 후기에서 Decisions API는](https://synabreu.github.io/openai/%ED%9B%84%EA%B8%B0-%EC%98%A4%ED%94%88AI-DevDay-%ED%82%A4%EB%85%B8%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EA%B3%A0/#43-decisions-api) 최근에 각광 받은 [Jev와](https://typesafe.ai/) 유사한 부분과 차이점을 각각 말한 적이 있다.
-
-그렇다면 이 Decisions API를 가지고 도대체 무엇을 만들 수 있는가에 대해 아이디어를 얻는 차원에서 아래의 유투브 동영상을 보자!
+[지난 후기에서 Decisions API는](https://synabreu.github.io/openai/%ED%9B%84%EA%B8%B0-%EC%98%A4%ED%94%88AI-DevDay-%ED%82%A4%EB%85%B8%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EA%B3%A0/#43-decisions-api) 최근에 각광 받은 [Jev와](https://typesafe.ai/) 유사한 부분과 차이점을 각각 말한 적이 있다. 그렇다면 이 Decisions API를 가지고 도대체 무엇을 만들 수 있는가에 대해 아이디어를 얻는 차원에서 아래의 유투브 동영상을 보자!
 
 <iframe
   width="560"
