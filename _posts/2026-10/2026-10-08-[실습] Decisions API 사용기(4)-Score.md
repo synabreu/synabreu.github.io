@@ -51,8 +51,8 @@ categories: [openai]
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe server.py --port 5083
+python.exe -m pip install -r requirements.txt
+python.exe server.py --port 5083
 ```
 
 http://127.0.0.1:5083/ 에 접속한다. `run-local.cmd`로도 실행할 수 있다.
@@ -60,13 +60,6 @@ http://127.0.0.1:5083/ 에 접속한다. `run-local.cmd`로도 실행할 수 있
 기존 문서 주소 `/api/docs/guides/decisions`와 `/playground`, 이전 데모 HTML 주소는 현재 데모 `/`로 자동 이동한다. 서버 소스 수정 후에는 실행 중인 서버를 종료하고 다시 실행한다.
 
 현재 PC의 `.venv`는 Python 3.12로 구성되어 있다. 이미 설치했다면 위 실행 명령만 사용한다. 기존 `.venv`에 `python -m venv .venv`를 다시 실행하지 않는다. 다른 버전의 Python으로 덮어쓰면 실행 파일 복사 오류와 바이너리 패키지 불일치가 발생할 수 있다.
-
-처음 설치하며 `.venv`가 없는 경우에만 아래 명령을 사용한다. Python 설치 경로는 해당 PC에 맞게 지정한다.
-
-```powershell
-& "C:\Program Files\Python312\python.exe" -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-```
 
 ## 3-2. macOS / Linux 운영체제 (bash·zsh)
 
@@ -272,9 +265,6 @@ if __name__ == '__main__':
 ## 6-2. Score_example.py
 
 ```python
-# 프로젝트 이름: OpenAI Descisions API (3) - Score API
-# 설명: 예제3 - 평가 기준에 따라 점수 매기는 Score API 사용
-
 import config  # 사용이 승인된 기존 키를 복사하지 않고 읽는다.
 from openai import OpenAI
 
