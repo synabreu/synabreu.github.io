@@ -10,7 +10,7 @@ categories: [openai]
 내용이 길어서 이번 블로그는 보험접수 분류 아키텍처와 전체 파일 리스트, 그리고 내부 소스들을 분석해 보도록 하겠다. 우선 전체 실행 동영상을 한번 보내는 것이 전체 아키텍처를 이해하는 데 무엇이 보다 중요하다.
 
 <video controls playsinline preload="metadata"
-       style="width: 70%; height: auto;"
+       style="width: 85%; height: auto;"
        poster="{{ '/images/2026-10/decisions-insurance-main.png' | relative_url }}">
   <source src="{{ '/images/2026-10/insurance-demo-clear-1080p.mp4' | relative_url }}"
           type="video/mp4">
