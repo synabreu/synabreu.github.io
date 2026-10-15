@@ -8,6 +8,9 @@ categories: [openai]
 ---
 이 프로젝트는 지금까지 배운 OpenAI의 Decisions API 를 응용해 실제로 B2B에서 사용할만 한 응용 AI로 보험 접수 분류 프로젝트를 작성해 보았다. 보험 기록자가 사고 접수 문장을 받아 접수 대상 여부(predicate), 처리 경로(choice), 긴급도(score), 부상 관련 검토 필요성(predicate)을 평가한다.
 
+![그림 1. decision insurance main]({{ '/images/2026-10/decisions-insurance-main.png' | relative_url }}){: style="width: 70%; height: auto;"}
+
+
 # 1. 실제 OpenAI API 연결
 
 실제 Decisions API를 사용하려면 `OPENAI_API_KEY`가 필요하다. `decisions-insurance` 프로젝트 루트의 `.env` 파일에 기존 API 키와 모델을 설정한다. `.env` 파일이 없다면 `.env.example`을 복사해 만든다.
@@ -58,7 +61,7 @@ python decision_insurance.py --mock
 
 실행 후 결과 화면은 [그림1]와 같다.
 
-![그림 1. decision insurance mook]({{ '/images/2026-10/decisions-insurance-01.png' | relative_url }}){: style="width: 70%; height: auto;"}
+![그림 2. decision insurance mook]({{ '/images/2026-10/decisions-insurance-01.png' | relative_url }}){: style="width: 70%; height: auto;"}
 
 5) 콘솔에서 실제 실행은 다음과 같다.
 
@@ -68,7 +71,7 @@ python decision_insurance.py --input examples/claim.txt --output output/car_acci
 
 실행 후 결과 화면은 [그림2]와 같다.
 
-![그림 2. decision insurance json 결과]({{ '/images/2026-10/decisions-insurance-02.png' | relative_url }}){: style="width: 70%; height: auto;"}
+![그림 3. decision insurance json 결과]({{ '/images/2026-10/decisions-insurance-02.png' | relative_url }}){: style="width: 70%; height: auto;"}
 
 또한 car_accident_result.json 파일은 다음과 같다.
 
@@ -275,7 +278,7 @@ python server.py --port 8094
 
 실제 모드는 기존 `.env.local` 또는 `.env`의 API 키를 서버에서만 읽는다. 모의 모드는 입력 내용을 분석하지 않고 고정된 예시 응답을 표시한다. 사고 내용과 결과는 서버 파일로 자동 저장하지 않으며, 필요한 결과는 브라우저에서 JSON으로 다운로드할 수 있다.
 
-![그림 3. decision insurance Web UI]({{ '/images/2026-10/decisions-insurance-03.png' | relative_url }}){: style="width: 70%; height: auto;"}
+![그림 4. decision insurance Web UI]({{ '/images/2026-10/decisions-insurance-03.png' | relative_url }}){: style="width: 70%; height: auto;"}
 
 # 5. 참고 자료
 

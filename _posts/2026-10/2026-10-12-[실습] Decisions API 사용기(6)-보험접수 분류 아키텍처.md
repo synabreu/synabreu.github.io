@@ -7,7 +7,15 @@ toc: true
 categories: [openai]
 ---
 
-내용이 길어서 이번 블로그는 보험접수 분류 아키텍처와 전체 파일 리스트, 그리고 내부 소스들을 분석해 보도록 하겠다. 
+내용이 길어서 이번 블로그는 보험접수 분류 아키텍처와 전체 파일 리스트, 그리고 내부 소스들을 분석해 보도록 하겠다. 우선 전체 실행 동영상을 한번 보내는 것이 전체 아키텍처를 이해하는 데 무엇이 보다 중요하다.
+
+<video controls playsinline preload="metadata"
+       style="width: 70%; height: auto;"
+       poster="{{ '/images/2026-10/decisions-insurance-main.png' | relative_url }}">
+  <source src="{{ '/images/2026-10/insurance-demo-clear-1080p.mp4' | relative_url }}"
+          type="video/mp4">
+  브라우저가 동영상 재생을 지원하지 않습니다.
+</video>
 
 # 1. 보험접수 분류 아키텍처 플로우
 
@@ -40,7 +48,9 @@ flowchart TD
     I -->|호출 실패| T
 ```
 
-## 2-1. 판단 질문과 역할
+---
+
+## 1-1. 판단 질문과 역할
 
 | 질문 이름                      | 유형          | 역할                                                  |
 | ------------------------------ | ------------- | ----------------------------------------------------- |
@@ -54,6 +64,8 @@ flowchart TD
 실제 분석은 기존 키로 API를 호출하며 사용료가 발생한다. 모의 분석은 고정 응답만 사용하고 입력 내용을 분석하지 않는다. CLI의 `--mock`과 `--input`은 함께 사용할 수 없다. API 키는 서버 또는 CLI 프로세스에서만 사용한다.
 
 결과는 담당자의 검토 경로를 제안할 뿐 실제 부서 배정이나 보험금 지급을 실행하지 않는다. `executed`는 항상 `false`다. CLI는 `--output`을 지정할 때 파일로 저장하고, 웹 서버는 사고 내용과 결과를 자동 저장하지 않는다.
+
+---
 
 # 2. 전체 폴더별 파일 구성
 
@@ -78,6 +90,8 @@ decisions-insurance 프로젝트 폴더의 파일들은 다음과 같다.
 | `decisions-insurance/static/`    | `index.html`            | 사고 내용 입력, 실제·모의 모드, 임계값 설정, 결과 표시 및 JSON 다운로드 웹 화면을 제공한다.             |
 | `decisions-insurance/tests/`     | `test_server.py`        | 실제 모드의 입력 전달, 모의 모드의 API 미호출 및 잘못된 입력 거부를 검증한다.                            |
 | `decisions-insurance/tests/`     | `test_workflow.py`      | 의료·긴급 검토, 판단 거부·누락·중복·낮은 신뢰도 처리와 자동 지급 미실행을 검증한다.                  |
+
+---
 
 # 3. 프로젝트 주요 소스 분석
 
@@ -176,6 +190,8 @@ def main():
 if __name__ == "__main__":
     raise SystemExit(main())
 ```
+
+---
 
 ## 3-2. 웹 실행 진입점 - server.py
 
@@ -277,6 +293,8 @@ if __name__ == "__main__":
         server.server_close()
 ```
 
+---
+
 ## 3-3. create_decision 메서드 분석
 
 create_decision 메서드는 decision_insurance.py 와 server.py 파일에서 공통적으로 호출하는 메서드이다. 실제 Decisions API를 호출하는 함수로써 사고 접수 내용과 API 키 및 SDK 기능을 확인하고 Decisions API의 분석 결과를 반환하며 연결과 모델 접근 등의 오류를 안전한 메시지로 처리한다.
@@ -325,6 +343,8 @@ def create_decision(text, model):
         except APIError:
             raise RuntimeError("API 연결 또는 응답 오류. 네트워크와 서비스 상태를 확인하라.") from None
 ```
+
+---
 
 ## 3-4. insurance/workflow.py → 검토 경로 결정
 
@@ -391,6 +411,8 @@ def select_workflow(result, threshold=0.80):
     return {"route": chosen, "action": ROUTES[chosen], "reason": "검토 경로 제안", "executed": False}
 ```
 
+---
+
 ## 3.5 insurance/questions.py
 
 insurance/questions.py는 insurance/service.py와 insurance/workflow.py 양쪽에 연결됩니다. API에 보낼 질문과 검토 경로 목록을 정의하는 파일입니다.
@@ -443,6 +465,8 @@ QUESTIONS = [
      "통증 호소, 병원 방문 계획, 부상 가능성에 근거하여 부상 관련 담당자 검토가 필요한가? 의학적 진단을 내리지 않는다."},
 ]
 ```
+
+---
 
 # 4. 참고 자료
 
