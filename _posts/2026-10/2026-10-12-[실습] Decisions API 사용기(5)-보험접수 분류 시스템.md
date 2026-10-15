@@ -1,5 +1,5 @@
 ---
-title: "[실습] Decisions API 사용기(5)-보험접수 분류"
+title: "[실습] Decisions API 사용기(5)-보험접수 분류 시스템"
 date: 2026-10-12
 tags: [openai, devday, samaltman, chatgpt, codex, linux, codexmobile, meta, muse, spacexai, grotbot, dots, ChatGPT Spaces]
 typora-root-url: ../
@@ -9,7 +9,6 @@ categories: [openai]
 이 프로젝트는 지금까지 배운 OpenAI의 Decisions API 를 응용해 실제로 B2B에서 사용할만 한 응용 AI로 보험 접수 분류 프로젝트를 작성해 보았다. 보험 기록자가 사고 접수 문장을 받아 접수 대상 여부(predicate), 처리 경로(choice), 긴급도(score), 부상 관련 검토 필요성(predicate)을 평가한다.
 
 ![그림 1. decision insurance main]({{ '/images/2026-10/decisions-insurance-main.png' | relative_url }}){: style="width: 90%; height: auto;"}
-
 
 # 1. 실제 OpenAI API 연결
 

@@ -17,6 +17,8 @@ categories: [openai]
   브라우저가 동영상 재생을 지원하지 않습니다.
 </video>
 
+---
+
 # 1. 보험접수 분류 아키텍처 플로우
 
 decisions-insurance 프로젝트 소스를 기준으로 CLI와 웹 UI의 공통 분석 흐름을 정리한다.
